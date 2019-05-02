@@ -1,1 +1,2 @@
-# lanyliu.github.io
+# links
+https://lanyliu.github.io/ `{page name}` .html
