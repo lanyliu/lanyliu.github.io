@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全人健康・共生願景 — 共學計畫</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --soil: #3d2b1f;
+    --bark: #6b4c35;
+    --moss: #5a6b3a;
+    --sage: #8a9e6e;
+    --rice: #f5f0e6;
+    --cream: #faf7f0;
+    --linen: #ede8db;
+    --stone: #b8a99a;
+    --dusk: #c4826a;
+    --mist: #d6ddd0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--soil);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    line-height: 1.9;
+    overflow-x: hidden;
+  }
+
+  /* ── grain overlay ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.6;
+  }
+
+  /* ── nav ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(250, 247, 240, 0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--linen);
+  }
+
+  .nav-logo {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    color: var(--bark);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    color: var(--bark);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .nav-links a:hover { opacity: 1; }
+
+  /* ── hero ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    background-color: var(--moss);
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem 3.5rem;
+    position: relative;
+  }
+
+  .hero-left::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(90,107,58,0) 40%, rgba(61,43,31,0.3));
+  }
+
+  .hero-pattern {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.08;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px),
+      repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px);
+  }
+
+  .hero-text-left {
+    position: relative;
+    z-index: 2;
+    color: var(--rice);
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 1.5rem;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+  }
+
+  .hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .hero-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    opacity: 0.85;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-right {
+    background-color: var(--linen);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 3.5rem 4rem;
+    border-left: 1px solid var(--stone);
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    line-height: 2;
+    color: var(--bark);
+    max-width: 420px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    border: 1px solid var(--sage);
+    border-radius: 2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    color: var(--moss);
+    background: rgba(90,107,58,0.07);
+  }
+
+  /* ── section base ── */
+  section { padding: 6rem 0; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--dusk);
+    margin-bottom: 0.8rem;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--soil);
+    margin-bottom: 3rem;
+  }
+
+  /* ── partners ── */
+  .partners {
+    background: var(--linen);
+    border-top: 1px solid var(--stone);
+    border-bottom: 1px solid var(--stone);
+  }
+
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .partner-card {
+    padding: 3rem 2.5rem;
+    border-right: 1px solid var(--stone);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .partner-card:last-child { border-right: none; }
+
+  .partner-icon {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+
+  .partner-role {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dusk);
+    margin-bottom: 0.5rem;
+  }
+
+  .partner-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--soil);
+  }
+
+  .partner-desc {
+    font-size: 0.88rem;
+    line-height: 1.85;
+    color: var(--bark);
+    opacity: 0.85;
+  }
+
+  .partner-layer {
+    display: inline-block;
+    margin-top: 1.2rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--moss);
+    font-weight: 500;
+    border-bottom: 1px solid var(--sage);
+    padding-bottom: 2px;
+  }
+
+  /* ── phases ── */
+  .phases { background: var(--cream); }
+
+  .phase-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 0;
+    border-top: 1px solid var(--linen);
+    padding: 3rem 0;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+
+  .phase-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .phase-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3.5rem;
+    color: var(--mist);
+    line-height: 1;
+    padding-top: 0.2rem;
+    font-style: italic;
+  }
+
+  .phase-content { padding-left: 2rem; border-left: 1px solid var(--linen); }
+
+  .phase-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .phase-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--soil);
+  }
+
+  .phase-duration {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: var(--stone);
+    border: 1px solid var(--stone);
+    padding: 0.2rem 0.7rem;
+    border-radius: 2rem;
+  }
+
+  .phase-desc {
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--bark);
+    margin-bottom: 1.5rem;
+    max-width: 620px;
+  }
+
+  .phase-activities {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .activity {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+    color: var(--bark);
+    line-height: 1.7;
+  }
+
+  .activity::before {
+    content: '—';
+    color: var(--sage);
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+  }
+
+  /* ── resources ── */
+  .resources {
+    background: var(--soil);
+    color: var(--rice);
+  }
+
+  .resources .section-label { color: var(--dusk); }
+  .resources .section-title { color: var(--rice); }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .resource-group {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    padding: 2rem;
+  }
+
+  .resource-group-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--dusk);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.8rem;
+  }
+
+  .resource-item {
+    margin-bottom: 1.3rem;
+  }
+
+  .resource-name {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--rice);
+    margin-bottom: 0.2rem;
+  }
+
+  .resource-note {
+    font-size: 0.78rem;
+    color: var(--stone);
+    line-height: 1.6;
+    margin-bottom: 0.4rem;
+  }
+
+  .resource-link {
+    font-size: 0.75rem;
+    color: var(--sage);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(138,158,110,0.3);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+    word-break: break-all;
+  }
+
+  .resource-link:hover { border-color: var(--sage); }
+
+  .resource-role {
+    display: inline-block;
+    margin-top: 0.3rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--moss);
+    background: rgba(90,107,58,0.2);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2rem;
+  }
+
+  /* ── fieldwork ── */
+  .fieldwork { background: var(--rice); }
+
+  .fieldwork-intro {
+    max-width: 680px;
+    margin-bottom: 3.5rem;
+    font-size: 0.95rem;
+    line-height: 2;
+    color: var(--bark);
+  }
+
+  .region-block {
+    margin-bottom: 3rem;
+    border-top: 2px solid var(--moss);
+    padding-top: 2rem;
+  }
+
+  .region-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--soil);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .region-badge {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--moss);
+    border: 1px solid var(--sage);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+  }
+
+  .site-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .site-card {
+    background: var(--cream);
+    border: 1px solid var(--linen);
+    padding: 1.8rem;
+    border-radius: 4px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .site-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(61,43,31,0.08);
+  }
+
+  .site-type {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--dusk);
+    margin-bottom: 0.6rem;
+  }
+
+  .site-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--soil);
+    margin-bottom: 0.7rem;
+  }
+
+  .site-desc {
+    font-size: 0.82rem;
+    line-height: 1.8;
+    color: var(--bark);
+    opacity: 0.85;
+    margin-bottom: 1rem;
+  }
+
+  .site-meta {
+    font-size: 0.75rem;
+    color: var(--stone);
+    line-height: 1.6;
+  }
+
+  .site-link {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-size: 0.75rem;
+    color: var(--moss);
+    text-decoration: none;
+    border-bottom: 1px solid var(--sage);
+    padding-bottom: 1px;
+  }
+
+  /* ── observation questions ── */
+  .questions {
+    background: var(--linen);
+    border-top: 1px solid var(--stone);
+    border-bottom: 1px solid var(--stone);
+  }
+
+  .questions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .question-card {
+    background: var(--cream);
+    padding: 2rem;
+    border-left: 3px solid var(--moss);
+  }
+
+  .question-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    color: var(--mist);
+    font-style: italic;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .question-text {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--soil);
+  }
+
+  /* ── footer ── */
+  footer {
+    background: var(--soil);
+    color: rgba(245,240,230,0.5);
+    padding: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    line-height: 2;
+  }
+
+  footer strong {
+    color: var(--rice);
+    font-weight: 400;
+    font-family: 'Noto Serif TC', serif;
+  }
+
+  /* ── animations ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-text-left > * {
+    animation: fadeUp 0.8s ease both;
+  }
+  .hero-eyebrow { animation-delay: 0.1s; }
+  .hero-title   { animation-delay: 0.25s; }
+  .hero-title-zh{ animation-delay: 0.35s; }
+
+  .hero-right > * {
+    animation: fadeUp 0.8s ease both;
+    animation-delay: 0.5s;
+  }
+
+  /* ── responsive ── */
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+    .hero-left { padding: 8rem 2rem 3rem; }
+    .hero-right { padding: 3rem 2rem; border-left: none; border-top: 1px solid var(--stone); }
+    .partners-grid { grid-template-columns: repeat(2, 1fr); }
+    .partner-card { border-right: none; border-bottom: 1px solid var(--stone); }
+    .resources-grid { grid-template-columns: 1fr; }
+    .questions-grid { grid-template-columns: 1fr; }
+    .phase-item { grid-template-columns: 60px 1fr; }
+    .phase-number { font-size: 2.2rem; }
+    .container { padding: 0 1.5rem; }
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">全人健康・共生願景</div>
+  <ul class="nav-links">
+    <li><a href="#partners">技能圖譜</a></li>
+    <li><a href="#phases">共學階段</a></li>
+    <li><a href="#resources">學習資源</a></li>
+    <li><a href="#fieldwork">田調地點</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-pattern"></div>
+    <div class="hero-text-left">
+      <p class="hero-eyebrow">共學計畫 · 2026</p>
+      <h1 class="hero-title">Living<br>Together,<br>Growing Old</h1>
+      <p class="hero-title-zh">全人健康長照・共生願景</p>
+    </div>
+  </div>
+  <div class="hero-right">
+    <p class="hero-desc">
+      這是一個開放式的共學社群，帶著同一個問題聚在一起：<br>
+      人在失去「社會功能」之後，還剩下什麼？<br><br>
+      沒有固定的組織者，也沒有鎖定人數或背景。
+      有意願的人陸續進入，深入之後也可能往別的方向走。
+      我們想做的，是在正式合作之前，先透過共學找到共同語言——
+      長照知識和法規是橋樑，核心是更古老的事：找回每個人在生命裡的角色與意義。
+    </p>
+    <div class="hero-tags">
+      <span class="tag">樸門農業</span>
+      <span class="tag">身體工作</span>
+      <span class="tag">全人照護</span>
+      <span class="tag">共生社群</span>
+      <span class="tag">在地老化</span>
+      <span class="tag">青銀共學</span>
+    </div>
+  </div>
+</section>
+
+<!-- Partners -->
+<section class="partners" id="partners">
+  <div class="container" style="padding-top:3rem; padding-bottom:2rem;">
+    <p class="section-label">技能圖譜</p>
+    <h2 class="section-title" style="margin-bottom:0.8rem;">目前在場的技能與視角</h2>
+    <p style="font-size:0.88rem; color:var(--bark); line-height:2; max-width:640px; margin-bottom:2.5rem; opacity:0.85;">
+      這不是固定的成員名單。共學社群是開放的——有意願的人會陸續加入，深入之後也可能往別的方向走。
+      以下是目前已經在場的幾種技能和視角，每一種都可能在共生的生態裡找到它的位置，
+      也歡迎帶著我們還沒想到的背景進來。
+    </p>
+  </div>
+  <div class="partners-grid">
+    <div class="partner-card">
+      <span class="partner-icon">🌱</span>
+      <p class="partner-role">土地層</p>
+      <h3 class="partner-title">樸門農業・自耕農</h3>
+      <p class="partner-desc">
+        以樸門倫理耕作的自有田。土地、食物、物質循環是這個視角的語言。
+        農事節奏可以成為時間結構的錨點，不同身體狀況的人都能找到可以貢獻的尺度——
+        撿菜葉、記錄氣候、說明這塊土地的歷史，都算。
+      </p>
+      <span class="partner-layer">在場的可能：展示「缺損也能貢獻」的活樣本</span>
+    </div>
+    <div class="partner-card">
+      <span class="partner-icon">🍃</span>
+      <p class="partner-role">知識層</p>
+      <h3 class="partner-title">樸門設計・生態教育</h3>
+      <p class="partner-desc">
+        帶入觀察與設計的思維，讓整個系統可見、可被討論。
+        樸門倫理（地球關懷、人的關懷、公平分享）可以作為社群共識的基礎語言，
+        比起空談「共生」更有操作性。
+      </p>
+      <span class="partner-layer">在場的可能：讓複雜的關係變得可理解</span>
+    </div>
+    <div class="partner-card">
+      <span class="partner-icon">🩺</span>
+      <p class="partner-role">照護實務層</p>
+      <h3 class="partner-title">長照・醫護實務工作者</h3>
+      <p class="partner-desc">
+        來自長照或醫護現場的第一手經驗。知道制度怎麼運作、身體照護的實際需求、
+        以及現行體系裡哪些地方真的卡住了。
+        這個視角讓理想和現實之間有了真實的對話，而不只是想像。
+      </p>
+      <span class="partner-layer">在場的可能：讓構想在現實裡站得住腳</span>
+    </div>
+    <div class="partner-card">
+      <span class="partner-icon">🪐</span>
+      <p class="partner-role">身體與關係層</p>
+      <h3 class="partner-title">調頻・身體工作・對話</h3>
+      <p class="partner-desc">
+        瑜伽、頌缽、呼吸是工具，核心是透過對話把每個人帶出來，讓能力或角色的可能性被看見。
+        做橋接的角色，幫大家找到在這個系統裡的頻率——
+        而不是把所有人調成同一個頻率。
+      </p>
+      <span class="partner-layer">在場的可能：讓人感覺被看見，讓場域安全</span>
+    </div>
+  </div>
+  <div class="container" style="padding-top:2rem; padding-bottom:3rem;">
+    <p style="font-size:0.82rem; color:var(--stone); letter-spacing:0.05em; border-top:1px solid var(--linen); padding-top:1.5rem;">
+      還有哪些背景可能在這個生態裡有位置？長照實務工作者、社工、建築師、廚師、音樂治療、藝術創作…… 歡迎帶著你的視角進來探索。
+    </p>
+  </div>
+</section>
+
+<!-- Phases -->
+<section class="phases" id="phases">
+  <div class="container">
+    <p class="section-label">學習路徑</p>
+    <h2 class="section-title">三個階段的共學旅程</h2>
+
+    <div class="phase-item">
+      <div class="phase-number">01</div>
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-title">建立共同語言</span>
+          <span class="phase-duration">1–2 個月</span>
+        </div>
+        <p class="phase-desc">
+          目標不是讓大家學一樣的東西，而是找到交集的詞彙。
+          每個人帶著自己的背景進來，如果跳過這步直接談願景，很容易雞同鴨講。
+          用國外案例作為共同的理想參照，讓三個不同背景的人有同一個畫面可以討論。
+        </p>
+        <div class="phase-activities">
+          <div class="activity">各自分享一個「讓你覺得這件事值得做」的故事或案例</div>
+          <div class="activity">共讀文本：Eden Alternative 核心理念，或富山型デイサービス起源故事（任選一個，重點是有共同材料可以討論）</div>
+          <div class="activity">每人回答一個問題：「你想像中，一個人在這裡老去，會是什麼樣的一天？」——答案的差異本身就很有價值</div>
+          <div class="activity">每月一次、每次 2–3 小時，輪流由一人主持，帶一個主題</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-item">
+      <div class="phase-number">02</div>
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-title">田野與現實校準</span>
+          <span class="phase-duration">2–3 個月</span>
+        </div>
+        <p class="phase-desc">
+          只在概念層討論很容易漂移。這個階段需要真實的接觸點。
+          長照線上課程在這裡進來——不是要大家考證照，而是對現行制度有基本的輪廓感，
+          知道這個社會目前把「照護」這件事放在哪裡、怎麼定義它。看見缺口，比討論理想更能讓不同背景的人產生共識。
+        </p>
+        <div class="phase-activities">
+          <div class="activity">各自在長照數位學習平台選 2–3 個單元觀看，重點是讓所有人對長照語言有基本感受</div>
+          <div class="activity">前往台北、宜蘭、台中的田調地點，各自從自己的專業視角觀察</div>
+          <div class="activity">把各自看到的帶回來，放在一起討論「缺少了什麼」</div>
+          <div class="activity">觀察重點：日照中心、農村共生案例、身體工作進入機構的可能</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-item">
+      <div class="phase-number">03</div>
+      <div class="phase-content">
+        <div class="phase-header">
+          <span class="phase-title">設計一個小實驗</span>
+          <span class="phase-duration">3–6 個月</span>
+        </div>
+        <p class="phase-desc">
+          不急著規劃生態村，先設計一個可以在三個月內執行的小規模實驗。
+          辦一個週末的共生體驗工作坊，把三個人的東西都放進去——土地勞動、樸門設計思維、頌缽或身體工作。
+          目的不是對外招生，而是讓三個人第一次在同一個場域裡工作，看看化學反應是什麼，也看看哪裡有摩擦。
+        </p>
+        <div class="phase-activities">
+          <div class="activity">邀請幾位不同年齡、不同身體狀況的人參與一日或週末體驗</div>
+          <div class="activity">引用 Eden Alternative 七個維度、富山型「不拒絕任何人」原則作為設計參考</div>
+          <div class="activity">樸門的「每個元素多重功能」邏輯直接套用在人的角色設計上</div>
+          <div class="activity">實驗結束後，共同回顧：什麼有效？什麼是下一步？法規邊界在哪裡？</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Resources -->
+<section class="resources" id="resources">
+  <div class="container">
+    <p class="section-label">學習資源</p>
+    <h2 class="section-title">知識地圖</h2>
+
+    <div class="resources-grid">
+      <div class="resource-group">
+        <h3 class="resource-group-title">🌏 國外案例（第一階段）</h3>
+
+        <div class="resource-item">
+          <p class="resource-name">Eden Alternative</p>
+          <p class="resource-note">去機構化照護的代表，主張把長照機構從「失能者的設施」轉變為「人類真實居住的棲息地」，圍繞七個核心維度：身份、連結、安全、自主、意義、成長、喜悅。</p>
+          <a href="https://www.edenalt.org" target="_blank" class="resource-link">edenalt.org</a>
+          <span class="resource-role">第一階段 · 理想參照</span>
+        </div>
+
+        <div class="resource-item">
+          <p class="resource-name">Green House Project</p>
+          <p class="resource-note">Eden Alternative 的進化版，以「小型有意識社群」取代傳統機構模式，協助建造住宅規模的高品質照護空間。</p>
+          <a href="https://www.edenalt.org/tag/green-house-project/" target="_blank" class="resource-link">edenalt.org/green-house-project</a>
+          <span class="resource-role">第一 / 三階段 · 設計參考</span>
+        </div>
+
+        <div class="resource-item">
+          <p class="resource-name">富山型デイサービス</p>
+          <p class="resource-note">1993 年由三位護士創立，不分年齡與障礙狀況一律接受，老人、孩童、障礙者同處一空間，每個人都有貢獻角色。共生型服務的起源案例。</p>
+          <a href="https://www.pref.toyama.jp/1200/chiikikyosei/toyamagata/toyamagata2.html" target="_blank" class="resource-link">pref.toyama.jp（日文）</a><br>
+          <a href="https://www.tyojyu.or.jp/net/topics/tokushu/kyoseigatasabisu/toyamatype-day-service.html" target="_blank" class="resource-link">tyojyu.or.jp 深度解析（日文）</a>
+          <span class="resource-role">第一 / 三階段 · 起源故事</span>
+        </div>
+      </div>
+
+      <div class="resource-group">
+        <h3 class="resource-group-title">🇹🇼 台灣制度（第二階段）</h3>
+
+        <div class="resource-item">
+          <p class="resource-name">長照數位學習平台</p>
+          <p class="resource-note">衛福部建置的免費平台，照服員核心課程 25 單元、約 55 小時。不以取得認證為目的也可自由瀏覽，是了解長照工作內容最直接的方式。</p>
+          <a href="https://ltc-learning.org/mooc/index.php" target="_blank" class="resource-link">ltc-learning.org</a>
+          <span class="resource-role">第二階段 · 認識現實系統</span>
+        </div>
+
+        <div class="resource-item">
+          <p class="resource-name">衛福部 1966 長照專區</p>
+          <p class="resource-note">制度規則、服務說明、各類認證辦法的官方來源。了解台灣長照 ABC 模式與服務分層邏輯。</p>
+          <a href="https://1966.gov.tw" target="_blank" class="resource-link">1966.gov.tw</a>
+          <span class="resource-role">第二階段 · 制度脈絡</span>
+        </div>
+
+        <div class="resource-item">
+          <p class="resource-name">長照人員訓練認證辦法</p>
+          <p class="resource-note">長照人員認證的法源依據，了解哪些服務需要牌照、哪些不需要，為未來落地做準備。</p>
+          <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070045" target="_blank" class="resource-link">law.moj.gov.tw</a>
+          <span class="resource-role">第三階段 · 現實邊界</span>
+        </div>
+      </div>
+
+      <div class="resource-group">
+        <h3 class="resource-group-title">📐 資源使用方式</h3>
+
+        <div class="resource-item">
+          <p class="resource-name">國外案例 — 起點的火種</p>
+          <p class="resource-note">第一階段：各自選一個案例，帶一個最有感覺的句子或畫面來分享。從情感共鳴開始，比從知識整理開始更能打開對話。第三階段：作為具體的設計借鑒。</p>
+        </div>
+
+        <div class="resource-item">
+          <p class="resource-name">長照線上課程 — 中段的錨</p>
+          <p class="resource-note">第二階段田野前的暖身。幫助非長照背景的夥伴建立基本詞彙感，田調時更能看見制度和現實的落差。</p>
+        </div>
+
+        <div class="resource-item">
+          <p class="resource-name">法規 — 落地的橋樑</p>
+          <p class="resource-note">最後才需要認真面對的現實邊界。學習的順序跟人投入一件事的心理順序一致：先被打動，再去理解，最後才談怎麼落地。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fieldwork -->
+<section class="fieldwork" id="fieldwork">
+  <div class="container">
+    <p class="section-label">田野調查</p>
+    <h2 class="section-title">三地田調地點</h2>
+    <p class="fieldwork-intro">
+      田調清單區分兩種目的：<strong>看現行體系怎麼運作</strong>，以及<strong>看共生理想已經在哪裡發芽</strong>。
+      三個人來自台北、宜蘭、台中，田調就在自己熟悉的土地上開始。
+    </p>
+
+    <!-- 台北 -->
+    <div class="region-block">
+      <h3 class="region-name">台北 <span class="region-badge">看現行長照體系</span></h3>
+      <div class="site-cards">
+        <div class="site-card">
+          <p class="site-type">日間照顧中心</p>
+          <h4 class="site-name">西湖日照中心</h4>
+          <p class="site-desc">尊重長輩原本興趣，不勉強參加不喜歡的活動，允許從事個別活動如麻將、書法、手工藝。在制度內已試著做出人味，值得觀察它在哪裡有限制。</p>
+          <p class="site-meta">📍 內湖區</p>
+          <p class="site-meta">🔍 觀察重點：日常節奏的設計、個別性如何被尊重</p>
+        </div>
+        <div class="site-card">
+          <p class="site-type">整合型日間照護</p>
+          <h4 class="site-name">台北慈濟日間照護中心</h4>
+          <p class="site-desc">以復健模式為主體，結合跨領域專業團隊。作為「醫療整合型」的代表，與「生活導向型」對照，可以看出制度邊界在哪裡。</p>
+          <p class="site-meta">📍 新店區</p>
+          <a href="https://taipei.tzuchi.com.tw/日間照護中心/" target="_blank" class="site-link">官方網站 →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 宜蘭 -->
+    <div class="region-block">
+      <h3 class="region-name">宜蘭 <span class="region-badge">看共生理想的在地實踐</span></h3>
+      <div class="site-cards">
+        <div class="site-card">
+          <p class="site-type">有機農村・共生案例</p>
+          <h4 class="site-name">行健有機夢想村</h4>
+          <p class="site-desc">三星鄉有機農村，成員橫跨老中青三代，是「青銀共治」的活案例。老農夫是知識的持有人，不是被照顧的對象——這正是我們想建立的核心精神。</p>
+          <p class="site-meta">📍 三星鄉廣富路 26 號</p>
+          <p class="site-meta">🕘 市集時間：每週日 9–14 時</p>
+          <a href="https://eatricetw.blogspot.com" target="_blank" class="site-link">官方網站 →</a>
+        </div>
+        <div class="site-card">
+          <p class="site-type">長照管理機構</p>
+          <h4 class="site-name">宜蘭縣長期照護服務管理所</h4>
+          <p class="site-desc">全國率先成立的縣市長照管理機構，以「一站式」整合提供長照、身心障礙、輔具申請等服務。可詢問是否能安排參訪，了解偏鄉服務的實際缺口。</p>
+          <p class="site-meta">📍 宜蘭市聖後街 141 號</p>
+          <a href="https://ltc.ilshb.gov.tw" target="_blank" class="site-link">官方網站 →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 台中 -->
+    <div class="region-block">
+      <h3 class="region-name">台中 <span class="region-badge">看農村地景與制度交會</span></h3>
+      <div class="site-cards">
+        <div class="site-card">
+          <p class="site-type">農業・地方創生</p>
+          <h4 class="site-name">新社區農村地景</h4>
+          <p class="site-desc">台中東側山城，長年以農業為主，推動農業綠色旅行計畫。可觀察農業、地方創生與長照資源缺口如何在同一塊土地上共存，也是生態村選址的潛力參考區域。</p>
+          <p class="site-meta">📍 台中市新社區</p>
+          <p class="site-meta">🔍 觀察重點：農村老人的實際生活樣貌、社區照顧的空白</p>
+        </div>
+        <div class="site-card">
+          <p class="site-type">社區長照資源</p>
+          <h4 class="site-name">台中山區巷弄長照站</h4>
+          <p class="site-desc">透過台中市衛生局長照資源查詢，找一個山區或農村型的巷弄長照站（C 據點）參訪，與都市型日照中心對照，看見偏鄉服務的現實差距。</p>
+          <p class="site-meta">📍 依區域篩選</p>
+          <a href="https://www.health.taichung.gov.tw/1620732/Nodelist" target="_blank" class="site-link">台中長照資源查詢 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Observation Questions -->
+<section class="questions">
+  <div class="container">
+    <p class="section-label">田調觀察框架</p>
+    <h2 class="section-title">每個地方都帶著這四個問題去</h2>
+    <p style="font-size:0.9rem; color:var(--bark); margin-bottom:2.5rem; max-width:560px; line-height:2;">
+      三個不同背景的人去看同一個地方，答案會很不一樣——那個差異本身，就是共學最好的材料。
+    </p>
+    <div class="questions-grid">
+      <div class="question-card">
+        <span class="question-number">01</span>
+        <p class="question-text">這裡的人，誰在給予、誰在接受？<br>有沒有角色流動的時刻？</p>
+      </div>
+      <div class="question-card">
+        <span class="question-number">02</span>
+        <p class="question-text">長者在這裡有什麼是「只有他們能做」的事？</p>
+      </div>
+      <div class="question-card">
+        <span class="question-number">03</span>
+        <p class="question-text">空間設計上，有沒有讓人感覺「這是生活」而非「這是機構」的地方？</p>
+      </div>
+      <div class="question-card">
+        <span class="question-number">04</span>
+        <p class="question-text">這裡最明顯的缺口是什麼？<br>你覺得我們能補上哪一塊？</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <strong>全人健康・共生願景 共學計畫</strong><br>
+  台北・宜蘭・台中 &nbsp;|&nbsp; 2026<br><br>
+  先共學，再共事。用學習作為初期容器，讓信任自然長出來。
+</footer>
+
+<script>
+  // Scroll reveal for phase items
+  const phases = document.querySelectorAll('.phase-item');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 120);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  phases.forEach(p => observer.observe(p));
+</script>
+
+</body>
+</html>
