@@ -131,6 +131,63 @@
   .panel.yin h4{color:var(--moss-deep);}
   .panel p{font-size:.92rem;font-weight:300;line-height:1.95;color:var(--ink-soft);}
 
+  /* pose sequence */
+  .poses{padding-left:40px;margin-top:28px;}
+  .poses-label{
+    font-size:.78rem;letter-spacing:.22em;color:var(--clay-deep);
+    font-weight:500;margin-bottom:18px;text-transform:uppercase;
+  }
+  .pose{
+    display:grid;grid-template-columns:auto 1fr;gap:16px;
+    padding:15px 0;border-bottom:1px dotted var(--line);
+  }
+  .pose:last-child{border-bottom:none;}
+  .pose-mark{
+    width:11px;height:11px;border-radius:50%;margin-top:7px;flex-shrink:0;
+  }
+  .pose-mark.y{background:var(--yang);}
+  .pose-mark.i{background:var(--yin);}
+  .pose-mark.bridge{background:linear-gradient(135deg,var(--yang) 50%,var(--yin) 50%);}
+  .pose-body .name{
+    font-family:'Noto Serif TC',serif;font-weight:500;
+    font-size:1.02rem;color:var(--ink);
+  }
+  .pose-body .name span{
+    font-family:'Noto Sans TC',sans-serif;font-weight:300;
+    font-size:.82rem;color:var(--ink-soft);letter-spacing:.02em;
+  }
+  .pose-body .cue{
+    font-size:.88rem;font-weight:300;color:var(--ink-soft);
+    line-height:1.85;margin-top:4px;
+  }
+  .pose-body .cue em{font-style:normal;color:var(--clay-deep);font-weight:400;}
+  .pose-body .cue b{color:var(--moss-deep);font-weight:400;}
+  .chain{
+    display:inline-block;font-size:.68rem;letter-spacing:.08em;
+    padding:2px 9px;border-radius:20px;margin-left:8px;
+    font-weight:500;vertical-align:middle;
+  }
+  .chain.ckc{background:rgba(111,119,88,.18);color:var(--moss-deep);}
+  .chain.okc{background:rgba(189,134,84,.18);color:var(--clay-deep);}
+  .bridge-note{
+    grid-column:1/-1;margin-top:6px;padding:10px 14px;
+    background:rgba(189,134,84,.1);border-radius:2px;
+    font-size:.82rem;font-weight:300;color:var(--ink-soft);line-height:1.7;
+  }
+  .bridge-note::before{content:"⤳ 陽轉陰　";color:var(--clay-deep);font-weight:500;}
+
+  /* bridge poses cross-reference */
+  .crossref{margin:60px 0 0;padding:40px 38px;background:var(--paper-warm);border-radius:4px;}
+  .crossref h2{font-family:'Noto Serif TC',serif;font-weight:600;font-size:1.3rem;letter-spacing:.05em;margin-bottom:10px;color:var(--ink);}
+  .crossref .intro{font-size:.95rem;font-weight:300;color:var(--ink-soft);line-height:2;margin-bottom:28px;}
+  .xr{margin-bottom:24px;}
+  .xr:last-child{margin-bottom:0;}
+  .xr-name{font-family:'Noto Serif TC',serif;font-weight:600;font-size:1.08rem;color:var(--ink);margin-bottom:12px;}
+  .xr-row{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:9px 0;align-items:start;}
+  .xr-tag{font-size:.78rem;font-weight:500;padding:3px 12px;border-radius:20px;white-space:nowrap;background:rgba(189,134,84,.16);color:var(--clay-deep);}
+  .xr-cue{font-size:.9rem;font-weight:300;color:var(--ink-soft);line-height:1.8;}
+  @media(max-width:680px){.xr-row{grid-template-columns:1fr;gap:5px;}}
+
   /* progression note */
   .arc{
     margin:60px 0 90px;padding:40px 38px;
@@ -168,7 +225,7 @@
 
   <header>
     <div class="eyebrow">Yin · Yang Sequence Design</div>
-    <h1>陰陽瑜伽課程設計<br>五個可長期輪替的主題</h1>
+    <h1>陰陽瑜伽課程設計<br>六個可長期輪替的主題</h1>
     <p class="lede">為一位重訓背景的學生規劃的平行課表。骨架取自 <strong>Anusara 的對位螺旋與主動停留</strong>，體位之間以 <strong>Vinyasa 串接</strong>，每個體式停留五個呼吸以上，口令落在力量傳遞路徑與體感覺察。每個主題都能獨立成一堂 90 分鐘的課，不分先後，在長時間裡累積練習。</p>
 
     <div class="profile">
@@ -186,73 +243,165 @@
       <span><i class="dot y"></i>陽 · 主軸練習（中段，主動出力與整合）</span>
       <span><i class="dot i"></i>陰 · 輔助釋放（後段，長停留減壓）</span>
     </div>
+
+    <div class="profile" style="border-left-color:var(--moss);margin-top:30px;">
+      <h2 style="color:var(--moss-deep);">陽段的編排邏輯 · 開放鏈與閉鎖鏈交替</h2>
+      <ul>
+        <li><b style="color:var(--moss-deep);font-weight:500;">閉鎖鏈</b>（手或腳壓地，多關節協同）建立整體穩定的地基。這位學生本來就有力量，閉鎖鏈他做得來——下犬、戰士、橋式都是。</li>
+        <li><b style="color:var(--clay-deep);font-weight:500;">開放鏈</b>（肢體末端在空中，孤立單一肌群）精準補強跟不上的小肌群。開放鏈會暴露弱點，正好訓練到重訓動作裡藏起來的那一塊。</li>
+        <li>每段陽段都讓兩種鏈<b style="font-weight:500;">有意識地交替</b>：先閉鎖鏈喚醒整體感覺，再開放鏈孤立訓練弱點，最後傳接進陰段的被動釋放。</li>
+      </ul>
+    </div>
   </header>
 
   <div class="themes">
 
     <section class="theme">
-      <div class="theme-head"><span class="num">壹</span><h3>肩胛的力量與空間</h3></div>
+      <div class="theme-head"><span class="num">壹</span><h3>核心連動與動態穩定</h3></div>
+      <div class="tag">對應：抗旋轉核心、爆發動作的力量傳遞 · 底層前置能力</div>
+      <p class="focus">這位學生<b>靜態核心夠穩</b>（平板做得好），但<b>動態時失能</b>（戰士三會晃）。缺的不是核心力量，而是<b>核心連動周邊小肌群</b>的神經協調與時序——核心會「撐」，但不會在動作中「即時對話」。這個主題練的是核心作為連結中樞，在重心轉移裡即時微調、連動臀中肌與肩胛。放在輪替最前段建立，是其他所有主題的底層能力。</p>
+      <div class="duo">
+        <div class="panel yang"><h4><i class="dot y"></i>陽段重點</h4><p>全部走動態、單側、重心轉移，不放靜態停留（他那塊已經好了）。從可控的不穩定漸進加難度，刻意設計「核心必須連動臀中肌、肩胛才能完成」的體式，讓那條神經迴路變成自動反應。開放鏈在這裡特別吃重——動態連動的弱點正藏在肢體末端不固定的時候。</p></div>
+        <div class="panel yin"><h4><i class="dot i"></i>陰段重點</h4><p>不走「釋放某條緊繃」，而走<b>神經系統的沉降</b>——讓剛剛高度活躍的協調迴路從「不斷微調」過渡到「完全交給支撐」。搭配放鬆核心的體式，因為整段練習核心都在被調用。</p></div>
+      </div>
+      <div class="poses">
+        <div class="poses-label">代表體式</div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">鳥狗式 <span>Bird Dog</span><span class="chain okc">開放鏈</span></div><div class="cue">對角線手腳在空中延伸——<em>對角連動入門</em>。口令引導核心抗旋轉，肩胛與臀同時參與，從最可控的情境建立連動感。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">單腿橋 <span>One-leg Bridge</span><span class="chain okc">開放鏈</span></div><div class="cue"><em>核心連動臀</em>的迴路。一腿在空中，口令落在「核心連動臀、讓骨盆不旋轉不下掉」——與後鏈主題同一體式，但焦點不同。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">半月式 <span>Ardha Chandrasana</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue"><em>核心連動臀中肌＋肩胛</em>。口令落在「感知骨盆每一次微偏移、用核心即時修正」——與臀外側主題同一體式，那裡練單一啟動，這裡練動態調節。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">戰士三 <span>Virabhadrasana III</span><span class="chain okc">開放鏈</span></div><div class="cue"><em>全身連動驗收</em>。漂浮的身體要核心、臀中肌、踝足、肩胛即時對話，正是他原本會晃的動作——這裡是訓練那條迴路的核心場景。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">手抓大腳趾平衡式 <span>Utthita Hasta Padangusthasana</span><span class="chain okc">開放鏈</span></div><div class="cue"><em>最高難度的即時微調</em>。單腳承重加伸展腿在空中，連動需求最大，作為這主題的頂點。</div></div></div>
+        <div class="pose"><span class="pose-mark bridge"></span><div class="pose-body"><div class="name">仰臥扭轉準備 <span>Supine settle</span></div><div class="bridge-note">屈膝倒向一側，從高度活躍的微調慢慢交給地面，呼吸放長，讓神經系統開始沉降。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">支撐嬰兒式 <span>Supported Balasana</span></div><div class="cue"><b>放鬆核心</b>，腹部完全卸下整段被調用的張力，停留 5 個呼吸以上。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">仰臥扭轉 <span>Supta Twist</span></div><div class="cue"><b>神經沉降</b>，讓協調迴路安靜下來，雙側各停留收尾。</div></div></div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <div class="theme-head"><span class="num">貳</span><h3>肩胛的力量與空間</h3></div>
       <div class="tag">對應：推拉造成的肩前束緊縮與肩胛失穩</div>
       <p class="focus">喚醒<b>前鋸肌、下斜方、旋轉肌袖</b>，讓肩胛在動態中找回主動控制，同時拓展胸口與胸椎的延伸空間。</p>
       <div class="duo">
         <div class="panel yang"><h4><i class="dot y"></i>陽段重點</h4><p>以肩胛主動下沉與外旋為核心的對位螺旋。串接時的下犬與平板過渡也帶肩胛位置口令，讓覺察連續不中斷。引導手臂往外旋、肩胛往後往下，建立穩定再進開展。</p></div>
         <div class="panel yin"><h4><i class="dot i"></i>陰段重點</h4><p>針對胸小肌與肩關節後囊的長停留釋放。被動鬆開因代償累積的前側張力，給下一次陽段的肩胛啟動創造空間。</p></div>
       </div>
-    </section>
+      <div class="poses">
+        <div class="poses-label">代表體式</div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">下犬式 <span>Adho Mukha</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue"><em>啟動</em>前鋸肌、下斜方。掌根下壓、肩胛往外往下包覆肋廓——閉鎖鏈先建立肩胛包覆的整體感覺。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">海豚式 <span>Dolphin</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue"><em>強化</em>肩胛穩定肌群在屈曲負重下的控制，前臂下壓、肩胛主動外展，呼應臥推時的肩胛收。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">蝗蟲式手臂後拉 <span>Salabhasana</span><span class="chain okc">開放鏈</span></div><div class="cue">手臂後伸在空中、肩胛<em>孤立後收下沉</em>，精準訓練下斜方與菱形肌的<em>主動收縮</em>，對應戰繩與划船的拉力鏈。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">戰士一手臂 <span>Virabhadrasana I</span><span class="chain okc">開放鏈</span></div><div class="cue">手臂上舉、肩胛下沉，練習在<em>伸展範圍裡持續出力</em>——胸口開、肩不擠。</div></div></div>
+        <div class="pose"><span class="pose-mark bridge"></span><div class="pose-body"><div class="name">嬰兒式手臂前伸 <span>Balasana</span></div><div class="bridge-note">手臂前延、肩胛主動往前滑開，從主動延伸慢慢轉為被動下沉，呼吸放長,身體開始交給地面。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">穿針式 <span>Thread the Needle</span></div><div class="cue"><b>釋放</b>肩關節後囊與後三角，停留 5–8 個呼吸,被動鬆開陽段反覆出力的部位。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">支撐魚式 <span>Supported Matsyasana</span></div><div class="cue">抱枕或磚墊在胸椎下,<b>被動開展</b>胸小肌與胸前線,收尾的減壓。</div></div></div>
+      </div>
 
     <section class="theme">
-      <div class="theme-head"><span class="num">貳</span><h3>臀外側的啟動與骨盆穩定</h3></div>
+      <div class="theme-head"><span class="num">參</span><h3>臀外側的啟動與骨盆穩定</h3></div>
       <div class="tag">對應：腿後側代償的根源問題</div>
       <p class="focus">讓<b>臀中肌、臀小肌</b>主動參與，訓練單腳承重時的骨盆控制，把腿後腱從過度補償的角色裡釋放出來。</p>
       <div class="duo">
         <div class="panel yang"><h4><i class="dot y"></i>陽段重點</h4><p>大量站姿與單腳平衡序列。口令引導臀外側往後往外推、腳掌往下扎根，把力量路徑講清楚，讓他放掉大腿前側的慣性代償。</p></div>
         <div class="panel yin"><h4><i class="dot i"></i>陰段重點</h4><p>髖屈肌與鼠蹊深層的長時間釋放。弓步重訓常忽略的這層深層減壓，讓骨盆有機會回到中立。</p></div>
       </div>
-    </section>
+      <div class="poses">
+        <div class="poses-label">代表體式</div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">戰士二 <span>Virabhadrasana II</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue"><em>啟動</em>前腿臀中肌——膝蓋往外推對齊腳尖、臀外側往後往外撐，閉鎖鏈建立承重穩定，對應弓步。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">女神式 <span>Utkata Konasana</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue">雙側臀外側<em>等長收縮</em>抵抗膝蓋內扣，呼應深蹲的外展張力。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">半月式 <span>Ardha Chandrasana</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue"><em>單腳承重</em>下訓練臀中肌穩定骨盆，小肌群在不穩定中持續工作——直接補強重訓缺的那一塊。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">消防栓式 <span>Fire Hydrant</span><span class="chain okc">開放鏈</span></div><div class="cue">四足跪姿單腿往外抬，腿在空中<em>孤立啟動臀中肌</em>——這塊正是重訓動作裡藏起來的弱點，開放鏈精準補強。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">側角式 <span>Utthita Parsvakonasana</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue">前腿臀外側<em>主動推</em>，後腿延展，在伸展側身的同時保持髖的控制。</div></div></div>
+        <div class="pose"><span class="pose-mark bridge"></span><div class="pose-body"><div class="name">低弓步停留 <span>Anjaneyasana</span></div><div class="bridge-note">從主動穩定漸漸把重心交給地面,後腳髖屈肌開始被動延長,主動收尾、被動接手。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">鴿式 <span>Eka Pada Rajakapotasana</span></div><div class="cue"><b>釋放</b>前腿臀外側深層與梨狀肌,停留 5 個呼吸以上讓組織鬆開。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">鞋帶式 <span>Shoelace</span></div><div class="cue">雙側臀外側<b>對稱深層減壓</b>,收尾把骨盆周圍的張力放掉。</div></div></div>
+      </div>
 
     <section class="theme">
-      <div class="theme-head"><span class="num">參</span><h3>胸背的彈性與對話</h3></div>
+      <div class="theme-head"><span class="num">肆</span><h3>胸背的彈性與對話</h3></div>
       <div class="tag">對應：推拉訓練的「出力但不伸展」慣性</div>
       <p class="focus">讓前側的<b>開展</b>與後側的<b>延伸</b>重新建立平衡，重點在<b>胸椎活動度</b>與後鏈的離心彈性。</p>
       <div class="duo">
         <div class="panel yang"><h4><i class="dot y"></i>陽段重點</h4><p>開胸與後彎的漸進序列，從胸椎延伸入手而非腰椎代償。Anusara 的「心向上」內在主題在這裡發揮，讓開展是主動的能量而非被動的鬆垮。</p></div>
         <div class="panel yin"><h4><i class="dot i"></i>陰段重點</h4><p>胸腰筋膜的減壓與支撐式後彎停留。讓反覆收縮的組織在低強度下重新找回長度。</p></div>
       </div>
-    </section>
+      <div class="poses">
+        <div class="poses-label">代表體式</div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">眼鏡蛇式 <span>Bhujangasana</span><span class="chain okc">開放鏈</span></div><div class="cue">脊椎伸肌<em>主動收縮</em>把胸口往前帶,手不撐力,訓練後鏈無支撐下的彈性——對應臥推後過度收縮的胸需要的反向開展。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">蝗蟲式抬胸 <span>Salabhasana</span><span class="chain okc">開放鏈</span></div><div class="cue">上背伸肌<em>離心控制</em>地抬起與放下,練胸椎延伸的主動範圍。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">桌式 / 反向平板 <span>Purvottanasana</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue">手腳壓地<em>整合</em>整條前側開展與後鏈收縮,在負重下練開胸,呼應過頭推的肩胸協同。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">駱駝式 <span>Ustrasana</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue">小腿壓地,胸椎主動延伸,<em>力量與開展同時存在</em>——Anusara 的「心向上」在這裡發揮。</div></div></div>
+        <div class="pose"><span class="pose-mark bridge"></span><div class="pose-body"><div class="name">支撐橋式 <span>Setu Bandha</span></div><div class="bridge-note">磚墊撐住薦骨,從主動後彎慢慢轉成被動支撐,胸口持續開但不再出力。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">仰臥開胸 <span>Reclined Chest Opener</span><span class=""></span></div><div class="cue">捲毯沿脊椎縱放,<b>被動釋放</b>胸腰筋膜與胸前線,停留 5 個呼吸以上。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">支撐魚式 <span>Supported Fish</span></div><div class="cue">胸椎下墊高,<b>長停留減壓</b>,讓反覆收縮的胸背找回長度。</div></div></div>
+      </div>
 
     <section class="theme">
-      <div class="theme-head"><span class="num">肆</span><h3>後鏈的長度與腿後側釋放</h3></div>
+      <div class="theme-head"><span class="num">伍</span><h3>後鏈的長度與腿後側釋放</h3></div>
       <div class="tag">對應：腿後腱長期緊繃</div>
       <p class="focus">處理腿後側緊繃前，先在練習中分辨<b>張力來源</b>——是真緊，還是臀外側弱造成的代償。</p>
       <div class="duo">
         <div class="panel yang"><h4><i class="dot y"></i>陽段重點</h4><p>帶有控制的後鏈延展，停留時口令引導腿後側「主動延長」而非被動拉扯，讓伸展裡仍有力量參與，避免單純拉長而失去穩定。</p></div>
         <div class="panel yin"><h4><i class="dot i"></i>陰段重點</h4><p>腿後側與腰薦椎交界的長停留釋放。五個呼吸以上的深度等待，讓結締組織真正進入鬆開狀態。</p></div>
       </div>
-    </section>
+      <div class="poses">
+        <div class="poses-label">代表體式</div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">橋式單腿伸 <span>One-leg Bridge</span><span class="chain okc">開放鏈</span></div><div class="cue">支撐腿臀與腿後腱<em>主動收縮</em>,伸直腿在空中,讓他分辨腿後側的<em>主動延長 vs 被動拉扯</em>——這是分辨張力來源的關鍵。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">仰臥抬腿 <span>Supta Padangusthasana</span><span class="chain okc">開放鏈</span></div><div class="cue">腿在空中,腿後腱<em>離心控制</em>地延長,在範圍內保有力量而非單純被拉開。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">加強側伸展 <span>Parsvottanasana</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue">腳壓地,後鏈<em>離心控制</em>整合進站姿,前腿腿後側有控制地延展。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">站姿前彎(微屈膝) <span>Uttanasana</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue">坐骨上提、後鏈<em>主動延長</em>而非塌腰,把開放鏈練到的覺察帶進承重姿勢。</div></div></div>
+        <div class="pose"><span class="pose-mark bridge"></span><div class="pose-body"><div class="name">坐姿前彎準備 <span>Dandasana → fold</span></div><div class="bridge-note">坐骨扎根、脊椎延長,從主動延展慢慢鬆開髖,呼吸放長進入陰的停留。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">毛毛蟲式 <span>Caterpillar</span></div><div class="cue"><b>釋放</b>整條後鏈與腰薦筋膜,背放鬆地圓,停留 5 個呼吸以上。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">半蝴蝶 <span>Half Butterfly</span></div><div class="cue">單側腿後側深層<b>長停留減壓</b>,收尾把緊繃放掉。</div></div></div>
+      </div>
 
     <section class="theme">
-      <div class="theme-head"><span class="num">伍</span><h3>整合與多平面穩定</h3></div>
+      <div class="theme-head"><span class="num">陸</span><h3>整合與多平面穩定</h3></div>
       <div class="tag">對應：重訓裡的抗旋轉核心與爆發動作 · 進階主題</div>
       <p class="focus">把前四個主題的成果整合進<b>旋轉與不穩定</b>的情境，訓練小肌群在複合動作裡的協同，讓穩定度能轉移到真實動作。</p>
       <div class="duo">
         <div class="panel yang"><h4><i class="dot y"></i>陽段重點</h4><p>扭轉、平衡與多平面串接，要求肩胛、骨盆、核心同時工作。口令重點在「現在哪塊肌肉在工作」的分辨，讓整合不只是動作組合，而是意識的整合。</p></div>
         <div class="panel yin"><h4><i class="dot i"></i>陰段重點</h4><p>全身性的張力盤點與長停留收尾。讓一整堂高整合度的練習，不帶著殘餘張力離開課堂。</p></div>
       </div>
-    </section>
+      <div class="poses">
+        <div class="poses-label">代表體式</div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">鳥狗式 <span>Bird Dog</span><span class="chain okc">開放鏈</span></div><div class="cue">對角線手腳在空中延伸,核心<em>抗旋轉穩定</em>,肩胛與臀同時工作——直接對應重訓的抗旋轉核心。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">扭轉三角式 <span>Parivrtta Trikonasana</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue">腳壓地,在<em>多平面</em>下整合腿後側延展、臀穩定與胸椎旋轉,前四個主題的成果在此匯合。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">扭轉側角式 <span>Parivrtta Parsvakonasana</span><span class="chain ckc">閉鎖鏈</span></div><div class="cue">深蹲承重加旋轉,臀外側、核心、肩胛<em>協同工作</em>,把穩定度轉移到複合動作。</div></div></div>
+        <div class="pose"><span class="pose-mark y"></span><div class="pose-body"><div class="name">扭轉半月式 <span>Parivrtta Ardha Chandrasana</span><span class="chain okc">開放鏈</span></div><div class="cue">單腳承重、上肢與抬腿在空中對角延伸,小肌群在<em>不穩定中協同</em>——整堂課的整合驗收。</div></div></div>
+        <div class="pose"><span class="pose-mark bridge"></span><div class="pose-body"><div class="name">仰臥扭轉準備 <span>Supine Twist prep</span></div><div class="bridge-note">屈膝倒向一側,從主動控制慢慢交給地心引力,呼吸帶著扭轉沉下去。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">仰臥扭轉 <span>Supta Matsyendrasana</span></div><div class="cue"><b>釋放</b>脊椎旋轉肌群與整條側線,雙側各停留 5 個呼吸以上。</div></div></div>
+        <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">快樂嬰兒 → 攤屍 <span>Ananda Balasana → Savasana</span></div><div class="cue">髖周圍<b>最後減壓</b>後完全放下,讓整合過的身體沉澱。</div></div></div>
+      </div>
 
+  </div>
+
+  <div class="crossref">
+    <h2>橋樑體式 · 同一體式，不同焦點</h2>
+    <p class="intro">幾個體式會跨主題出現，靠口令區分覺察任務。對長期輪替的學生，同一個體式在不同主題裡有不同的覺察焦點，反而讓練習變立體，而非重複。帶課時可一眼對照。</p>
+    <div class="xr">
+      <div class="xr-name">半月式 Ardha Chandrasana</div>
+      <div class="xr-row"><span class="xr-tag">參 臀外側</span><span class="xr-cue">焦點在<b>單一肌群啟動</b>：臀中肌往後往外推、穩住骨盆不掉。</span></div>
+      <div class="xr-row"><span class="xr-tag">壹 核心連動</span><span class="xr-cue">焦點在<b>動態調節</b>：感知骨盆每一次微偏移，用核心即時修正、連動肩胛。</span></div>
+    </div>
+    <div class="xr">
+      <div class="xr-name">單腿橋 One-leg Bridge</div>
+      <div class="xr-row"><span class="xr-tag">伍 後鏈</span><span class="xr-cue">焦點在<b>腿後腱主動延長收縮</b>，分辨主動與被動的差別。</span></div>
+      <div class="xr-row"><span class="xr-tag">壹 核心連動</span><span class="xr-cue">焦點在<b>核心連動臀的迴路</b>：讓骨盆不旋轉、不下掉。</span></div>
+    </div>
   </div>
 
   <div class="arc">
     <h2>長期輪替的邏輯</h2>
-    <p>主題<b>壹到肆</b>是分區處理，各自針對一個核心問題；<b>伍</b>是整合驗收，把前面累積的小肌群意識放進複合情境。</p>
+    <p>主題<b>壹</b>是底層前置——核心連動是其他所有主題的基礎能力，肩胛要穩、臀外側單腳承重都需要它，放最前面讓後面每個主題都受益。<b>貳到伍</b>是分區處理，各自針對一個核心問題；<b>陸</b>是整合驗收，把累積的小肌群意識放進複合多平面情境。</p>
     <div class="flow">
-      <span class="step">壹 肩胛</span><span class="arrow">·</span>
-      <span class="step">貳 臀外側</span><span class="arrow">·</span>
-      <span class="step">參 胸背</span><span class="arrow">·</span>
-      <span class="step">肆 後鏈</span><span class="arrow">→</span>
-      <span class="step">伍 整合</span>
+      <span class="step">壹 核心連動</span><span class="arrow">→</span>
+      <span class="step">貳 肩胛</span><span class="arrow">·</span>
+      <span class="step">參 臀外側</span><span class="arrow">·</span>
+      <span class="step">肆 胸背</span><span class="arrow">·</span>
+      <span class="step">伍 後鏈</span><span class="arrow">→</span>
+      <span class="step">陸 整合</span>
     </div>
-    <p>前期多排壹到肆建立基礎，等小肌群意識成熟後再加重伍的比例。每堂課的節奏一致：前 15 分鐘暖身喚醒當天主題的小肌群，中段陽的主軸練習，後段陰的對應釋放——<b>陰段鬆開的部位，正是陽段用力最多的地方</b>，讓身體在離開時是被整合過的，而非帶著張力。</p>
+    <p>前期先建立核心連動（壹）與分區基礎（貳到伍），小肌群意識成熟後再加重整合（陸）的比例。每堂課的節奏一致：前 15 分鐘暖身喚醒當天主題的小肌群，中段陽的主軸練習，後段陰的對應釋放——<b>陰段鬆開的部位，正是陽段用力最多的地方</b>，讓身體在離開時是被整合過的，而非帶著張力。</p>
   </div>
 
   <footer>品牌共鳴實驗室 · 課程設計參考</footer>
