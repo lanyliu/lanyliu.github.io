@@ -1,0 +1,5 @@
+node_modules/
+package.json
+package-lock.json
+_perm_test.txt
+.DS_Store
