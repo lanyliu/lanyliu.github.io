@@ -50,6 +50,22 @@ notify-telegram.sh 發通知到手機
 - 推送邏輯集中在一個地方，好排查
 - 排程任務只要專心產內容
 
+### 寫入順序不能改
+
+`index.html` 一被寫入，watcher 立刻醒來，`sleep 5` 之後就 commit、push、發通知。**在 index.html 之後才寫的檔案，會整批錯過那次 commit 和通知。**
+
+所以排程任務的寫入順序是固定的，index.html 一定最後：
+
+```
+1. covered-topics.md    職涯區塊紀錄
+2. notify-note.txt      手機提醒文字
+3. index.html           頁面本體 ← 寫完就觸發
+```
+
+2026-08-08 測試時踩過：index.html 先寫，17:31:47 觸發，17:31:52 發出通知，但 `notify-note.txt` 到 17:34:11 才生出來，晚了兩分半。通知按設計退回「只發連結」，沒有錯誤訊息，看起來像功能沒做。
+
+這類問題不會報錯，只會安靜地少東西。改 prompt 的寫入段落時要留意。
+
 ### 為什麼路徑不能改
 
 `push-brief.sh` 和 plist 的 WatchPaths 都寫死 `morning-brief/index.html`。早報如果寫到別的檔名，watcher 不會被觸發，推送就不會發生，而且不會有任何錯誤訊息，只是安靜地沒動作。

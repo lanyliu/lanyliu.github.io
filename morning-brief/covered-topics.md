@@ -20,7 +20,6 @@
 ---
 
 ## 2026-08-08
-- 階梯｜IC 與管理雙軌薪資對照、Staff 級距 250K–400K｜zenvanriel.com
-- 階梯｜2026 新增 LLM 錯誤緩解技能要求｜zenvanriel.com
-- 資料｜台灣年資對應月薪 41K/46K、AI 高階年薪 300 萬｜guide.104.com.tw
-- 資料｜Indeed 台灣 200+ 職缺、資科需統計與 ML 背景｜tw.indeed.com
+- 階梯｜AI 薪酬分裂成兩個市場：企業端 ML $170K–$245K vs 前沿實驗室 $600K–$1M+｜pin.com
+- 資料｜台灣 2026 薪資調查：數據轉譯能力比純 SQL/Python 技術值錢，數據產品經理最搶手｜m-calc.com
+
