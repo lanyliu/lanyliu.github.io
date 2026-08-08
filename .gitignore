@@ -3,3 +3,5 @@ package.json
 package-lock.json
 _perm_test.txt
 .DS_Store
+morning-brief/.telegram.env
+morning-brief/notify-note.txt

@@ -9,6 +9,12 @@ if git diff --cached --quiet; then
   echo "$(date '+%F %T')  no change, skipping"
   exit 0
 fi
-git commit -m "morning brief $(date +%Y-%m-%d)" && git push origin master \
-  && echo "$(date '+%F %T')  pushed OK" \
-  || echo "$(date '+%F %T')  PUSH FAILED"
+NOTIFY="$HOME/lanyliu.github.io/morning-brief/notify-telegram.sh"
+
+if git commit -m "morning brief $(date +%Y-%m-%d)" && git push origin master; then
+  echo "$(date '+%F %T')  pushed OK"
+  [ -x "$NOTIFY" ] && "$NOTIFY"
+else
+  echo "$(date '+%F %T')  PUSH FAILED"
+  [ -x "$NOTIFY" ] && "$NOTIFY" --failed
+fi
