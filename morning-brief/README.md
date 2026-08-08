@@ -50,6 +50,23 @@ notify-telegram.sh 發通知到手機
 - 推送邏輯集中在一個地方，好排查
 - 排程任務只要專心產內容
 
+### 字型：不內嵌，已定案
+
+早報一律用系統字型，不內嵌任何字型檔：
+
+```
+headline    Georgia, "Songti TC", "Noto Serif CJK TC", serif
+其餘        -apple-system, "Segoe UI", sans-serif
+```
+
+morning skill 原本要求把 Fraunces 以 base64 內嵌，但那個字型只有拉丁字符集。早報標題是中文，內嵌了也套不上，中文照樣回退到系統襯線體，等於花成本買不到東西。
+
+skill 自己也留了出口：「for a headline in another script, use a high-quality system serif instead and skip the @font-face」。
+
+實際差異：內嵌版本 index.html 約 35KB，不內嵌約 10KB。base64 字串 24K 字元，換算約 8000 token，每天一次。
+
+排程 prompt 裡已經寫死，並註明不要每次重新評估。看到有人想「把字型加回來讓標題好看一點」的時候，先確認標題是不是中文。
+
 ### 寫入順序不能改
 
 `index.html` 一被寫入，watcher 立刻醒來，`sleep 5` 之後就 commit、push、發通知。**在 index.html 之後才寫的檔案，會整批錯過那次 commit 和通知。**
