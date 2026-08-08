@@ -34,7 +34,7 @@
 
   /* hero */
   header{
-    padding:88px 0 56px;
+    padding:56px 0 56px;
     border-bottom:1px solid var(--line);
     margin-bottom:8px;
   }
@@ -193,6 +193,38 @@
   .xr-cue{font-size:.9rem;font-weight:300;color:var(--ink-soft);line-height:1.8;}
   @media(max-width:680px){.xr-row{grid-template-columns:1fr;gap:5px;}}
 
+  /* sticky nav */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,242,233,.93);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    margin-bottom:0;
+  }
+  .nav-inner{
+    max-width:880px;margin:0 auto;padding:11px 28px;
+    display:flex;gap:6px;align-items:center;
+    overflow-x:auto;scrollbar-width:thin;
+  }
+  .nav-inner::-webkit-scrollbar{height:3px;}
+  .nav-inner::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+  .nav a{
+    flex-shrink:0;text-decoration:none;
+    font-size:.82rem;font-weight:400;letter-spacing:.02em;
+    color:var(--ink-soft);padding:6px 13px;border-radius:20px;
+    transition:background .2s,color .2s;white-space:nowrap;
+  }
+  .nav a:hover{background:var(--paper-warm);color:var(--ink);}
+  .nav a.active{background:var(--clay);color:#fff;font-weight:500;}
+  .nav a.util{color:var(--moss-deep);}
+  .nav a.util.active{background:var(--moss);color:#fff;}
+  .nav .sep{flex-shrink:0;width:1px;height:16px;background:var(--line);margin:0 5px;}
+  section[id],div[id]{scroll-margin-top:64px;}
+  @media(max-width:680px){
+    .nav-inner{padding:10px 16px;}
+    .nav a{font-size:.78rem;padding:5px 11px;}
+  }
+
   /* progression note */
   .arc{
     margin:60px 0 90px;padding:40px 38px;
@@ -226,6 +258,19 @@
 </style>
 </head>
 <body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#t1">壹 核心連動</a>
+    <a href="#t2">貳 肩胛</a>
+    <a href="#t3">參 冠狀面</a>
+    <a href="#t4">肆 胸背</a>
+    <a href="#t5">伍 後鏈</a>
+    <a href="#t6">陸 整合</a>
+    <span class="sep"></span>
+    <a href="#bridge" class="util">橋樑體式</a>
+    <a href="#arc" class="util">輪替邏輯</a>
+  </div>
+</nav>
 <div class="wrap">
 
   <header>
@@ -263,7 +308,7 @@
 
   <div class="themes">
 
-    <section class="theme">
+    <section class="theme" id="t1">
       <div class="theme-head"><span class="num">壹</span><h3>核心連動與動態穩定</h3></div>
       <div class="tag">對應：抗旋轉核心、爆發動作的力量傳遞 · 底層前置能力</div>
       <p class="focus">這位學生<b>靜態核心夠穩</b>（平板做得好），但<b>動態時失能</b>（戰士三會晃）。缺的不是核心力量，而是<b>核心連動周邊小肌群</b>的神經協調與時序——核心會「撐」，但不會在動作中「即時對話」。同樣的型態也出現在上肢：側撐時手臂發抖、肩胛浮動，是<b>肩帶連動</b>的同一個病灶。他在雙側對稱的熟悉模式裡運作良好，一進入單側、需要即時分配的情境就找不到路。這個主題練的是核心作為連結中樞，在重心轉移裡即時微調、連動臀中肌與肩胛。放在輪替最前段建立，是其他所有主題的底層能力。</p>
@@ -284,7 +329,7 @@
       </div>
     </section>
 
-    <section class="theme">
+    <section class="theme" id="t2">
       <div class="theme-head"><span class="num">貳</span><h3>肩胛的力量與空間</h3></div>
       <div class="tag">對應：推拉造成的肩前束緊縮與肩胛失穩</div>
       <p class="focus">喚醒<b>前鋸肌、下斜方、旋轉肌袖</b>，讓肩胛在動態中找回主動控制，同時拓展胸口與胸椎的延伸空間。</p>
@@ -303,7 +348,7 @@
         <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">支撐魚式 <span>Supported Matsyasana</span></div><div class="cue">抱枕或磚墊在胸椎下,<b>被動開展</b>胸小肌與胸前線,收尾的減壓。</div></div></div>
       </div>
 
-    <section class="theme">
+    <section class="theme" id="t3">
       <div class="theme-head"><span class="num">參</span><h3>冠狀面 · 整條側線的力量</h3></div>
       <div class="tag">對應：重訓課表裡完全缺席的側向穩定 · 腿後側代償的根源</div>
       <p class="focus"><b>冠狀面是他整個身體最弱的平面。</b>矢狀面（硬舉、深蹲、臥推）他很強，水平面（戰繩、抗旋轉核心）也有練，唯獨側向穩定在重訓課表裡幾乎沒有出現。這個主題涵蓋整條側線——<b>臀中肌、臀小肌</b>（骨盆側向支撐）、<b>腹斜肌、腰方肌</b>（軀幹抗側屈），兩者必須同時作用，缺一個另一個就會爆掉。側板做得吃力正是這個缺口的直接證據。</p>
@@ -328,7 +373,7 @@
         <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">鞋帶式 <span>Shoelace</span></div><div class="cue">雙側臀外側<b>對稱深層減壓</b>,收尾把骨盆周圍的張力放掉。</div></div></div>
       </div>
 
-    <section class="theme">
+    <section class="theme" id="t4">
       <div class="theme-head"><span class="num">肆</span><h3>胸背的彈性與對話</h3></div>
       <div class="tag">對應：推拉訓練的「出力但不伸展」慣性</div>
       <p class="focus">讓前側的<b>開展</b>與後側的<b>延伸</b>重新建立平衡，重點在<b>胸椎活動度</b>與後鏈的離心彈性。</p>
@@ -347,7 +392,7 @@
         <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">支撐魚式 <span>Supported Fish</span></div><div class="cue">胸椎下墊高,<b>長停留減壓</b>,讓反覆收縮的胸背找回長度。</div></div></div>
       </div>
 
-    <section class="theme">
+    <section class="theme" id="t5">
       <div class="theme-head"><span class="num">伍</span><h3>後鏈的長度與腿後側釋放</h3></div>
       <div class="tag">對應：腿後腱長期緊繃</div>
       <p class="focus">處理腿後側緊繃前，先在練習中分辨<b>張力來源</b>——是真緊，還是臀外側弱造成的代償。</p>
@@ -366,7 +411,7 @@
         <div class="pose"><span class="pose-mark i"></span><div class="pose-body"><div class="name">半蝴蝶 <span>Half Butterfly</span></div><div class="cue">單側腿後側深層<b>長停留減壓</b>,收尾把緊繃放掉。</div></div></div>
       </div>
 
-    <section class="theme">
+    <section class="theme" id="t6">
       <div class="theme-head"><span class="num">陸</span><h3>整合與多平面穩定</h3></div>
       <div class="tag">對應：重訓裡的抗旋轉核心與爆發動作 · 進階主題</div>
       <p class="focus">把前四個主題的成果整合進<b>旋轉與不穩定</b>的情境，訓練小肌群在複合動作裡的協同，讓穩定度能轉移到真實動作。</p>
@@ -387,7 +432,7 @@
 
   </div>
 
-  <div class="crossref">
+  <div class="crossref" id="bridge">
     <h2>橋樑體式 · 同一體式，不同焦點</h2>
     <p class="intro">幾個體式會跨主題出現，靠口令區分覺察任務。對長期輪替的學生，同一個體式在不同主題裡有不同的覺察焦點，反而讓練習變立體，而非重複。帶課時可一眼對照。</p>
     <div class="xr">
@@ -408,7 +453,7 @@
     </div>
   </div>
 
-  <div class="arc">
+  <div class="arc" id="arc">
     <h2>長期輪替的邏輯</h2>
     <p>主題<b>壹</b>是底層前置——核心連動是其他所有主題的基礎能力，肩胛要穩、臀外側單腳承重都需要它，放最前面讓後面每個主題都受益。<b>貳到伍</b>是分區處理，各自針對一個核心問題；<b>陸</b>是整合驗收，把累積的小肌群意識放進複合多平面情境。</p>
     <div class="flow">
@@ -425,5 +470,46 @@
   <footer>品牌共鳴實驗室 · 課程設計參考</footer>
 
 </div>
+<script>
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var targets = links.map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  });
+  var current = -1;
+
+  function update(){
+    // 判斷線設在導覽列下方一點的位置
+    var lineY = 90;
+    var idx = -1;
+    for (var i = 0; i < targets.length; i++){
+      var el = targets[i];
+      if (!el) continue;
+      // 區段頂端已經越過判斷線，就成為目前區段（取最後一個符合的）
+      if (el.getBoundingClientRect().top <= lineY) idx = i;
+    }
+    // 捲到底部時，強制指向最後一個區段
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4){
+      idx = targets.length - 1;
+    }
+    if (idx === current) return;
+    current = idx;
+    links.forEach(function(a, i){
+      a.classList.toggle('active', i === idx);
+    });
+  }
+
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){ update(); ticking = false; });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive:true });
+  window.addEventListener('resize', onScroll);
+  update();
+})();
+</script>
 </body>
 </html>
