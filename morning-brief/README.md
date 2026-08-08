@@ -9,6 +9,7 @@
 | 檔案 | 角色 |
 |---|---|
 | 排程任務 `morning-brief` | 每天 08:10 觸發，產生內容並寫入 `index.html` |
+| `sections.md` | 主題區塊設定。要加減區塊、換順序、調範圍改這裡 |
 | `sources.md` | 追蹤來源清單。要加減來源改這裡，不用動排程任務 |
 | `index.html` | 產出的早報。每天被覆寫 |
 | `push-brief.sh` | 偵測到 `index.html` 更新後執行 commit + push |
