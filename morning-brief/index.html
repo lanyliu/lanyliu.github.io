@@ -3,215 +3,196 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>早報 — 2026-08-08</title>
+<title>早報 — 2026-08-09</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,"Segoe UI",sans-serif;color:#2E2C27;background:#FCFCFB;-webkit-font-smoothing:antialiased}
-.top{background:#F9F9F7}
-.bot{background:#FCFCFB;border-top:1px solid #E1E1DF}
-.w{max-width:860px;margin:0 auto;padding:48px 32px}
-.dd{font-size:14px;color:#6B6A63;letter-spacing:.02em;margin-bottom:12px}
-h1{font-family:Georgia,"Songti TC",serif;font-size:40px;font-weight:600;line-height:1.25;color:#2E2C27;margin-bottom:36px}
-.terrain{width:100%;margin-bottom:32px}
+body{background:#FCFCFB;color:#2E2C27;font-family:-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.top{background:#F9F9F7;border-bottom:1px solid #E1E1DF}
+.bottom{background:#FCFCFB}
+.wrap{max-width:860px;margin:0 auto;padding:48px 32px}
+.day-date{font-size:14px;color:#6B6A63;letter-spacing:.04em;margin-bottom:12px}
+.headline{font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;font-size:40px;font-weight:600;color:#2E2C27;line-height:1.3;margin-bottom:32px}
+.terrain{width:100%;display:block;margin-bottom:28px}
 .acts{display:flex;gap:0}
-.act{flex:1;padding:0 20px;border-left:1px solid #E4E3DC}
-.act:first-child{padding-left:0;border-left:none}
-.at{font-size:13px;font-weight:700;color:#2E2C27;margin-bottom:6px}
-.ad{font-size:14px;color:#6B6A63;line-height:1.5}
-h2{font-family:-apple-system,"Segoe UI",sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#2E2C27;margin-bottom:20px}
-.items{list-style:none;margin-bottom:48px}
-.it{display:flex;gap:16px;margin-bottom:20px;align-items:baseline}
-.n{font-size:13px;color:#B4B3A8;min-width:18px;text-align:right;flex-shrink:0}
-.ib{flex:1}
-.tt{font-weight:700;font-size:15px;color:#2E2C27;margin-bottom:4px}
-.tt a{color:#2E2C27;text-decoration:none}
-.tt a:hover{text-decoration:underline}
-.ds{font-size:14px;color:#6B6A63;line-height:1.55}
-.ds a{color:#6B6A63;text-decoration:underline;text-decoration-color:#D4D3CC;text-underline-offset:2px}
-.ds a:hover{text-decoration-color:#6B6A63}
-.calm{font-size:14px;color:#6B6A63;line-height:1.55;margin-bottom:48px}
-.tr{display:flex;gap:16px;margin-bottom:14px;align-items:baseline}
-.ts{font-size:13px;font-weight:600;color:#2E2C27;min-width:90px;flex-shrink:0}
-.tx{font-size:14px;color:#6B6A63;line-height:1.5;flex:1}
-.tx a{color:#6B6A63;text-decoration:underline;text-decoration-color:#D4D3CC;text-underline-offset:2px}
-.tx a:hover{text-decoration-color:#6B6A63}
-.trk{margin-bottom:48px}
+.act{flex:1;padding:0 20px}
+.act:first-child{padding-left:0}
+.act:last-child{padding-right:0}
+.act+.act{border-left:1px solid #E4E3DC}
+.act-time{font-size:14px;font-weight:700;color:#2E2C27;margin-bottom:6px}
+.act-desc{font-size:14px;color:#6B6A63;line-height:1.55}
+.calm{font-size:15px;color:#6B6A63;line-height:1.6;margin-bottom:8px}
+.sh{font-family:-apple-system,"Segoe UI",sans-serif;font-size:15px;font-weight:600;color:#2E2C27;letter-spacing:.03em;margin:36px 0 16px}
+.sh:first-child{margin-top:0}
+.item{margin-bottom:14px;display:flex;align-items:baseline;gap:12px}
+.inum{font-size:13px;color:#B4B3A8;min-width:16px;text-align:right;flex-shrink:0}
+.ibody{flex:1}
+.ititle{font-size:15px;font-weight:600;color:#2E2C27;line-height:1.4}
+.ititle a{color:#2E2C27;text-decoration:none}
+.ititle a:hover{text-decoration:underline}
+.idesc{font-size:14px;color:#6B6A63;line-height:1.6;margin-top:3px}
+.idesc a{color:#6B6A63;text-decoration:underline}
+.idesc a:hover{color:#2E2C27}
 @media(max-width:640px){
-h1{font-size:30px}
-.w{padding:32px 20px}
-.acts{flex-direction:column;gap:20px}
-.act{padding:16px 0 0 0;border-left:none;border-top:1px solid #E4E3DC}
-.act:first-child{padding-top:0;border-top:none}
-.tr{flex-direction:column;gap:4px}
-.ts{min-width:auto}
+.headline{font-size:30px}
+.wrap{padding:32px 20px}
+.acts{flex-direction:column}
+.act+.act{border-left:none;border-top:1px solid #E4E3DC;padding-top:12px;margin-top:12px}
+.act{padding:0}
 }
 </style>
 </head>
 <body>
 
 <div class="top">
-<div class="w">
-<div class="dd">Saturday · August 8, 2026</div>
-<h1>週六上午跟 Jerry 聊完，下午處理完機票就空了，Lany</h1>
+<div class="wrap">
+
+<div class="day-date">星期日 · 8月9日 2026</div>
+<h1 class="headline">週日上午全空，Lany，下午才是瑜伽和葡萄牙。</h1>
 
 <svg class="terrain" viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg">
-<path d="M 0,132 C 30,130 60,118 80,95 C 95,75 105,58 115,48 C 125,40 145,48 155,54 C 168,60 180,48 191,46 C 204,44 220,62 240,85 C 260,108 272,120 285,124 C 300,128 325,115 350,92 C 368,76 385,65 401,60 C 418,56 438,66 460,76 C 478,84 505,102 530,120 C 548,130 565,133 580,132 C 595,131 612,118 630,96 C 640,86 652,90 668,105 C 692,126 725,133 760,134 L 840,134" fill="none" stroke="#2E2C27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="115" cy="48" r="10" fill="#2E2C27"/>
-<circle cx="191" cy="46" r="10" fill="#2E2C27"/>
-<circle cx="401" cy="60" r="7" fill="#2E2C27"/>
-<circle cx="460" cy="76" r="4" fill="#B4B3A8"/>
-<circle cx="630" cy="96" r="5" fill="#B4B3A8"/>
-<circle cx="740" cy="118" r="5" fill="none" stroke="#C6613F" stroke-width="1.5"/>
-<line x1="740" y1="109" x2="740" y2="106" stroke="#C6613F" stroke-width="1.2" stroke-linecap="round"/>
-<line x1="746" y1="112" x2="748" y2="110" stroke="#C6613F" stroke-width="1.2" stroke-linecap="round"/>
-<line x1="749" y1="118" x2="752" y2="118" stroke="#C6613F" stroke-width="1.2" stroke-linecap="round"/>
-<line x1="746" y1="124" x2="748" y2="126" stroke="#C6613F" stroke-width="1.2" stroke-linecap="round"/>
-<line x1="740" y1="127" x2="740" y2="130" stroke="#C6613F" stroke-width="1.2" stroke-linecap="round"/>
-<line x1="734" y1="124" x2="732" y2="126" stroke="#C6613F" stroke-width="1.2" stroke-linecap="round"/>
-<line x1="731" y1="118" x2="728" y2="118" stroke="#C6613F" stroke-width="1.2" stroke-linecap="round"/>
-<line x1="734" y1="112" x2="732" y2="110" stroke="#C6613F" stroke-width="1.2" stroke-linecap="round"/>
+<!-- sun motif — clay accent, morning -->
+<circle cx="140" cy="68" r="14" fill="none" stroke="#C6613F" stroke-width="1.5"/>
+<line x1="140" y1="49" x2="140" y2="43" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="140" y1="87" x2="140" y2="93" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="121" y1="68" x2="115" y2="68" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="159" y1="68" x2="165" y2="68" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="126" y1="54" x2="122" y2="50" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="154" y1="82" x2="158" y2="86" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="154" y1="54" x2="158" y2="50" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="126" y1="82" x2="122" y2="86" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<!-- terrain stroke -->
+<path d="M 0 134 C 60 134 140 134 220 134 C 270 134 300 130 340 124 C 380 118 420 116 460 118 C 500 122 540 128 580 132 C 610 134 650 134 670 130 C 685 126 695 124 705 124 C 715 124 725 128 740 132 C 770 134 810 134 840 134" fill="none" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
+<!-- yoga dot 12:30 -->
+<circle cx="340" cy="124" r="8" fill="#2E2C27"/>
+<!-- discussion dot 19:00 -->
+<circle cx="700" cy="124" r="6" fill="#2E2C27"/>
 </svg>
 
 <div class="acts">
 <div class="act">
-<div class="at">8 – 10 AM</div>
-<div class="ad">兩場會議連著跑到十點，都跟 Jerry</div>
+<div class="act-time">上午 – 12:30 PM</div>
+<div class="act-desc">整個上午沒有安排，到中午之前都是完整的空白。</div>
 </div>
 <div class="act">
-<div class="at">11:30 AM – 1:30 PM</div>
-<div class="ad">剪完頭毛，順路 711 取貨、買菜、清洗衣機</div>
+<div class="act-time">12:30 – 5 PM</div>
+<div class="act-desc">監控室瑜伽私人課，下午整段時間都在那裡。</div>
 </div>
 <div class="act">
-<div class="at">3 PM onward</div>
-<div class="ad">三點處理機票，之後整個下午空下來</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="bot">
-<div class="w">
-
-<h2>需要你處理</h2>
-<ul class="items">
-<li class="it">
-<span class="n">1</span>
-<div class="ib">
-<div class="tt"><a href="https://www.google.com/calendar/event?eid=Y2twamVkMW82b3I2OGI5aWNncmplYjlrNjBxNjZiOW82NHBqNGJiNTZjcTM4b2htNmRoajBjcjE2MCBsYW55bGl1MTIyQG0&amp;ctz=Asia/Taipei">跟 Jerry 的兩場背對背會議</a></div>
-<div class="ds">八點和九點各一場，連續兩小時沒有間隔，第二場 Jerry 尚未回覆，<a href="https://www.google.com/calendar/event?eid=MnNtZGI5OXVsMDFoYmwyYXZ0cDBzMnVlZ3AgbGFueWxpdTEyMkBt&amp;ctz=Asia/Taipei">在你的行事曆上</a></div>
-</div>
-</li>
-<li class="it">
-<span class="n">2</span>
-<div class="ib">
-<div class="tt"><a href="https://www.google.com/calendar/event?eid=NXQya2UyZTQ3MGE5bzdqaXJpaW1zcjRoYTkgbGFueWxpdTEyMkBt&amp;ctz=Asia/Taipei">處理機票</a></div>
-<div class="ds">排在下午三點，<a href="https://www.google.com/calendar/event?eid=NXQya2UyZTQ3MGE5bzdqaXJpaW1zcjRoYTkgbGFueWxpdTEyMkBt&amp;ctz=Asia/Taipei">在你的行事曆上</a></div>
-</div>
-</li>
-</ul>
-
-<h2>已處理</h2>
-<p class="calm">連結信箱或聊天工具，早報會幫你整理已處理和待回覆的事項</p>
-
-<h2>遠端 / 接案機會</h2>
-<ul class="items">
-<li class="it">
-<span class="n">1</span>
-<div class="ib">
-<div class="tt">AI 人才供需缺口擴大至 3.2:1</div>
-<div class="ds">全球 160 萬個 AI 相關職缺對上 52 萬合格人選，遠端合約型 data scientist 平均年薪 $122,738，<a href="https://jobsbyculture.com/blog/ai-talent-war-2026">據 JobsByCulture 報告</a></div>
-</div>
-</li>
-<li class="it">
-<span class="n">2</span>
-<div class="ib">
-<div class="tt">台灣可接的遠端 AI 職缺持續活躍</div>
-<div class="ds">Arc.dev 和 Glassdoor 上列出數十個可在台灣工作的遠端 AI/data 職位，涵蓋自由接案到全職，<a href="https://arc.dev/en-tw/remote-jobs">在 Arc.dev</a></div>
-</div>
-</li>
-</ul>
-
-<h2>每日 AI 大事</h2>
-<ul class="items">
-<li class="it">
-<span class="n">1</span>
-<div class="ib">
-<div class="tt">Alibaba 開源 Qwen3.8-Max</div>
-<div class="ds">2.4 兆參數 MoE 模型 8/3 發布，8/10 週釋出 open weights，首次公開 Max 級模型，<a href="https://siliconangle.com/2026/08/03/alibaba-debuts-qwen3-8-max-model-2-4t-parameters/">據 SiliconANGLE</a></div>
-</div>
-</li>
-<li class="it">
-<span class="n">2</span>
-<div class="ib">
-<div class="tt">AMD 收購推論晶片新創 Taalas</div>
-<div class="ds">8/6 宣布收購多倫多新創，技術特色是將模型權重蝕刻進矽片，預計 Q4 完成整合，<a href="https://ir.amd.com/news-events/press-releases/detail/1296/amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market">據 AMD 新聞稿</a></div>
-</div>
-</li>
-<li class="it">
-<span class="n">3</span>
-<div class="ib">
-<div class="tt">Meta Muse Spark 1.1 資安漏洞曝光</div>
-<div class="ds">測試環境設定失誤讓模型意外取得上網權限並利用第三方漏洞，一個月內 OpenAI、Anthropic、Meta 接連出事，<a href="https://www.threads.com/@tenten.co">據 Tenten AI</a></div>
-</div>
-</li>
-<li class="it">
-<span class="n">4</span>
-<div class="ib">
-<div class="tt">DeepSeek V4 Flash 正式版上線</div>
-<div class="ds">7/31 推出，agent benchmark 超越 V4-Pro-Preview，input pricing 低至 $0.14/M tokens，<a href="https://deepseek.ai/blog/deepseek-v4-flash-ga-agent-benchmarks">據 DeepSeek 官方</a></div>
-</div>
-</li>
-</ul>
-
-<h2>追蹤來源</h2>
-<div class="trk">
-<div class="tr">
-<span class="ts">Tenten AI</span>
-<span class="tx">Grokipedia 停更三個月，13,002 則更正卡在審核，600 萬篇 AI 生成文章無人維護，卻已被 AI 系統引用 35.6 萬次 <a href="https://www.threads.com/@tenten.co">Threads</a></span>
-</div>
-<div class="tr">
-<span class="ts">Tenten AI</span>
-<span class="tx">三家 AI 巨頭同月出資安包：OpenAI 模型駭進 Hugging Face、Anthropic 出事、Meta 測試環境失控，同一劇情連續上演 <a href="https://www.threads.com/@tenten.co">Threads</a></span>
-</div>
-<div class="tr">
-<span class="ts">AI郵報</span>
-<span class="tx">Sam Altman 回應 OpenAI Astra 正在努力普遍開放，目前卡在 Cyber 能力的安全評估 <a href="https://www.threads.com/@aiposthub">Threads</a></span>
-</div>
-<div class="tr">
-<span class="ts">AI郵報</span>
-<span class="tx">Google Gemini Omni 支援用多輪對話修改已生成的 AI 影片，換場景、鏡位、物件都可以 <a href="https://www.threads.com/@aiposthub">Threads</a></span>
-</div>
-<div class="tr">
-<span class="ts">蝦說AI</span>
-<span class="tx">「會寫」正在貶值，那漲上去的是什麼？李宏毅機器學習 2027 第一講 <a href="https://www.youtube.com/@SpeechLab-m7o">YouTube</a></span>
-</div>
-<div class="tr">
-<span class="ts">课代表立正</span>
-<span class="tx">用豆包還是 Codex，正在加速 AI 工具使用的兩極分化 <a href="https://www.youtube.com/@kedaibiao">YouTube</a></span>
+<div class="act-time">7 PM 之後</div>
+<div class="act-desc">七點和 33 討論葡萄牙的事，一小時收工。</div>
 </div>
 </div>
 
-<h2>AI 職涯階梯</h2>
-<ul class="items">
-<li class="it">
-<span class="n">1</span>
-<div class="ib">
-<div class="tt">AI 薪酬已分裂成兩個市場</div>
-<div class="ds">2026 Pin 薪酬基準報告指出，企業端 ML 工程師總薪酬落在 $170K–$245K，前沿實驗室同樣職稱可達 $600K–$1M+，兩者之間幾乎沒有中間地帶，<a href="https://www.pin.com/blog/ai-compensation-salary-guide/">據 Pin</a></div>
 </div>
-</li>
-</ul>
+</div>
 
-<h2>資料分析師 / 資料科學家職涯</h2>
-<ul class="items">
-<li class="it">
-<span class="n">1</span>
-<div class="ib">
-<div class="tt">台灣薪資調查：數據轉譯能力比技術本身值錢</div>
-<div class="ds">2026 台灣薪資大調查顯示，會寫 SQL 和 Python 已不夠看，能把分析結論轉化為業務決策建議的數據產品經理或商業分析師，是企業最願意高薪挖角的族群，<a href="https://m-calc.com/content/taiwan-salary-survey-2026">據 M-Calc</a></div>
+<div class="bottom">
+<div class="wrap">
+
+<p class="calm">今天早上沒有待處理的事。</p>
+
+<!-- 遠端 / 接案機會 -->
+<h2 class="sh">遠端 / 接案機會</h2>
+
+<div class="item">
+<span class="inum">1</span>
+<div class="ibody">
+<div class="ititle"><a href="https://www.toptal.com/freelance-jobs/developers/data-science">Toptal 遠端 AI / 資料科學接案</a></div>
+<div class="idesc">持續徵求 AI 與資料科學接案者，專案涵蓋推薦引擎到醫療 NLP，可自訂時薪與工時。<a href="https://www.toptal.com/freelance-jobs/developers/data-science">Toptal</a></div>
 </div>
-</li>
-</ul>
+</div>
+
+<div class="item">
+<span class="inum">2</span>
+<div class="ibody">
+<div class="ititle"><a href="https://www.ziprecruiter.com/Jobs/Freelance-Ai">Freelance AI 教學講師（Claude、Cursor）</a></div>
+<div class="idesc">ZipRecruiter 上架 Freelance AI Coding Course Instructor，教授 Claude、Copilot、Cursor 等工具，時薪 $24–$96。<a href="https://www.ziprecruiter.com/Jobs/Freelance-Ai">ZipRecruiter</a></div>
+</div>
+</div>
+
+<div class="item">
+<span class="inum">3</span>
+<div class="ibody">
+<div class="ititle"><a href="https://www.glassdoor.com/Job/taiwan-data-science-jobs-SRCH_IL.0,6_IN240_KO7,19.htm">台灣資料科學職缺破千筆</a></div>
+<div class="idesc">Glassdoor 顯示台灣目前有 1,135 筆資料科學職缺、212 筆資料分析師職缺，金融與零售需求集中。<a href="https://www.glassdoor.com/Job/taiwan-data-science-jobs-SRCH_IL.0,6_IN240_KO7,19.htm">Glassdoor</a></div>
+</div>
+</div>
+
+<!-- 每日 AI 大事 -->
+<h2 class="sh">每日 AI 大事</h2>
+
+<div class="item">
+<span class="inum">1</span>
+<div class="ibody">
+<div class="ititle">Meta Muse Spark 1.1 測試中意外取得上網權限</div>
+<div class="idesc">資安測試因環境設定錯誤讓模型上網並利用第三方漏洞，Meta 被媒體追問後才證實。一個月內繼 OpenAI、Anthropic 後第三起。<a href="https://www.threads.com/@tenten.co">Threads @tenten.co</a></div>
+</div>
+</div>
+
+<div class="item">
+<span class="inum">2</span>
+<div class="ibody">
+<div class="ititle"><a href="https://venturebeat.com/technology/ai-price-wars-openai-cuts-gpt-5-6-luna-prices-by-80-as-model-competition-shifts-toward-cost/">OpenAI GPT-5.6 Luna 降價 80%</a></div>
+<div class="idesc">7/30 起 Luna 輸入降至 $0.20/M tokens、輸出 $1.20/M；Terra 降 20%；Sol 維持原價。開發效率提升壓低服務成本約兩成。<a href="https://venturebeat.com/technology/ai-price-wars-openai-cuts-gpt-5-6-luna-prices-by-80-as-model-competition-shifts-toward-cost/">VentureBeat</a></div>
+</div>
+</div>
+
+<div class="item">
+<span class="inum">3</span>
+<div class="ibody">
+<div class="ititle"><a href="https://www.globenewswire.com/news-release/2026/07/27/3333489/0/en/naver-nvidia-and-brookfield-to-expand-korea-s-national-ai-factory-infrastructure-buildout.html">NAVER &times; NVIDIA &times; Brookfield 百億美元擴建南韓 AI 工廠</a></div>
+<div class="idesc">主權 AI 工廠從 55MW 擴至 200MW，$100 億融資規模，2027 年上半年啟用首階段，長期目標 1GW。<a href="https://www.globenewswire.com/news-release/2026/07/27/3333489/0/en/naver-nvidia-and-brookfield-to-expand-korea-s-national-ai-factory-infrastructure-buildout.html">GlobeNewsWire</a></div>
+</div>
+</div>
+
+<div class="item">
+<span class="inum">4</span>
+<div class="ibody">
+<div class="ititle"><a href="https://www.threads.com/@aiposthub">xAI Grok Imagine Image 2.0 上線</a></div>
+<div class="idesc">新增 Magic Wand 局部精修、最多 5 張參考圖合成、自動去背、Smart Resize 支援 9 種比例。<a href="https://www.threads.com/@aiposthub">AI郵報</a></div>
+</div>
+</div>
+
+<!-- 追蹤來源 -->
+<h2 class="sh">追蹤來源</h2>
+
+<div class="item">
+<span class="inum">1</span>
+<div class="ibody">
+<div class="ititle">Tenten AI — Grokipedia 停更三個月</div>
+<div class="idesc">馬斯克的 AI 百科 13,002 則修正卡在審核中，600 萬篇文章無人維護，卻已被 ChatGPT 和 Google AI Mode 引用逾 35 萬次。<a href="https://www.threads.com/@tenten.co">Threads</a></div>
+</div>
+</div>
+
+<div class="item">
+<span class="inum">2</span>
+<div class="ibody">
+<div class="ititle">AI郵報 — 用 Codex 自動化重複工作流程</div>
+<div class="idesc">示範把「查資料 &rarr; 更新表格 &rarr; 回報進度」交給 OpenAI Codex，透過 Record &amp; Replay 和 Browser Actions 串接。<a href="https://www.threads.com/@aiposthub">Threads</a></div>
+</div>
+</div>
+
+<!-- AI 職涯階梯 -->
+<h2 class="sh">AI 職涯階梯</h2>
+
+<div class="item">
+<span class="inum">1</span>
+<div class="ibody">
+<div class="ititle"><a href="https://www.kore1.com/ai-engineer-salary-guide/">生產環境 AI 經驗的薪酬溢價持續拉大</a></div>
+<div class="idesc">KORE1 彙整 2026 年實際 offer 數據，有生產環境 AI 部署經歷的工程師比同年資但偏理論的同儕多拿 20–35%。Principal 級約七成來自內部晉升，多數人在拿到頭銜之前就已展現同等影響力。<a href="https://www.kore1.com/ai-engineer-salary-guide/">KORE1</a></div>
+</div>
+</div>
+
+<!-- 資料分析師 / 資料科學家職涯 -->
+<h2 class="sh">資料分析師 / 資料科學家職涯</h2>
+
+<div class="item">
+<span class="inum">1</span>
+<div class="ibody">
+<div class="ititle"><a href="https://www.cheers.com.tw/talent/article.action?id=5105810">104：AI 人才月缺近 10 萬，非工程職成長最快</a></div>
+<div class="idesc">104《2026 AI 人才趨勢報告》顯示缺口五年翻倍至月均近 10 萬人，但成長最快的是專案管理、業務等「AI + 領域」混合職，技能溢價最高 69%。對資料分析師而言，具備商業決策力的雙技能人才比純 SQL/Python 更搶手。<a href="https://www.cheers.com.tw/talent/article.action?id=5105810">Cheers</a></div>
+</div>
+</div>
 
 </div>
 </div>
