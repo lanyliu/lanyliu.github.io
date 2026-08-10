@@ -19,6 +19,10 @@
 
 ---
 
+## 2026-08-10
+- 階梯｜IC 與管理軌薪酬對等：2026 年企業開始將 Staff Engineer 與 Engineering Manager 放進同一薪級帶｜zenvanriel.com
+- 資料｜AIF 調查：56.1% 企業 AI 人才不足，跨領域組合能力（商管＋數據、設計＋AI）比單一技術背景更稀缺｜technice.com.tw
+
 ## 2026-08-09
 - 階梯｜2026 offer 數據：生產環境 AI 經驗比理論背景多 20–35% 薪酬溢價，Principal 七成內部晉升｜kore1.com
 - 資料｜104 報告：台灣每月 AI 人才缺口近 10 萬，成長最快是非工程「AI + 領域」混合職｜cheers.com.tw
