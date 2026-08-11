@@ -19,6 +19,10 @@
 
 ---
 
+## 2026-08-11
+- 階梯｜SignalFire 2026 報告：「Super IC」崛起，初階工程師聘用暴跌 65%，組織壓平中間管理層｜signalfire.com
+- 資料｜104 數據：AI 職缺四大硬技能需求，流程自動化近五年成長 233%，資料分析師轉向自動化與預測建模｜news.cnyes.com
+
 ## 2026-08-10
 - 階梯｜IC 與管理軌薪酬對等：2026 年企業開始將 Staff Engineer 與 Engineering Manager 放進同一薪級帶｜zenvanriel.com
 - 資料｜AIF 調查：56.1% 企業 AI 人才不足，跨領域組合能力（商管＋數據、設計＋AI）比單一技術背景更稀缺｜technice.com.tw
