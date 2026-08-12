@@ -19,6 +19,10 @@
 
 ---
 
+## 2026-08-12
+- 階梯｜Forbes 報導：初階開發者職缺連跌 33 個月，Big Tech 初階佔比從 32% 降到 7%，AI coding agent 取代入門任務但 AI/ML 初階反而在招｜forbes.com
+- 資料｜Data-DI 2026 指南：Agentic AI 讓資料分析師從跑報表轉型為 AI Agent 監督者，負責引導調查與審核產出｜data-di.com
+
 ## 2026-08-11
 - 階梯｜SignalFire 2026 報告：「Super IC」崛起，初階工程師聘用暴跌 65%，組織壓平中間管理層｜signalfire.com
 - 資料｜104 數據：AI 職缺四大硬技能需求，流程自動化近五年成長 233%，資料分析師轉向自動化與預測建模｜news.cnyes.com
