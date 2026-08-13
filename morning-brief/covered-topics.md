@@ -19,6 +19,10 @@
 
 ---
 
+## 2026-08-13
+- 階梯｜AI 職稱命名混亂：2026 年分化出 40+ 種稱呼，CTO 觀察 80% 做的是同一件事（用 API 做產品），真正差異只有三大功能｜ivanturkovic.com
+- 資料｜104 AI 人才趨勢報告：30 歲以下非工程職加 AI 技能起薪溢價最高 69%（財務會計 69%、門市 67%、MIS 63%），資料分析轉 AI PM 年薪翻倍案例｜money.udn.com
+
 ## 2026-08-12
 - 階梯｜Forbes 報導：初階開發者職缺連跌 33 個月，Big Tech 初階佔比從 32% 降到 7%，AI coding agent 取代入門任務但 AI/ML 初階反而在招｜forbes.com
 - 資料｜Data-DI 2026 指南：Agentic AI 讓資料分析師從跑報表轉型為 AI Agent 監督者，負責引導調查與審核產出｜data-di.com
