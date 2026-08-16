@@ -19,6 +19,10 @@
 
 ---
 
+## 2026-08-16
+- 階梯｜AI Evals Engineer 18 個月內從 JD 附帶任務升格為獨立職稱，L4–L7 薪酬 $230K–$1.2M+，前沿實驗室與 applied AI 新創搶人，EU AI Act 八月執行推升評估工程師需求｜jobsbyculture.com
+- 資料｜91APP 提出 AI agent 數據分析四層自動化框架（問答／運算／管線／判斷），DA 核心價值從跑查詢轉向問對問題與為結論負責，Gartner 預測 40%+ agentic AI 專案因資料底座不齊被取消｜marketing.91app.com
+
 ## 2026-08-15
 - 階梯｜Forward Deployed Engineer 成為 2026 最火 AI 新角色，AIEWF 大會與 1,000 筆職缺分析顯示需求年增超過 700%，嵌入客戶端部署 AI 系統，TC $300K–$550K｜latent.space
 
