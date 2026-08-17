@@ -19,6 +19,10 @@
 
 ---
 
+## 2026-08-17
+- 階梯｜LinkedIn 新興職缺報告 MLOps Engineer 五年成長 9.8 倍成生產部署瓶頸角色，EU AI Act 八月生效同步推動 AI Governance & Ethics Specialist 成企業 AI 招聘最快成長類別｜herohunt.ai
+- 資料｜PwC 2026 全球 AI 就業晴雨錶：AI 技能薪資溢價從前一年 25% 躍升至 56%，要求 AI 技能的職缺成長為整體市場八倍（69% vs 9%），資料分析類職缺近 45% 提及 AI｜pwc.com
+
 ## 2026-08-16
 - 階梯｜AI Evals Engineer 18 個月內從 JD 附帶任務升格為獨立職稱，L4–L7 薪酬 $230K–$1.2M+，前沿實驗室與 applied AI 新創搶人，EU AI Act 八月執行推升評估工程師需求｜jobsbyculture.com
 - 資料｜91APP 提出 AI agent 數據分析四層自動化框架（問答／運算／管線／判斷），DA 核心價值從跑查詢轉向問對問題與為結論負責，Gartner 預測 40%+ agentic AI 專案因資料底座不齊被取消｜marketing.91app.com
