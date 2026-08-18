@@ -19,6 +19,10 @@
 
 ---
 
+## 2026-08-18
+- 階梯｜Agent Engineer 隨 agent 框架（ADK、Claude Agent SDK、LangGraph）成熟在 2025 年底正式獨立成職稱，LinkedIn agentic systems 職缺從 2024 年 151 筆暴增至 16,500+｜tekninjas.com
+- 資料｜104 調薪調查各產業 AI 人才加碼幅度，光電光學業 AI 新人加薪 22.5%、資深 35%，半導體新人 10%、資深 20%，製造業核心 81.5% 有加碼意願｜peoplenews.tw
+
 ## 2026-08-17
 - 階梯｜LinkedIn 新興職缺報告 MLOps Engineer 五年成長 9.8 倍成生產部署瓶頸角色，EU AI Act 八月生效同步推動 AI Governance & Ethics Specialist 成企業 AI 招聘最快成長類別｜herohunt.ai
 - 資料｜PwC 2026 全球 AI 就業晴雨錶：AI 技能薪資溢價從前一年 25% 躍升至 56%，要求 AI 技能的職缺成長為整體市場八倍（69% vs 9%），資料分析類職缺近 45% 提及 AI｜pwc.com
