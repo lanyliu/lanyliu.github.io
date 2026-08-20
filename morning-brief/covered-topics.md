@@ -19,6 +19,10 @@
 
 ---
 
+## 2026-08-20
+- 階梯｜2026 科技業裁員 170,500 人（54% 歸因 AI）與 AI 工程師均薪同期跳漲 $50K 至 $206K，市場兩極化：例行角色縮減、AI 專才（Red Teamer $160K–$230K）暴增，64% 資安職缺要求 AI 技能｜kubiosec.tech
+- 資料｜791 筆 2026 年 104 與台灣就業通 AI 職缺分析：金融業 AI 薪資比一般軟體業高 40%、37% 職缺標註經驗不拘、LLM/GenAI 一年衝進前五大技能需求｜threads.com
+
 ## 2026-08-18
 - 階梯｜Agent Engineer 隨 agent 框架（ADK、Claude Agent SDK、LangGraph）成熟在 2025 年底正式獨立成職稱，LinkedIn agentic systems 職缺從 2024 年 151 筆暴增至 16,500+｜tekninjas.com
 - 資料｜104 調薪調查各產業 AI 人才加碼幅度，光電光學業 AI 新人加薪 22.5%、資深 35%，半導體新人 10%、資深 20%，製造業核心 81.5% 有加碼意願｜peoplenews.tw
