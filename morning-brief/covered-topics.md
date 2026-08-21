@@ -19,6 +19,11 @@
 
 ---
 
+## 2026-08-21
+- 階梯｜Context Engineer 從 Prompt Engineer 分化為獨立職稱，Adobe 四月開出 AI Context Engineer 職缺，DataHub 報告 95% 資料團隊投資 context engineering 訓練，薪資比通才 AI 工程師高 30–50%｜aijobboard.dev
+- 階梯｜AI FinOps Specialist 專管 AI 工作負載成本，FinOps Foundation 2026 報告顯示 98% 從業者管理 AI 支出（年增 32%），GPU 叢集與推理成本催生獨立角色｜data.finops.org
+- 資料｜AITT 主權 AI 人才白皮書：數位部推估需求從 5,770 人降至 3,750 人，與 104 每月十萬缺口形成反差，反映「AI 專業人才」定義鴻溝——企業要的是各領域加 AI 的複合人才｜aittlabs.org
+
 ## 2026-08-20
 - 階梯｜2026 科技業裁員 170,500 人（54% 歸因 AI）與 AI 工程師均薪同期跳漲 $50K 至 $206K，市場兩極化：例行角色縮減、AI 專才（Red Teamer $160K–$230K）暴增，64% 資安職缺要求 AI 技能｜kubiosec.tech
 - 資料｜791 筆 2026 年 104 與台灣就業通 AI 職缺分析：金融業 AI 薪資比一般軟體業高 40%、37% 職缺標註經驗不拘、LLM/GenAI 一年衝進前五大技能需求｜threads.com
