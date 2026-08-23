@@ -19,6 +19,10 @@
 
 ---
 
+## 2026-08-23
+- 階梯｜遠端 AI 工程師薪資中位數 $194K 反超辦公室崗位 $40K，1.9M 筆職缺分析顯示 remote 從折價轉溢價，LLM/GenAI 專精加 40–60%｜recruitingfromscratch.com
+- 資料｜Adecco 2026 台灣薪資指南逾八成企業調薪聚焦 AI 能力者，薪資 M 型化加劇，無 AI 技能的資料角色成長停滯｜adecco.com
+
 ## 2026-08-21
 - 階梯｜Context Engineer 從 Prompt Engineer 分化為獨立職稱，Adobe 四月開出 AI Context Engineer 職缺，DataHub 報告 95% 資料團隊投資 context engineering 訓練，薪資比通才 AI 工程師高 30–50%｜aijobboard.dev
 - 階梯｜AI FinOps Specialist 專管 AI 工作負載成本，FinOps Foundation 2026 報告顯示 98% 從業者管理 AI 支出（年增 32%），GPU 叢集與推理成本催生獨立角色｜data.finops.org
