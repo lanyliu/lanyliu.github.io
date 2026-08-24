@@ -19,6 +19,10 @@
 
 ---
 
+## 2026-08-24
+- 階梯｜CAIO 從象徵性任命轉為營運必要角色，IBM 調查四分之一企業已設置，12 個月內採用率近三倍成長，TC $250K–$1M+｜gurusup.com
+- 資料｜首屆台灣資料治理年會（8/21）數據：50% GenAI 專案卡在 PoC 因資料品質不足，僅 24% 企業 AI 人才準備度成熟，TDAMA 推 CDMP 兩年百人目標｜finance.technews.tw
+
 ## 2026-08-23
 - 階梯｜遠端 AI 工程師薪資中位數 $194K 反超辦公室崗位 $40K，1.9M 筆職缺分析顯示 remote 從折價轉溢價，LLM/GenAI 專精加 40–60%｜recruitingfromscratch.com
 - 資料｜Adecco 2026 台灣薪資指南逾八成企業調薪聚焦 AI 能力者，薪資 M 型化加劇，無 AI 技能的資料角色成長停滯｜adecco.com
