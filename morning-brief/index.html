@@ -3,192 +3,163 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>早報 — 2026-08-24</title>
+<title>早報 — 2026-08-25</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{
---bg:#FCFCFB;--wash:#F9F9F7;--ink:#2E2C27;--ink-soft:#6B6A63;
---ink-grey:#B4B3A8;--hairline:#E4E3DC;--clay:#C6613F;--clay-hover:#AE5133;
---band-line:#E1E1DF;
---serif:Georgia,"Songti TC","Noto Serif CJK TC",serif;
---sans:-apple-system,"Segoe UI",sans-serif;
-}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-
-/* ── top band ── */
-.top-band{background:var(--wash);border-bottom:1px solid var(--band-line)}
-.top-inner{max-width:860px;margin:0 auto;padding:56px 28px 40px}
-
-.day-date{font-size:14px;color:var(--ink-soft);letter-spacing:.04em;margin-bottom:8px}
-.headline{font-family:var(--serif);font-size:40px;line-height:1.25;color:var(--ink);margin-bottom:28px;font-weight:600}
-
-.terrain{width:100%;height:auto;display:block;margin-bottom:24px}
-
+body{background:#FCFCFB;color:#2E2C27;font-family:-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.top{background:#F9F9F7;border-bottom:1px solid #E1E1DF}
+.w{max-width:860px;margin:0 auto;padding:48px 28px}
+.day-date{font-size:14px;color:#6B6A63;letter-spacing:.04em;margin-bottom:10px}
+h1{font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;font-size:40px;font-weight:600;line-height:1.3;color:#2E2C27;margin-bottom:28px}
+.terrain{width:100%;display:block;margin-bottom:24px}
 .acts{display:flex;gap:0}
-.act{flex:1;position:relative;padding:0 20px}
-.act:not(:last-child)::after{content:'';position:absolute;right:0;top:0;bottom:0;width:1px;background:var(--hairline)}
-.act-time{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;margin-bottom:4px}
-.act-text{font-size:14px;color:var(--ink-soft);line-height:1.55}
-.act:first-child{padding-left:0}
-.act:last-child{padding-right:0}
-
-/* ── bottom band ── */
-.bottom-band{background:var(--bg)}
-.bottom-inner{max-width:860px;margin:0 auto;padding:40px 28px 64px}
-
-.section-heading{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--ink);letter-spacing:.03em;margin:40px 0 16px;text-transform:none}
-.section-heading:first-child{margin-top:0}
-
-/* item list */
-.item-list{list-style:none;counter-reset:item}
-.item-list li{position:relative;padding-left:32px;margin-bottom:18px}
-.item-list li::before{counter-increment:item;content:counter(item);position:absolute;left:0;top:1px;font-size:13px;color:var(--ink-grey);font-variant-numeric:tabular-nums}
-.item-title{font-weight:600;font-size:15px;color:var(--ink);display:block;margin-bottom:2px}
-.item-title a{text-decoration:none;color:var(--ink)}
-.item-title a:hover{text-decoration:underline}
-.item-body{font-size:14px;color:var(--ink-soft);line-height:1.6}
-.item-body a{color:var(--ink-soft);text-decoration:underline;text-decoration-color:var(--ink-grey);text-underline-offset:2px}
-.item-body a:hover{color:var(--ink)}
-
-.calm-line{font-size:14px;color:var(--ink-soft);margin:12px 0 0 32px}
-.connect-line{font-size:13px;color:var(--ink-grey);margin:24px 0 0 0}
-
-/* ── responsive ── */
+.act{flex:1;padding:14px 18px 4px}
+.act:not(:last-child){border-right:1px solid #E4E3DC}
+.act-time{font-size:14px;font-weight:700;color:#2E2C27;margin-bottom:6px;text-transform:uppercase}
+.act-desc{font-size:14px;color:#6B6A63;line-height:1.55}
+.bot .w{padding-top:40px;padding-bottom:56px}
+.sh{font-family:-apple-system,"Segoe UI",sans-serif;font-size:16px;font-weight:600;color:#2E2C27;margin:36px 0 16px}
+.sh:first-child{margin-top:0}
+.calm{font-size:15px;color:#6B6A63;line-height:1.6;margin-bottom:6px}
+.conn{font-size:14px;color:#B4B3A8;margin-bottom:0;line-height:1.6}
+.it{margin-bottom:18px;padding-left:28px;position:relative}
+.it-n{position:absolute;left:0;top:1px;font-size:13px;color:#B4B3A8;font-variant-numeric:tabular-nums}
+.it-t{font-size:15px;font-weight:600;color:#2E2C27;line-height:1.45;margin-bottom:3px}
+.it-t a{color:#2E2C27;text-decoration:none}
+.it-t a:hover{text-decoration:underline}
+.it-b{font-size:14px;color:#6B6A63;line-height:1.6}
+.it-b a{color:#6B6A63;text-decoration:underline;text-decoration-color:#B4B3A8;text-underline-offset:2px}
+.it-b a:hover{color:#2E2C27}
+.src{margin-bottom:12px;font-size:14px;color:#6B6A63;line-height:1.6}
+.src b{font-weight:600;color:#2E2C27}
+.src a{color:#6B6A63;text-decoration:underline;text-decoration-color:#B4B3A8;text-underline-offset:2px}
+.src a:hover{color:#2E2C27}
 @media(max-width:640px){
-  .headline{font-size:30px}
-  .top-inner{padding:40px 20px 32px}
-  .bottom-inner{padding:32px 20px 48px}
-  .acts{flex-direction:column;gap:0}
-  .act{padding:12px 0}
-  .act:not(:last-child)::after{right:auto;left:0;top:auto;bottom:0;width:100%;height:1px}
+h1{font-size:30px}
+.w{padding:36px 20px}
+.acts{flex-direction:column}
+.act{padding:12px 0}
+.act:not(:last-child){border-right:none;border-bottom:1px solid #E4E3DC}
 }
 </style>
 </head>
 <body>
 
-<!-- ═══ TOP BAND ═══ -->
-<div class="top-band">
-<div class="top-inner">
+<div class="top">
+<div class="w">
 
-<div class="day-date">Monday · August 24 2026</div>
-<h1 class="headline">早上留給自己，Lany，下午茶裡藏了一通 call 要接。</h1>
+<p class="day-date">星期二 · 8 月 25 日</p>
+<h1>晨練結束到下午茶之前，三個小時是你的，Lany。</h1>
 
-<!-- terrain -->
 <svg class="terrain" viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg">
-  <!-- sun motif (clay accent, open morning) -->
-  <circle cx="120" cy="38" r="12" fill="none" stroke="#C6613F" stroke-width="1.5"/>
-  <line x1="120" y1="22" x2="120" y2="17" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="120" y1="54" x2="120" y2="59" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="104" y1="38" x2="99" y2="38" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="136" y1="38" x2="141" y2="38" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="108.7" y1="26.7" x2="105.2" y2="23.2" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="131.3" y1="49.3" x2="134.8" y2="52.8" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="131.3" y1="26.7" x2="134.8" y2="23.2" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="108.7" y1="49.3" x2="105.2" y2="52.8" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- terrain stroke -->
-  <path d="M 0,138 C 60,137 140,135 220,132 C 280,128 310,110 350,85 C 380,68 410,60 430,62 C 460,65 490,78 520,98 C 550,115 580,128 610,127 C 630,126 645,112 660,108 C 675,104 695,118 720,128 C 760,136 800,138 840,138"
-        fill="none" stroke="#2E2C27" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- overlap: two hollow intersecting circles -->
-  <circle cx="405" cy="62" r="11" fill="#FCFCFB" stroke="#2E2C27" stroke-width="1.8"/>
-  <circle cx="425" cy="64" r="9" fill="#FCFCFB" stroke="#2E2C27" stroke-width="1.8"/>
-
-  <!-- yoga dot -->
-  <circle cx="660" cy="108" r="7" fill="#2E2C27"/>
+<path d="M0,145 C18,145 30,130 45,100 C55,78 65,64 76,60 C87,56 97,64 108,82 C125,112 142,132 160,136 C175,139 188,118 200,88 C210,64 218,50 228,46 C238,42 248,52 258,72 C280,112 315,140 390,145 C430,145 458,142 475,125 C488,110 498,94 508,88 C518,82 528,90 540,108 C558,138 590,145 640,145 C658,144 675,130 688,108 C696,92 702,80 710,75 C718,70 726,78 738,98 C755,130 785,145 840,145" fill="none" stroke="#2E2C27" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="76" cy="60" r="9" fill="#2E2C27"/>
+<circle cx="228" cy="46" r="9" fill="#2E2C27"/>
+<circle cx="508" cy="88" r="7" fill="#2E2C27"/>
+<circle cx="710" cy="75" r="7" fill="#2E2C27"/>
+<!-- sun — clay accent over the open midday stretch -->
+<circle cx="400" cy="42" r="10" fill="none" stroke="#C6613F" stroke-width="1.8"/>
+<line x1="400" y1="27" x2="400" y2="22" stroke="#C6613F" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="400" y1="57" x2="400" y2="62" stroke="#C6613F" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="385" y1="42" x2="380" y2="42" stroke="#C6613F" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="415" y1="42" x2="420" y2="42" stroke="#C6613F" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="393" y1="35" x2="389" y2="31" stroke="#C6613F" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="407" y1="49" x2="411" y2="53" stroke="#C6613F" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="407" y1="35" x2="411" y2="31" stroke="#C6613F" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="393" y1="49" x2="389" y2="53" stroke="#C6613F" stroke-width="1.8" stroke-linecap="round"/>
 </svg>
 
-<!-- acts -->
 <div class="acts">
-  <div class="act">
-    <div class="act-time">9 AM – 2 PM</div>
-    <div class="act-text">沒有任何行程，五個小時整段空出來。</div>
-  </div>
-  <div class="act">
-    <div class="act-time">2 – 5 PM</div>
-    <div class="act-text">老屋下午茶兩點起，台灣設計 call 三點插進來一個小時。</div>
-  </div>
-  <div class="act">
-    <div class="act-time">7 PM onward</div>
-    <div class="act-text">小班哈達瑜伽七點，練完明天七點半還有一堂早晨瑜伽。</div>
-  </div>
+<div class="act">
+<div class="act-time">7:30 – 10:45 AM</div>
+<div class="act-desc">早晨瑜伽接老屋 Niguma，中間有 75 分鐘可以慢慢切換。</div>
 </div>
-
+<div class="act">
+<div class="act-time">11 AM – 2 PM</div>
+<div class="act-desc">三小時完整空白，今天最長的專注時段。</div>
+</div>
+<div class="act">
+<div class="act-time">2 – 6 PM</div>
+<div class="act-desc">菲比下午茶之後歇一歇，五點上線宇宙通告。</div>
 </div>
 </div>
 
-<!-- ═══ BOTTOM BAND ═══ -->
-<div class="bottom-band">
-<div class="bottom-inner">
+</div>
+</div>
 
-<!-- 需要你處理 -->
-<div class="section-heading">需要你處理</div>
-<ol class="item-list">
-  <li>
-    <span class="item-title"><a href="https://www.google.com/calendar/event?eid=Nm9zNjhvcG9jY3JqZ2JiMzY4bzZhYjlrNmdyMzBiOXA2MWltY2I5bGM4cW1hcDluYzhybThlOXBjayBsYW55bGl1MTIyQG0&ctz=Asia/Taipei">三點的 call 和下午茶時段重疊</a></span>
-    <span class="item-body">台灣設計 call 三點到四點，落在老屋下午茶（兩點到五點）中間，<a href="https://www.google.com/calendar/event?eid=Y2twM2NkcG42MHE2OGJiMjZncjNnYjlrY2dxbTZiYjFja3AzYWI5aTZjczMwcGhtNnBpM2FjOWpjYyBsYW55bGl1MTIyQG0&ctz=Asia/Taipei">行事曆上</a>兩個區塊交疊，出門前想好怎麼切換。</span>
-  </li>
-</ol>
+<div class="bot">
+<div class="w">
 
-<!-- 已處理 — empty, calendar-only line -->
-<p class="connect-line">只有行事曆連線，接上信箱或聊天工具就能看到更多需要處理和已完成的事。</p>
+<p class="calm">今天早上沒有什麼需要你處理的事。</p>
+<p class="conn">接上信箱或聊天工具，早報就能幫你追蹤等回覆的訊息。</p>
 
-<!-- ── 遠端 / 接案機會 ── -->
-<div class="section-heading">遠端 / 接案機會</div>
-<ol class="item-list">
-  <li>
-    <span class="item-title">Welo Data 招繁中 Generative AI Analyst，台灣遠端</span>
-    <span class="item-body">審核繁體中文文字、影像、音訊、影片以訓練 AI 模型，同時開放 Senior Linguist（繁／簡中）做標註與品質確保，涵蓋台灣、馬來西亞、新加坡、印尼，<a href="https://jobs.lever.co/weloglobal/56758846-5fc8-4d28-9341-bb342c434ed5">在 Lever 上開放申請</a>。</span>
-  </li>
-  <li>
-    <span class="item-title">Toptal、Arc.dev 持續開放 AI/ML 遠端接案</span>
-    <span class="item-body">Toptal 八月有 AI Developer 與 ML Engineer 的 freelance 職缺，自訂工時、平台處理帳務；Arc.dev 每日新增遠端 AI 職位，freelance 到 full-time 都有，<a href="https://arc.dev/en-tw/remote-jobs">台灣頁面可直接篩選</a>。</span>
-  </li>
-  <li>
-    <span class="item-title">遠端 AI data 職缺行情 $80K–$180K</span>
-    <span class="item-body">Glassdoor 八月數據顯示遠端 AI、資料科學與 ML 職缺年薪區間 $80K–$180K，freelance data scientist ML 平均年薪 $122K，<a href="https://www.glassdoor.com/Job/taiwan-remote-jobs-SRCH_IL.0,6_IN240_KO7,13.htm">台灣相關遠端職缺約 537 筆</a>。</span>
-  </li>
-</ol>
+<h2 class="sh">遠端 / 接案機會</h2>
 
-<!-- ── 每日 AI 大事 ── -->
-<div class="section-heading">每日 AI 大事</div>
-<ol class="item-list">
-  <li>
-    <span class="item-title">OpenAI 調降 GPT-5.6 Sol API 價格逾 20%</span>
-    <span class="item-body">八月 21 日起 input $4/M tokens、output $20/M tokens，三個月促銷至 11 月 21 日，直接壓低 Claude Opus 5 的價格優勢，<a href="https://www.investing.com/news/stock-market-news/openai-cuts-developer-pricing-for-frontier-gpt56-sol-model-by-more-than-20-4872186">Reuters 報導</a>。</span>
-  </li>
-  <li>
-    <span class="item-title">Anthropic IPO S-1 可能八月底遞件</span>
-    <span class="item-body">六月已向 SEC 提交機密草案，投資人瞄準十月上市、估值 $2T，Morgan Stanley、Goldman Sachs、JPMorgan 領銜，S-1 將把「AI 反彈情緒」列為風險因素，<a href="https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html">CNBC 報導</a>。</span>
-  </li>
-  <li>
-    <span class="item-title">NVIDIA 斥 $7B 投資 Poolside AI，同步推 $500B 融資平台</span>
-    <span class="item-body">$6B 授權 AI 模型、$1B 注資、挖走逾百名工程師，Poolside 估值升至 $12B；另與 BlackRock、Apollo 等六大機構合建 AI 算力基建融資平台，<a href="https://finance.yahoo.com/technology/ai/articles/nvidia-reportedly-strikes-7b-licensing-205155931.html">Yahoo Finance 報導</a>。</span>
-  </li>
-  <li>
-    <span class="item-title">Z.ai 開源 GLM-5.3 在主流軟體中找到逾千個真實漏洞</span>
-    <span class="item-body">GLM-5.3 是開源程式碼模型，八月中釋出後社群用它掃描廣泛使用的軟體，發現超過一千個實際安全漏洞，<a href="https://llm-stats.com/ai-news">LLM Stats 彙整</a>。</span>
-  </li>
-</ol>
+<div class="it">
+<span class="it-n">1</span>
+<div class="it-t"><a href="https://www.toptal.com/freelance-jobs/developers/artificial-intelligence">Toptal 八月遠端 AI 接案職缺持續開放</a></div>
+<div class="it-b">AI Developer、Data Scientist、ML Engineer 遠端合約，費率自訂，可選時區與工時（<a href="https://www.toptal.com/freelance-jobs/developers/artificial-intelligence">Toptal 平台</a>）。</div>
+</div>
 
-<!-- ── AI 職涯階梯 ── -->
-<div class="section-heading">AI 職涯階梯</div>
-<ol class="item-list">
-  <li>
-    <span class="item-title">CAIO 從掛名變必要，四分之一企業已設置</span>
-    <span class="item-body">IBM CAIO 調查顯示 Chief AI Officer 12 個月內採用率近三倍成長，66% 企業預期兩年內多數公司都會設置；TC $250K–$1M+ 視企業規模而定，Fortune 500 常超過 $1M，從象徵性任命走向負責策略、治理、風險與價值創造的營運核心角色，<a href="https://gurusup.com/blog/caio-salary-2026">GuruSup 薪資指南</a>。</span>
-  </li>
-</ol>
+<div class="it">
+<span class="it-n">2</span>
+<div class="it-t"><a href="https://www.datafreelancehub.com/jobs/data-scientist-aiml-remote-8hzb">遠端 AI/ML 資料科學家合約，時薪 $30–100</a></div>
+<div class="it-b">要求 Python、SQL 及 TensorFlow 或 PyTorch，全球遠端（<a href="https://www.datafreelancehub.com/jobs/data-scientist-aiml-remote-8hzb">Data Freelance Hub</a>）。</div>
+</div>
 
-<!-- ── 資料分析師 / 資料科學家職涯 ── -->
-<div class="section-heading">資料分析師 / 資料科學家職涯</div>
-<ol class="item-list">
-  <li>
-    <span class="item-title">資料品質卡住一半 GenAI 專案，治理能力成新升值方向</span>
-    <span class="item-body">首屆台灣資料治理年會（8/21）數據：50% GenAI 專案在 PoC 階段就中止，主因是資料品質不足；鄧白氏 Q3 調查呼應，超過半數台企資料基礎未就緒，僅 24% 認為 AI 人才準備度成熟。TDAMA 目標兩年內推動 CDMP 持證人數突破 100 人，資料治理正從後勤能力升格為 DA/DS 的核心競爭力，<a href="https://finance.technews.tw/2026/08/21/tdama-ai-ready/">TechNews 報導</a>。</span>
-  </li>
-</ol>
+<div class="it">
+<span class="it-n">3</span>
+<div class="it-t"><a href="https://www.ziprecruiter.com/Jobs/Freelance-Ai">美國 AI 自由接案時薪中位 $47.71</a></div>
+<div class="it-b">八月統計，多數落在 $24–$62 之間，高端可達 $96（<a href="https://www.ziprecruiter.com/Jobs/Freelance-Ai">ZipRecruiter</a>）。</div>
+</div>
+
+<h2 class="sh">每日 AI 大事</h2>
+
+<div class="it">
+<span class="it-n">1</span>
+<div class="it-t"><a href="https://llm-stats.com/llm-updates">OpenAI 調降 Sol 定價逾 20%</a></div>
+<div class="it-b">8/21 起輸入 $4、輸出 $20（每百萬 token），促銷價至少到十一月（<a href="https://llm-stats.com/llm-updates">LLM Stats</a>）。</div>
+</div>
+
+<div class="it">
+<span class="it-n">2</span>
+<div class="it-t"><a href="https://aiagentstore.ai/ai-agent-news/this-week">Google A2A 加入 Agentic AI Foundation</a></div>
+<div class="it-b">A2A 與 MCP 並列中立治理框架，基金會成員逾 250 家含 AWS、Anthropic、Microsoft（<a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agent Store 週報</a>）。</div>
+</div>
+
+<div class="it">
+<span class="it-n">3</span>
+<div class="it-t"><a href="https://aiagentstore.ai/ai-agent-news/this-week">DeepSeek V4-Flash 加入多模態</a></div>
+<div class="it-b">V4-Flash-Vision-Exp 以現有費率不加價獲得圖像理解，多項視覺基準接近 Opus 4.8（<a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agent Store 週報</a>）。</div>
+</div>
+
+<div class="it">
+<span class="it-n">4</span>
+<div class="it-t"><a href="https://aiagentstore.ai/ai-agent-news/this-week">Alibaba Qwen-UI-Agent 做螢幕操作</a></div>
+<div class="it-b">跨手機、桌面、網頁的 GUI Agent，多項基準超越 GPT-5.6（<a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agent Store 週報</a>）。</div>
+</div>
+
+<h2 class="sh">追蹤來源</h2>
+
+<p class="src"><b>Tenten AI</b> — Cloudflare Agents Week 推出 isitagentready.com，掃描 20 萬網域發現 robots.txt 採用率 78%、Markdown 支援僅 3.9%（<a href="https://www.threads.com/@tenten.co/post/DXVU93wlWCg">Threads</a>）</p>
+
+<p class="src"><b>AI郵報</b> — 上週 AI 重點事件回顧，五則必讀整理（<a href="https://www.threads.com/@aiposthub/post/DXnq4xyAbbG">Threads</a>）</p>
+
+<h2 class="sh">AI 職涯階梯</h2>
+
+<div class="it">
+<span class="it-n">1</span>
+<div class="it-t"><a href="https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces">BCG：AI 重塑多於取代，職涯階梯須主動重建</a></div>
+<div class="it-b">2026 研究將受影響職位分四類，其中 Divergent Roles（12%）出現初階縮減、資深擴張的結構性分歧，企業若不重建升遷路徑與培訓體系，中間人才將斷層（<a href="https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces">BCG</a>）。</div>
+</div>
+
+<h2 class="sh">資料分析師 / 資料科學家職涯</h2>
+
+<div class="it">
+<span class="it-n">1</span>
+<div class="it-t"><a href="https://ikala.ai/zh-tw/blog/ikala-ai-insight/2026-ai-agent-trend/">台灣企業 AI Agent 採用加速，DA 工作流跟著轉</a></div>
+<div class="it-b">iKala 分析指出半導體、金融、零售是台灣導入 AI Agent 最積極的產業，製造業用 Text2SQL 讓主管直接查資料庫，DA 核心工作從寫查詢轉向設計與監督 agent 工作流（<a href="https://ikala.ai/zh-tw/blog/ikala-ai-insight/2026-ai-agent-trend/">iKala</a>）。</div>
+</div>
 
 </div>
 </div>
