@@ -19,6 +19,10 @@
 
 ---
 
+## 2026-08-26
+- 階梯｜Axial Search 43,480 筆美國 AI 工程職缺分析：66% IC 角色、Principal 薪酬追平 Director、中位數 $176K，市場獎勵全端廣度勝過單一專精｜axialsearch.com
+- 資料｜AIF 2026 台灣產業 AI 化大調查：61.8% 員工私下用 AI（影子 AI），人才策略維度得分僅 29.17 全場最低，44.7% 企業零 AI 培訓計畫｜managertoday.com.tw
+
 ## 2026-08-25
 - 階梯｜BCG 2026 報告定義 Divergent Roles（12%），初階縮減資深擴張，企業須主動重建職涯階梯避免中間人才斷層｜bcg.com
 - 資料｜iKala 2026 台灣 AI Agent 產業採用：半導體金融零售領先，製造業 Text2SQL 讓主管直接查資料庫，DA 從跑查詢轉向設計 agent 工作流｜ikala.ai
