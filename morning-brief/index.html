@@ -3,140 +3,171 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>早報 · 9 月 1 日</title>
+<title>早報 — 2026-09-02</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#FCFCFB;color:#2E2C27;-webkit-font-smoothing:antialiased}
-.band-top{background:#F9F9F7}
-.band-bottom{background:#FCFCFB;border-top:1px solid #E1E1DF}
-.wrap{max-width:860px;margin:0 auto;padding:48px 32px}
-.day-date{font:400 13px/1 -apple-system,"Segoe UI",sans-serif;color:#6B6A63;letter-spacing:.04em;margin-bottom:12px}
-h1.headline{font:600 40px/1.2 Georgia,"Songti TC","Noto Serif CJK TC",serif;color:#2E2C27;margin-bottom:36px}
-.terrain{width:100%;height:auto;display:block;margin-bottom:32px}
-.acts{display:flex;gap:0;margin-bottom:0}
-.act{flex:1;padding:0 20px}
+:root{
+--bg:#FCFCFB;--wash:#F9F9F7;--ink:#2E2C27;--ink-soft:#6B6A63;--ink-grey:#B4B3A8;
+--hairline:#E4E3DC;--line:#E1E1DF;--clay:#C6613F;--clay-hover:#AE5133;
+--serif:Georgia,"Songti TC","Noto Serif CJK TC",serif;
+--sans:-apple-system,"Segoe UI",sans-serif;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--ink-soft);text-decoration:underline;text-decoration-color:var(--hairline);text-underline-offset:2px}
+a:hover{text-decoration-color:var(--ink-soft)}
+
+.top{background:var(--wash);border-bottom:1px solid var(--line)}
+.wrap{max-width:860px;margin:0 auto;padding:48px 28px}
+.day-date{font-size:13px;color:var(--ink-soft);letter-spacing:.03em;margin-bottom:6px}
+h1{font-family:var(--serif);font-size:40px;font-weight:600;line-height:1.25;color:var(--ink);margin-bottom:28px}
+
+.terrain{width:100%;margin-bottom:28px}
+
+.acts{display:flex;gap:0}
+.act{flex:1;padding:0 18px}
 .act:first-child{padding-left:0}
 .act:last-child{padding-right:0}
-.act+.act{border-left:1px solid #E4E3DC}
-.act-time{font:600 14px/1.4 -apple-system,"Segoe UI",sans-serif;color:#2E2C27;margin-bottom:6px}
-.act-desc{font:400 14px/1.6 -apple-system,"Segoe UI",sans-serif;color:#6B6A63}
-.section-heading{font:600 15px/1.3 -apple-system,"Segoe UI",sans-serif;color:#2E2C27;margin:40px 0 18px;letter-spacing:.01em}
-.section-heading:first-child{margin-top:0}
-.item{margin-bottom:20px;padding-left:28px;position:relative}
-.item-num{position:absolute;left:0;top:1px;font:400 14px/1.6 -apple-system,"Segoe UI",sans-serif;color:#B4B3A8}
-.item-title{font:600 15px/1.5 -apple-system,"Segoe UI",sans-serif;color:#2E2C27}
-.item-title a{color:#2E2C27;text-decoration:none}
-.item-body{font:400 14px/1.7 -apple-system,"Segoe UI",sans-serif;color:#6B6A63;margin-top:2px}
-.item-body a{color:#6B6A63;text-decoration:underline;text-underline-offset:2px}
-.calm-line{font:400 14px/1.7 -apple-system,"Segoe UI",sans-serif;color:#6B6A63;margin:20px 0}
-.connect-hint{font:400 13px/1.6 -apple-system,"Segoe UI",sans-serif;color:#B4B3A8;margin-top:24px}
-.news-item{margin-bottom:10px;font:400 14px/1.7 -apple-system,"Segoe UI",sans-serif;color:#6B6A63}
-.news-item a{color:#6B6A63;text-decoration:underline;text-underline-offset:2px}
+.act+.act{border-left:1px solid var(--hairline)}
+.act-time{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.act-text{font-size:13.5px;color:var(--ink-soft);line-height:1.55}
+
+.bottom .wrap{padding-top:40px;padding-bottom:56px}
+h2{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--ink);letter-spacing:.02em;margin-bottom:16px;text-transform:none}
+.section+.section{margin-top:36px}
+
+.item{margin-bottom:18px;padding-left:28px;position:relative}
+.item-num{position:absolute;left:0;top:0;font-size:13px;color:var(--ink-grey);font-variant-numeric:tabular-nums}
+.item-title{font-weight:600;font-size:14.5px;color:var(--ink);display:block;margin-bottom:2px}
+.item-title a{color:var(--ink);text-decoration:none}
+.item-body{font-size:13.5px;color:var(--ink-soft);line-height:1.6}
+
+.calm-line{font-size:14px;color:var(--ink-soft);margin:12px 0}
+.connect-hint{font-size:13px;color:var(--ink-grey);margin-top:18px}
+
 @media(max-width:640px){
-  h1.headline{font-size:30px}
-  .wrap{padding:32px 20px}
-  .acts{flex-direction:column;gap:0}
-  .act+.act{border-left:none;border-top:1px solid #E4E3DC;padding-top:16px;margin-top:16px}
-  .act{padding:0}
+h1{font-size:30px}
+.wrap{padding:32px 20px}
+.acts{flex-direction:column;gap:0}
+.act+.act{border-left:none;border-top:1px solid var(--hairline);padding-top:14px;margin-top:14px}
+.act{padding:0}
 }
 </style>
 </head>
 <body>
 
-<div class="band-top">
+<div class="top">
 <div class="wrap">
-
-<div class="day-date">星期二 · 九月一日 2026</div>
-<h1 class="headline">九月第一天排了五場，Lany，但場與場之間都留了空。</h1>
+<div class="day-date">Wednesday · September 2, 2026</div>
+<h1>早上整段空著，Lany，下午兩場撞在一起，出門前理一下。</h1>
 
 <svg class="terrain" viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg">
-  <!-- terrain stroke: 5 peaks for 5 sessions -->
-  <path d="M 0,138 C 20,138 42,88 76,55 C 98,34 130,98 162,122 C 182,138 215,52 248,50 C 268,49 308,138 345,132 C 368,128 422,42 458,58 C 482,68 522,126 553,122 C 574,119 618,32 649,48 C 666,56 690,84 706,80 C 720,77 740,32 763,45 C 784,55 818,128 840,138" fill="none" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
-  <!-- meeting dots on the line -->
-  <circle cx="76" cy="55" r="9" fill="#2E2C27"/>
-  <circle cx="248" cy="50" r="9" fill="#2E2C27"/>
-  <circle cx="458" cy="58" r="9" fill="#2E2C27"/>
-  <circle cx="649" cy="48" r="8" fill="#2E2C27"/>
-  <circle cx="763" cy="45" r="9" fill="#2E2C27"/>
-  <!-- birds motif above longest valley (10:45-12:30 gap) -->
-  <path d="M 318,92 Q 325,82 332,92" fill="none" stroke="#2E2C27" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M 342,84 Q 350,73 358,84" fill="none" stroke="#C6613F" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M 362,94 Q 368,86 374,94" fill="none" stroke="#2E2C27" stroke-width="1.2" stroke-linecap="round"/>
+<!-- Terrain stroke: 8AM(x=0) to 10PM(x=840), y baseline=140, higher=lower y -->
+<path d="M0,135 C40,135 80,134 120,133 C150,131 165,118 180,108 C195,118 210,130 240,133 C280,135 320,136 360,134 C380,130 400,90 420,78 C440,72 460,72 480,78 C500,88 520,115 540,128 C570,134 610,136 650,135 C670,133 680,118 695,105 C710,118 730,132 760,135 C790,136 820,136 840,135" fill="none" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
+
+<!-- 11:00 errand dot -->
+<circle cx="180" cy="108" r="6" fill="#2E2C27"/>
+
+<!-- 14:30-17:00 / 15:00-16:30 overlap: two hollow intersecting circles -->
+<circle cx="410" cy="78" r="10" fill="#FCFCFB" stroke="#2E2C27" stroke-width="1.8"/>
+<circle cx="430" cy="78" r="9" fill="#FCFCFB" stroke="#2E2C27" stroke-width="1.8"/>
+
+<!-- Clay tension squiggle under the overlap -->
+<path d="M404,96 C410,92 416,100 422,96 C428,92 434,100 440,96" fill="none" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+
+<!-- 19:30 evening class dot -->
+<circle cx="695" cy="105" r="7" fill="#2E2C27"/>
+
+<!-- Focal markers (faint) -->
+<circle cx="140" cy="155" r="1.5" fill="#B4B3A8"/>
+<circle cx="420" cy="155" r="1.5" fill="#B4B3A8"/>
+<circle cx="700" cy="155" r="1.5" fill="#B4B3A8"/>
 </svg>
 
 <div class="acts">
-  <div class="act">
-    <div class="act-time">7:30 – 11 AM</div>
-    <div class="act-desc">早晨瑜伽和 Niguma 連排，中間隔了一小時十五分吃早餐。</div>
-  </div>
-  <div class="act">
-    <div class="act-time">11 AM – 3 PM</div>
-    <div class="act-desc">上午收場後有快兩小時空白，12:30 回老屋接頌缽陰瑜伽。</div>
-  </div>
-  <div class="act">
-    <div class="act-time">3 – 5:30 PM</div>
-    <div class="act-desc">三點試缽，結束後半小時進 Zoom 宇宙通告，傍晚收工。</div>
-  </div>
+<div class="act">
+<div class="act-time">8 – 11 AM</div>
+<div class="act-text">整個上午沒有行程，十一點有個採買要跑。</div>
+</div>
+<div class="act">
+<div class="act-time">2:30 – 5 PM</div>
+<div class="act-text">瑜伽私人課＋缽和美意空間重疊了一個半小時，兩場擠在同一個時段。</div>
+</div>
+<div class="act">
+<div class="act-time">7:30 PM 之後</div>
+<div class="act-text">小班哈達瑜伽一堂課，八點半結束。明早七點半有 Jing2 的早晨瑜伽。</div>
+</div>
+</div>
+</div>
 </div>
 
-</div>
-</div>
-
-<div class="band-bottom">
+<div class="bottom">
 <div class="wrap">
 
-<div class="section-heading">需要你處理</div>
-
+<div class="section">
+<h2>需要你處理</h2>
 <div class="item">
-  <span class="item-num">1</span>
-  <div class="item-title"><a href="https://www.google.com/calendar/event?eid=NnNzM2FjaGxjcGhqYWI5aTZzcjM4YjlrNzBxM2diOXBja3FqYWI5aTY0b2owb3BrNnRoNmFwaGw2byBsYW55bGl1MTIyQG0&ctz=Asia/Taipei">明天下午兩場行程重疊</a></div>
-  <div class="item-body">後山埤瑜伽私人課（14:30–17:00）和美意空間（15:00–16:30）有一個半小時撞在一起，<a href="https://www.google.com/calendar/event?eid=NnNzM2FjaGxjcGhqYWI5aTZzcjM4YjlrNzBxM2diOXBja3FqYWI5aTY0b2owb3BrNnRoNmFwaGw2byBsYW55bGl1MTIyQG0&ctz=Asia/Taipei">在行事曆上</a>兩場只能留一場。</div>
+<span class="item-num">1</span>
+<span class="item-title">瑜伽私人課和美意空間時間重疊</span>
+<div class="item-body"><a href="https://calendar.google.com">行事曆上</a>兩點半到五點的後山埤瑜伽私人課＋缽，和三點到四點半的美意空間重疊了一個半小時，出門前需要決定調整哪一場。</div>
+</div>
 </div>
 
-<p class="connect-hint">目前只連了行事曆，連上信箱或聊天工具的話，早報可以幫你盯回信和討論。</p>
-
-<div class="section-heading">遠端 / 接案機會</div>
-
-<div class="item">
-  <span class="item-num">1</span>
-  <div class="item-title">Toptal 遠端 AI 與資料科學接案持續開放</div>
-  <div class="item-body">費率由接案者自訂的 AI 開發與資料科學自由工作，<a href="https://www.toptal.com/freelance-jobs/developers/data-science">在 Toptal</a> 八月仍有開放職缺。</div>
-</div>
-<div class="item">
-  <span class="item-num">2</span>
-  <div class="item-title">遠端 AI 評估合約時薪 $60–$120</div>
-  <div class="item-body">評估 AI agent 在軟體工程任務的表現，彈性遠端合約，<a href="https://www.opentrain.ai/jobs/country/taiwan/">在 OpenTrain</a> 列有台灣可申請的案件。</div>
-</div>
-<div class="item">
-  <span class="item-num">3</span>
-  <div class="item-title">Arc 整合台灣時區遠端技術職缺</div>
-  <div class="item-body">與 We Work Remotely 合作刊登遠端機會，涵蓋 AI 與資料相關角色，<a href="https://arc.dev/en-tw/remote-jobs">在 Arc</a> 可按技能和時區篩選。</div>
+<div class="section">
+<h2>已處理</h2>
+<p class="calm-line">今天沒有已結案的事項。</p>
+<p class="connect-hint">連結信箱或聊天工具，早報就能幫你整理待回的訊息和已結案的討論串。</p>
 </div>
 
-<div class="section-heading">每日 AI 大事</div>
-
-<div class="news-item">John Ternus 今天正式接任 Apple CEO，Tim Cook 轉任執行董事長，硬體工程出身的 Ternus 首要任務是 Apple Intelligence 策略，9 月 9 日發表會可能亮相首款摺疊 iPhone。<a href="https://macdailynews.com/2026/08/31/john-ternus-takes-apples-helm-as-ai-becomes-job-no-1/">據 MacDailyNews</a></div>
-
-<div class="news-item">Meta 開源最強模型 Muse Spark 1.2 權重，同步推出 Muse Glimmer 系列，設計在筆電等消費級裝置上運行，直接對標 OpenAI 和 Anthropic。<a href="https://www.cnbc.com/2026/08/10/meta-muse-glimmer-open-weight-ai.html">據 CNBC</a></div>
-
-<div class="news-item">DeepSeek 重啟第二輪募資近 $80 億美元，估值約 $740 億，目標八月底收尾，年底或明年初申請上海科創板 IPO。<a href="https://techstartups.com/2026/08/28/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo/">據 Tech Startups</a></div>
-
-<div class="news-item">NPR 與 NewsGuard 測試 ChatGPT、Gemini、Claude 等六款聊天機器人對抗 30 則國家級假訊息，正確辨識率約四分之三，優於傳統搜尋引擎。<a href="https://aiweekly.co/ai-news-today">據 AI Weekly</a></div>
-
-<div class="section-heading">AI 職涯階梯</div>
-
+<div class="section">
+<h2>遠端 / 接案機會</h2>
 <div class="item">
-  <span class="item-num">1</span>
-  <div class="item-title"><a href="https://aijourn.com/how-the-ai-engineer-role-is-unbundling-in-2026/">AI Engineer 通才角色正式分裂為四大專精</a></div>
-  <div class="item-body">AI Journal 八月底分析指出，企業 AI 從實驗轉向生產後，原本一人包辦的 AI Engineer 已拆成 Post-Training Scientist、Agentic Systems Architect、Inference &amp; GPU Optimization Engineer、AI Eval &amp; Governance Engineer 四條路，<a href="https://aijourn.com/how-the-ai-engineer-role-is-unbundling-in-2026/">在 AI Journal</a> Gartner 觀察企業重心從能力探索轉向營運穩定與成本優化，通才職缺正在消失。</div>
+<span class="item-num">1</span>
+<span class="item-title">AI/ML 資料科學家遠端合約</span>
+<div class="item-body"><a href="https://www.datafreelancehub.com/jobs/data-scientist-aiml-remote-8hzb">Data Freelance Hub 刊登</a>的合約職缺，時薪 $30–100 USD，全遠端，要求 Python/R、SQL 與向非技術利害關係人溝通數據發現的能力。</div>
+</div>
+<div class="item">
+<span class="item-num">2</span>
+<span class="item-title">Toptal 持續徵 AI 資料科學接案者</span>
+<div class="item-body"><a href="https://www.toptal.com/freelance-jobs/developers/data-science">Toptal 平台上</a>有經審核的資料科學自由接案職缺，可自訂工時與時區，合作對象從 Fortune 500 到矽谷新創。</div>
+</div>
+<div class="item">
+<span class="item-num">3</span>
+<span class="item-title">RemoteAI：有 LLM 經驗的候選人明顯吃香</span>
+<div class="item-body"><a href="https://remoteai.io/v2/jobs/data-science">RemoteAI 觀察</a>，目前遠端資料科學市場中，具備 AI 與 LLM 系統實務經驗的人選在篩選階段有顯著優勢，涵蓋全職、合約與兼職模式。</div>
+</div>
 </div>
 
-<div class="section-heading">資料分析師 / 資料科學家職涯</div>
-
+<div class="section">
+<h2>每日 AI 大事</h2>
 <div class="item">
-  <span class="item-num">1</span>
-  <div class="item-title"><a href="https://www.staffingindustry.com/news/global-daily-news/ai-demand-fuels-salary-polarisation-in-taiwan-robert-walters">台灣薪酬指標從年資轉向技能</a></div>
-  <div class="item-body">Robert Walters 2026 台灣薪資調查顯示，技能正取代年資和職稱成為薪酬主要指標，AI 與半導體人才加薪幅度達 30%，79% 專業人士認為 AI 對長期發展正面，超過七成企業預計一年內正式導入 AI，<a href="https://www.staffingindustry.com/news/global-daily-news/ai-demand-fuels-salary-polarisation-in-taiwan-robert-walters">在 SIA</a> 報導。</div>
+<span class="item-num">1</span>
+<span class="item-title">John Ternus 接任 Apple CEO</span>
+<div class="item-body">9 月 1 日生效，結束 Tim Cook 十五年任期，Cook 轉任執行董事長。<a href="https://aiweekly.co/ai-news-today">AI Weekly 報導</a></div>
+</div>
+<div class="item">
+<span class="item-num">2</span>
+<span class="item-title">美國國防部上線 GenAI.mil</span>
+<div class="item-body">整合 OpenAI ChatGPT Mil、xAI Grok for Government 與 Google Gemini，供三百萬軍文職人員使用，已有 170 萬人上線。<a href="https://unrot.co/blogs/today-top-ai-news-september-1-2026">unrot.co 整理</a></div>
+</div>
+<div class="item">
+<span class="item-num">3</span>
+<span class="item-title">OpenAI 自研推理晶片 Jalapeno 公布效能</span>
+<div class="item-body">首顆自研推理晶片，每瓦峰值吞吐量與 token 延遲均優於現有商用系統。<a href="https://aiweekly.co/ai-news-today">AI Weekly 報導</a></div>
+</div>
+<div class="item">
+<span class="item-num">4</span>
+<span class="item-title">Midjourney V8.2 開放測試</span>
+<div class="item-body">新增指令式圖片編輯、最多四張圖片參考、局部重繪與外擴功能，為首個 V8 系列編輯模型。<a href="https://aiweekly.co/ai-news-today">AI Weekly 報導</a></div>
+</div>
+</div>
+
+<div class="section">
+<h2>AI 職涯階梯</h2>
+<div class="item">
+<span class="item-num">1</span>
+<span class="item-title">入門職 AI 技能要求一年翻近三倍</span>
+<div class="item-body">NACE 2026 Spring Update 調查 185 家雇主：超過三分之一的入門職現在要求 AI 技能，較 2025 年秋季近三倍成長。60% 雇主讓實習生做 AI 專案，51% AI 相關職缺落在傳統 IT 領域以外。雇主要的是可即時上手的實務 AI 能力，不是進階 ML 專精。<a href="https://www.naceweb.org/job-market/trends-and-predictions/demand-for-ai-skills-in-entry-level-jobs-nearly-triples-since-fall-2025">NACE 報告</a></div>
+</div>
 </div>
 
 </div>
