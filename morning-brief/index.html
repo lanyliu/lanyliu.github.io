@@ -3,134 +3,144 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>早報 — 2026-09-06</title>
+<title>早報 — 2026-09-07</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#FCFCFB;color:#2E2C27;font-family:-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-.top{background:#F9F9F7;border-bottom:1px solid #E1E1DF}
-.wrap{max-width:860px;margin:0 auto;padding:48px 24px}
-.day-date{font-size:13px;color:#6B6A63;letter-spacing:.04em;margin-bottom:6px}
-h1{font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;font-size:40px;font-weight:600;line-height:1.25;color:#2E2C27;margin-bottom:32px}
-.terrain{width:100%;margin-bottom:28px}
+:root{
+  --bg:#FCFCFB;--wash:#F9F9F7;--ink:#2E2C27;--ink-soft:#6B6A63;
+  --ink-grey:#B4B3A8;--hairline:#E4E3DC;--clay:#C6613F;--clay-hover:#AE5133;
+  --edge:#E1E1DF;
+  --serif:Georgia,"Songti TC","Noto Serif CJK TC",serif;
+  --sans:-apple-system,"Segoe UI",sans-serif;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--ink-soft);text-decoration:underline;text-decoration-color:var(--hairline)}
+a:hover{text-decoration-color:var(--ink-soft)}
+.top{background:var(--wash);border-bottom:1px solid var(--edge)}
+.bot{background:var(--bg)}
+.w{max-width:860px;margin:0 auto;padding:48px 32px}
+.dd{font-size:13px;color:var(--ink-soft);letter-spacing:.04em;margin-bottom:8px}
+h1{font-family:var(--serif);font-size:40px;line-height:1.25;font-weight:600;
+  color:var(--ink);margin-bottom:32px}
+.tr{width:100%;margin-bottom:24px}
+.tr svg{display:block;width:100%;height:auto}
 .acts{display:flex;gap:0}
-.act{flex:1;padding:0 20px}
-.act:first-child{padding-left:0}
-.act:last-child{padding-right:0}
-.act+.act{border-left:1px solid #E4E3DC}
-.act-time{font-size:13px;font-weight:700;color:#2E2C27;margin-bottom:4px}
-.act-text{font-size:14px;color:#6B6A63;line-height:1.5}
-.bottom .wrap{padding-top:40px;padding-bottom:56px}
-.section-heading{font-size:15px;font-weight:600;color:#2E2C27;margin-top:36px;margin-bottom:16px}
-.calm-line{font-size:14px;color:#6B6A63;margin-bottom:4px}
-.connect-line{font-size:13px;color:#B4B3A8;margin-top:10px;margin-bottom:0}
-.item{margin-bottom:16px;padding-left:28px;position:relative}
-.item-num{position:absolute;left:0;top:1px;font-size:13px;color:#B4B3A8;font-variant-numeric:tabular-nums}
-.item-title{font-size:15px;font-weight:600;line-height:1.4;margin-bottom:2px}
-.item-title a{color:#2E2C27;text-decoration:none}
-.item-body{font-size:14px;color:#6B6A63;line-height:1.55}
-.item-body a{color:#6B6A63;text-decoration:underline;text-decoration-color:#E4E3DC;text-underline-offset:2px}
-.news-item{font-size:14px;color:#6B6A63;line-height:1.55;margin-bottom:10px;padding-left:28px;position:relative}
-.news-item .item-num{position:absolute;left:0;top:1px;font-size:13px;color:#B4B3A8;font-variant-numeric:tabular-nums}
-.news-item a{color:#6B6A63;text-decoration:underline;text-decoration-color:#E4E3DC;text-underline-offset:2px}
-.source-item{font-size:14px;color:#6B6A63;line-height:1.55;margin-bottom:10px}
-.source-item a{color:#6B6A63;text-decoration:underline;text-decoration-color:#E4E3DC;text-underline-offset:2px}
-.source-name{font-weight:600;color:#2E2C27}
+.ac{flex:1;padding:0 16px}
+.ac:first-child{padding-left:0}
+.ac:last-child{padding-right:0}
+.ac+.ac{border-left:1px solid var(--hairline)}
+.at{font-weight:700;font-size:13px;color:var(--ink);margin-bottom:4px;letter-spacing:.02em}
+.ad{font-size:14px;color:var(--ink-soft);line-height:1.5}
+.calm{font-size:15px;color:var(--ink-soft);margin:8px 0 12px}
+.conn{font-size:13px;color:var(--ink-grey);margin-bottom:32px}
+.sh{font-family:var(--sans);font-size:16px;font-weight:600;color:var(--ink);
+  margin:36px 0 16px;letter-spacing:.01em}
+.it{margin-bottom:20px;padding-left:28px;position:relative}
+.n{position:absolute;left:0;top:1px;font-size:13px;color:var(--ink-grey);
+  font-variant-numeric:tabular-nums}
+.tt{font-weight:600;font-size:15px;line-height:1.4;margin-bottom:2px}
+.tt a{color:var(--ink);text-decoration:none}
+.tt a:hover{text-decoration:underline;text-decoration-color:var(--ink-soft)}
+.bd{font-size:14px;color:var(--ink-soft);line-height:1.55}
+.bd a{color:var(--ink-soft)}
+.si{margin-bottom:14px;font-size:14px;color:var(--ink-soft);line-height:1.55}
+.sn{font-weight:600;color:var(--ink)}
 @media(max-width:640px){
-h1{font-size:30px}
-.acts{flex-direction:column}
-.act{padding:12px 0}
-.act:first-child{padding-top:0}
-.act+.act{border-left:none;border-top:1px solid #E4E3DC}
-.wrap{padding:32px 20px}
+  h1{font-size:30px}
+  .w{padding:32px 20px}
+  .acts{flex-direction:column;gap:0}
+  .ac+.ac{border-left:0;border-top:1px solid var(--hairline);padding-top:12px;margin-top:12px}
+  .ac{padding:0}
 }
 </style>
 </head>
 <body>
-<div class="top">
-<div class="wrap">
-<div class="day-date">星期日 · 9月6日 2026</div>
-<h1>今天在山裡，Lany，從早到傍晚都是你的場。</h1>
-<svg class="terrain" viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg">
-<path d="M0,155 C120,148 240,128 340,122 C440,118 540,124 640,132 C740,142 800,152 840,155" fill="none" stroke="#C6613F" stroke-width="1.2" opacity="0.3"/>
-<path d="M0,155 C40,152 55,125 70,100 C90,65 120,52 150,47 C180,42 200,40 230,39 C280,38 320,39 370,40 C430,42 500,44 560,46 C610,49 645,52 665,58 C685,68 700,85 715,100 C740,130 770,148 840,155" fill="none" stroke="#2E2C27" stroke-width="2"/>
-<circle cx="105" cy="65" r="9" fill="#2E2C27"/>
-<circle cx="218" cy="40" r="8" fill="#FCFCFB" stroke="#2E2C27" stroke-width="1.5"/>
-<circle cx="230" cy="39" r="6" fill="#FCFCFB" stroke="#2E2C27" stroke-width="1.5"/>
-<circle cx="355" cy="40" r="7" fill="#FCFCFB" stroke="#2E2C27" stroke-width="1.5"/>
-<circle cx="367" cy="40" r="6" fill="#FCFCFB" stroke="#2E2C27" stroke-width="1.5"/>
-<circle cx="665" cy="58" r="6" fill="#2E2C27"/>
-<circle cx="700" cy="85" r="6" fill="#2E2C27"/>
-</svg>
-<div class="acts">
-<div class="act">
-<div class="act-time">8 AM – 12 PM</div>
-<div class="act-text">測音兩小時暖場，十點起櫃檯迎賓，滿月淨化正式開跑。</div>
-</div>
-<div class="act">
-<div class="act-time">12 – 4:30 PM</div>
-<div class="act-text">午間雙音療後是淨化流程的核心時段，一路到四點半。</div>
-</div>
-<div class="act">
-<div class="act-time">4:30 PM onward</div>
-<div class="act-text">書屋大合照收尾，發回程小卡，五點半收工。</div>
-</div>
-</div>
-</div>
-</div>
-<div class="bottom">
-<div class="wrap">
-<p class="calm-line">今天早上沒有需要你處理的事。</p>
-<p class="connect-line">連上信箱或聊天工具，早報就能幫你追蹤需要回覆的訊息。</p>
 
-<h2 class="section-heading">遠端 / 接案機會</h2>
-<div class="item">
-<span class="item-num">1</span>
-<div class="item-title"><a href="https://www.indeed.com/q-artificial-intelligence-l-remote-jobs.html">遠端 AI 職缺九月行情</a></div>
-<div class="item-body">Data Scientist 中階年薪 $100K–$135K、資深 $140K–$170K，企業偏好 SQL、商業溝通與 LLM 實作經驗，<a href="https://www.indeed.com/q-artificial-intelligence-l-remote-jobs.html">in Indeed</a>。</div>
-</div>
-<div class="item">
-<span class="item-num">2</span>
-<div class="item-title"><a href="https://remoteai.io/">LLM 與 MLOps 遠端合約角色</a></div>
-<div class="item-body">按技術棧分類的遠端職缺平台，涵蓋全職到 freelance，多數接受全球申請，<a href="https://remoteai.io/">in RemoteAI</a>。</div>
-</div>
+<div class="top"><div class="w">
+  <div class="dd">Monday · September 7 2026</div>
+  <h1>三個約散在一天裡，下午那段留白最寬，Lany。</h1>
+  <div class="tr">
+    <svg viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,145 C30,144 45,136 60,126 C72,118 82,112 90,108 C98,112 110,122 120,132 C138,143 168,148 200,148 C230,148 255,140 270,128 C286,113 306,90 320,84 C330,82 340,84 350,90 C364,100 378,114 390,128 C408,143 448,149 500,150 C550,150 600,150 650,148 C672,146 700,138 720,126 C732,118 742,108 750,103 C758,108 768,120 780,132 C796,144 822,148 840,148" fill="none" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="90" cy="108" r="7" fill="#2E2C27"/>
+      <circle cx="330" cy="82" r="10" fill="#2E2C27"/>
+      <circle cx="750" cy="103" r="7" fill="#2E2C27"/>
+      <path d="M548,52 L554,44 L560,52" fill="none" stroke="#6B6A63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M572,40 L578,32 L584,40" fill="none" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M558,64 L564,56 L570,64" fill="none" stroke="#6B6A63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div class="acts">
+    <div class="ac">
+      <div class="at">8 – 11:30 AM</div>
+      <div class="ad">民宿九點結束，之後兩個半小時沒有安排。</div>
+    </div>
+    <div class="ac">
+      <div class="at">11:30 AM – 7 PM</div>
+      <div class="ad">黛寶拉 SPA 到一點半，下午五個小時什麼都沒排。</div>
+    </div>
+    <div class="ac">
+      <div class="at">7 PM onward</div>
+      <div class="ad">小班哈達瑜伽收尾，明早七點半有課要早起。</div>
+    </div>
+  </div>
+</div></div>
 
-<h2 class="section-heading">每日 AI 大事</h2>
-<div class="news-item">
-<span class="item-num">1</span>
-OpenAI 九月三日發布 GPT-6 Astra，Greg Brockman 稱「世代級跳躍」，首款達網安 Critical 等級，API $10/$50M tokens（<a href="https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/">Fortune</a>）
-</div>
-<div class="news-item">
-<span class="item-num">2</span>
-Nvidia 以 $129 億收購 Hugging Face，整合 300 萬模型與 1,800 萬開發者社群，預計明年上半年完成（<a href="https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/">TechCrunch</a>）
-</div>
-<div class="news-item">
-<span class="item-num">3</span>
-McKinsey 2026 全球 AI 調查 1,719 人跨 97 國：32% 企業跳過購買軟體，用 agentic coding 工具自建（<a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">McKinsey</a>）
-</div>
-<div class="news-item">
-<span class="item-num">4</span>
-SoundHound AI 九月四日完成收購 LivePerson，語音 AI 結合訊息網路覆蓋 Fortune 100 中 25 家（<a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agent Store</a>）
-</div>
+<div class="bot"><div class="w">
+  <p class="calm">今早沒有需要你處理的事。</p>
+  <p class="conn">連上信箱或聊天工具，下次早報就能幫你整理未讀和待回覆的訊息。</p>
 
-<h2 class="section-heading">追蹤來源</h2>
-<div class="source-item"><span class="source-name">Tenten AI</span> → 軟體工程師就業指數從 2022 年高峰 250 跌至 2026 年初 69.06，AI 職缺同期成長 170%（<a href="https://www.threads.com/@tenten.co">Threads</a>）</div>
-<div class="source-item"><span class="source-name">AI郵報</span> → Terminal-Bench-Science 0.1 新基準，Fable 5.1 拿下 52.6%，上一代直接被拉開超過兩倍（<a href="https://www.threads.com/@aiposthub">Threads</a>）</div>
+  <div class="sh">遠端 / 接案機會</div>
+  <div class="it">
+    <span class="n">1</span>
+    <div class="tt"><a href="https://www.opentrain.ai/jobs/country/taiwan/">AI 模型評估員遠端接案，時薪 $60–120</a></div>
+    <div class="bd">OpenTrain AI 開放台灣可參與的 AI agent 評估與資料標註工作，彈性排班，<a href="https://www.opentrain.ai/jobs/country/taiwan/">在 OpenTrain AI 上</a>直接申請。</div>
+  </div>
+  <div class="it">
+    <span class="n">2</span>
+    <div class="tt"><a href="https://www.toptal.com/freelance-jobs/developers/artificial-intelligence">Toptal 九月 AI/ML 遠端接案持續開放</a></div>
+    <div class="bd">平台媒合 Fortune 500 到新創的 AI 與資料科學短期專案，可自訂時數和費率，<a href="https://www.toptal.com/freelance-jobs/developers/artificial-intelligence">在 Toptal 上</a>瀏覽。</div>
+  </div>
+  <div class="it">
+    <span class="n">3</span>
+    <div class="tt"><a href="https://arc.dev/en-tw/remote-jobs">Arc.dev 列出台灣時區遠端 AI 職位</a></div>
+    <div class="bd">涵蓋資料工程、ML 工程等角色，支援時區與技能篩選，<a href="https://arc.dev/en-tw/remote-jobs">在 Arc.dev 上</a>查看。</div>
+  </div>
 
-<h2 class="section-heading">AI 職涯階梯</h2>
-<div class="item">
-<span class="item-num">1</span>
-<div class="item-title"><a href="https://fortune.com/2026/08/29/ai-workers-survey-job-impact-2026/">AI 晉升的現實比想像低</a></div>
-<div class="item-body">Fortune 全美 1,250 人調查，2023–2026 年僅 9% 勞工因 AI 技能獲得晉升，同期 50% 已在工作中使用 AI，優勢能否持續尚待觀察，<a href="https://fortune.com/2026/08/29/ai-workers-survey-job-impact-2026/">in Fortune</a>。</div>
-</div>
+  <div class="sh">每日 AI 大事</div>
+  <div class="it">
+    <span class="n">1</span>
+    <div class="tt"><a href="https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html">OpenAI 發布 GPT-6 Astra</a></div>
+    <div class="bd">首款達 Critical 資安門檻的公開模型，支援非同步工具呼叫與執行中追加指令，API 價格為 Sol 的 2.5 倍，9/3 起分批開放，<a href="https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html">據 CNBC</a>。</div>
+  </div>
+  <div class="it">
+    <span class="n">2</span>
+    <div class="tt"><a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem">Claude 11 天完成費馬最後定理形式化證明</a></div>
+    <div class="bd">透過 Prove2Me 多代理框架自主產出 1,300 萬行 Lean 程式碼與 29,500 個中間定理，Lean 以三條標準公理驗證通過，<a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem">據 Anthropic 研究頁面</a>。</div>
+  </div>
+  <div class="it">
+    <span class="n">3</span>
+    <div class="tt"><a href="https://finance.yahoo.com/markets/stocks/articles/anthropic-sets-fall-ipo-eyeing-185032639.html">Anthropic IPO 招股書勞動節後公開</a></div>
+    <div class="bd">目標估值觸及 $2 兆，Q2 營收 $109 億創紀錄，Morgan Stanley、Goldman Sachs 與 JPMorgan 聯合承銷，<a href="https://finance.yahoo.com/markets/stocks/articles/anthropic-sets-fall-ipo-eyeing-185032639.html">據 Yahoo Finance</a>。</div>
+  </div>
+  <div class="it">
+    <span class="n">4</span>
+    <div class="tt"><a href="https://variety.com/2026/music/news/sony-music-publishing-warner-chappell-anthropic-lawsuit-1236847442/">Sony Warner 聯合控告 Anthropic 音樂侵權</a></div>
+    <div class="bd">48 頁訴狀指控大規模複製數萬首受保護歌曲訓練 Claude，每首求償最高 $15 萬，三大音樂出版商全數加入訴訟，<a href="https://variety.com/2026/music/news/sony-music-publishing-warner-chappell-anthropic-lawsuit-1236847442/">據 Variety</a>。</div>
+  </div>
 
-<h2 class="section-heading">資料分析師 / 資料科學家職涯</h2>
-<div class="item">
-<span class="item-num">1</span>
-<div class="item-title"><a href="https://insights.morganphilips.com/en/salary-guides/taiwan-salary-guide">台灣 AI 人才競爭不只在資料圈</a></div>
-<div class="item-body">Morgan Philips 2026 薪資指南以 NVIDIA「五層蛋糕」框架分析台灣 AI 人才需求，封裝、散熱、電力電子工程師等基礎建設角色與 ML/Data 角色同步搶人，資料人才的競爭對手從同行擴大到整條供應鏈，<a href="https://insights.morganphilips.com/en/salary-guides/taiwan-salary-guide">in Morgan Philips</a>。</div>
-</div>
+  <div class="sh">追蹤來源</div>
+  <div class="si"><span class="sn">AI郵報</span> — OpenAI 工程師實測 GPT-6 Astra 五大心法：給 AI 專業工具、歸零測試舊 Prompt、人類掌舵方向與驗收標準 — <a href="https://www.aiposthub.com/gpt-6-astra-five-lessons-dominik-kundel/">閱讀全文</a></div>
+  <div class="si"><span class="sn">AI郵報</span> — Meta 發表自主 AI 研究系統 AIRA&#8323;，在 NVIDIA 30B 微調賽中擊敗四千支人類隊伍奪金 — <a href="https://www.aiposthub.com/meta-aira-3-autonomous-ai-researcher-kaggle-gold/">閱讀全文</a></div>
 
-</div>
-</div>
+  <div class="sh">AI 職涯階梯</div>
+  <div class="it">
+    <span class="n">1</span>
+    <div class="tt"><a href="https://karat.com/engineering-interview-trends-2026/">Karat：七成工程主管認為 AI 讓面試評估更難</a></div>
+    <div class="bd">400 位跨美中印工程主管調查顯示 62% 求職者已在面試中使用 AI，但僅不到 30% 企業投入 AI 原生評估系統，人才篩選與實際能力之間的落差正在擴大，<a href="https://karat.com/engineering-interview-trends-2026/">據 Karat 2026 報告</a>。</div>
+  </div>
+
+</div></div>
 </body>
 </html>
