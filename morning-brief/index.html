@@ -2,137 +2,181 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Morning Brief</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>晨報 — 2026-10-21</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#FCFCFB;color:#2E2C27;font-family:-apple-system,"Segoe UI",sans-serif;
-font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.band-top{background:#F9F9F7;border-bottom:1px solid #E1E1DF}
-.band-bottom{background:#FCFCFB}
-.inner{max-width:860px;margin:0 auto;padding:48px 24px}
-.band-bottom .inner{padding-top:40px;padding-bottom:56px}
-.day-date{font-size:13px;color:#6B6A63;letter-spacing:0.03em;margin-bottom:12px}
-h1{font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;font-size:40px;
-font-weight:400;line-height:1.25;color:#2E2C27;margin-bottom:32px;letter-spacing:-0.01em}
-.terrain{width:100%;height:auto;display:block;margin-bottom:28px}
+:root {
+  --bg: #FCFCFB;
+  --wash: #F9F9F7;
+  --ink: #2E2C27;
+  --ink-soft: #6B6A63;
+  --ink-grey: #B4B3A8;
+  --hairline: #E4E3DC;
+  --line: #E1E1DF;
+  --clay: #C6613F;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.band-top{background:var(--wash);padding:48px 24px 40px}
+.band-bottom{background:var(--bg);border-top:1px solid var(--line);padding:40px 24px 56px}
+.inner{max-width:860px;margin:0 auto}
+.day-date{font-size:14px;color:var(--ink-soft);letter-spacing:0.02em;margin-bottom:6px}
+.headline{font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;font-size:40px;line-height:1.25;color:var(--ink);font-weight:600;margin-bottom:32px}
+.terrain{width:100%;margin-bottom:28px}
 .acts{display:flex;gap:0}
-.act{flex:1;padding:0 16px}
+.act{flex:1;padding:0 20px}
 .act:first-child{padding-left:0}
 .act:last-child{padding-right:0}
-.act+.act{border-left:1px solid #E4E3DC}
-.act-time{font-size:14px;font-weight:600;color:#2E2C27;margin-bottom:4px}
-.act-text{font-size:13px;color:#6B6A63;line-height:1.5}
-.calm-line{font-size:15px;color:#6B6A63;margin-bottom:8px}
-.connect-line{font-size:13px;color:#B4B3A8;margin-bottom:40px}
-.section{margin-bottom:36px}
-.section:last-child{margin-bottom:0}
-.section-heading{font-size:15px;font-weight:600;color:#2E2C27;margin-bottom:16px}
-.item{margin-bottom:16px;padding-left:28px;position:relative}
-.item:last-child{margin-bottom:0}
-.item-num{position:absolute;left:0;top:0;font-size:13px;color:#B4B3A8;
-font-variant-numeric:tabular-nums}
-.item-title{font-size:14px;font-weight:600;color:#2E2C27;margin-bottom:2px}
-.item-title a{color:#2E2C27;text-decoration:none}
+.act+.act{border-left:1px solid var(--hairline)}
+.act-time{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;margin-bottom:4px}
+.act-desc{font-size:14px;color:var(--ink-soft);line-height:1.5}
+
+.section-heading{font-family:-apple-system,"Segoe UI",sans-serif;font-size:15px;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:16px}
+.calm-line{font-size:15px;color:var(--ink-soft);line-height:1.6;margin-bottom:8px}
+.connect-line{font-size:14px;color:var(--ink-grey);margin-top:4px}
+
+.section-block{margin-top:40px}
+.section-block-title{font-family:-apple-system,"Segoe UI",sans-serif;font-size:15px;font-weight:600;color:var(--ink);margin-bottom:16px}
+.item{margin-bottom:18px;padding-left:28px;position:relative}
+.item-num{position:absolute;left:0;top:0;font-size:13px;color:var(--ink-grey);font-variant-numeric:tabular-nums}
+.item-title{font-size:15px;font-weight:600;color:var(--ink);line-height:1.4}
+.item-title a{color:var(--ink);text-decoration:none}
 .item-title a:hover{text-decoration:underline}
-.item-body{font-size:13px;color:#6B6A63;line-height:1.55}
-.item-body a{color:#6B6A63;text-decoration:underline}
-.item-body a:hover{color:#2E2C27}
-.news-item{margin-bottom:10px;font-size:13px;color:#6B6A63;line-height:1.55}
-.news-item:last-child{margin-bottom:0}
-.news-item a{color:#6B6A63;text-decoration:underline}
-.news-item a:hover{color:#2E2C27}
+.item-body{font-size:14px;color:var(--ink-soft);line-height:1.55;margin-top:2px}
+.item-body a{color:var(--ink-soft);text-decoration:underline}
+.item-body a:hover{color:var(--ink)}
+
 @media(max-width:640px){
-h1{font-size:30px}
-.inner{padding:32px 16px}
-.band-bottom .inner{padding-top:28px;padding-bottom:40px}
-.acts{flex-direction:column;gap:0}
-.act{padding:12px 0}
-.act:first-child{padding-top:0}
-.act+.act{border-left:none;border-top:1px solid #E4E3DC}
+  .headline{font-size:30px}
+  .acts{flex-direction:column;gap:0}
+  .act+.act{border-left:none;border-top:1px solid var(--hairline);padding-top:12px;margin-top:12px}
+  .act{padding:0}
+  .band-top{padding:32px 16px 28px}
+  .band-bottom{padding:28px 16px 40px}
 }
 </style>
 </head>
 <body>
 <div class="band-top">
 <div class="inner">
-<div class="day-date">星期四 · 10月15日 2026</div>
-<h1>三段航程的一天，Lany，傍晚到波爾圖。</h1>
+<div class="day-date">星期三 · 10 月 21 日 2026</div>
+<div class="headline">Lany，八點有一筆帳務提醒，其餘整天留給你。</div>
 <svg class="terrain" viewBox="0 0 840 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0,132 C60,130 120,127 180,130 C240,133 300,129 360,128 C420,130 480,133 540,131 C600,128 660,130 720,132 C780,130 840,131" stroke="#2E2C27" stroke-width="2" fill="none"/>
-<path d="M80,128 A20,20 0 0,1 120,128" fill="none" stroke="#C6613F" stroke-width="1.5"/>
-<line x1="90" y1="111" x2="92" y2="117" stroke="#C6613F" stroke-width="1" stroke-linecap="round"/>
-<line x1="100" y1="107" x2="100" y2="114" stroke="#C6613F" stroke-width="1" stroke-linecap="round"/>
-<line x1="110" y1="111" x2="108" y2="117" stroke="#C6613F" stroke-width="1" stroke-linecap="round"/>
-<path d="M400,108 L408,103 L416,108" fill="none" stroke="#6B6A63" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M425,103 L432,98 L439,103" fill="none" stroke="#6B6A63" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M412,98 L418,94 L424,98" fill="none" stroke="#6B6A63" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="720" cy="100" r="10" fill="#B4B3A8"/>
-<circle cx="724" cy="98" r="9" fill="#F9F9F7"/>
+<!-- Flat/still-water terrain for an open day -->
+<path d="M0 130 C60 130 80 128 117 126 C150 128 200 130 300 131 C400 132 500 131 600 130 C700 129 780 130 840 130" stroke="#2E2C27" stroke-width="2.2" fill="none"/>
+<!-- Grey dot at ~8AM (free event) -->
+<circle cx="117" cy="126" r="7" fill="#B4B3A8"/>
+<!-- Clay sun motif — open day accent -->
+<circle cx="420" cy="72" r="14" fill="none" stroke="#C6613F" stroke-width="2"/>
+<line x1="420" y1="52" x2="420" y2="44" stroke="#C6613F" stroke-width="2" stroke-linecap="round"/>
+<line x1="420" y1="92" x2="420" y2="100" stroke="#C6613F" stroke-width="2" stroke-linecap="round"/>
+<line x1="400" y1="72" x2="392" y2="72" stroke="#C6613F" stroke-width="2" stroke-linecap="round"/>
+<line x1="440" y1="72" x2="448" y2="72" stroke="#C6613F" stroke-width="2" stroke-linecap="round"/>
+<line x1="406" y1="58" x2="400" y2="52" stroke="#C6613F" stroke-width="2" stroke-linecap="round"/>
+<line x1="434" y1="58" x2="440" y2="52" stroke="#C6613F" stroke-width="2" stroke-linecap="round"/>
+<line x1="406" y1="86" x2="400" y2="92" stroke="#C6613F" stroke-width="2" stroke-linecap="round"/>
+<line x1="434" y1="86" x2="440" y2="92" stroke="#C6613F" stroke-width="2" stroke-linecap="round"/>
 </svg>
 <div class="acts">
 <div class="act">
-<div class="act-time">12:30 – 9:15 AM</div>
-<div class="act-text">EK 387 從桃園出發，午夜起飛越過印度洋到杜拜。</div>
+<div class="act-time">8 – 9 AM</div>
+<div class="act-desc">更新老屋帳務，灰點是唯一一件排定的事。</div>
 </div>
 <div class="act">
-<div class="act-time">10:50 AM – 7:35 PM</div>
-<div class="act-text">杜拜轉機一個半小時後，EK 191 飛往里斯本，跨越三個時區。</div>
+<div class="act-time">9 AM – 1 PM</div>
+<div class="act-desc">整段空白，適合深度工作或研究新的接案機會。</div>
 </div>
 <div class="act">
-<div class="act-time">11 PM onward</div>
-<div class="act-text">里斯本轉接 EK 4793，當地下午五點左右到波爾圖。</div>
+<div class="act-time">1 PM 之後</div>
+<div class="act-desc">下午到晚上全開，節奏由你決定。</div>
 </div>
 </div>
 </div>
 </div>
+
 <div class="band-bottom">
 <div class="inner">
-<p class="calm-line">今天早上沒有需要你處理的事。</p>
-<p class="connect-line">連接信箱或聊天工具，早報能幫你看看誰在等你回覆。</p>
 
-<div class="section">
-<div class="section-heading">遠端 / 接案機會</div>
+<p class="calm-line">今天早上沒有事情需要你。</p>
+<p class="connect-line">連上信箱或聊天工具，就能在這裡看到待回覆的訊息。</p>
+
+<!-- Section 1: 遠端 / 接案機會 -->
+<div class="section-block">
+<div class="section-block-title">遠端 / 接案機會</div>
+
 <div class="item">
 <span class="item-num">1</span>
-<div class="item-title"><a href="https://www.opentrain.ai/jobs/country/taiwan/">遠端 AI 資料科學家合約</a></div>
-<div class="item-body"><a href="https://www.opentrain.ai/jobs/country/taiwan/">OpenTrain</a> 近日開出 Competitive Data Scientist 遠端合約，時薪 $60–120，以任務計酬，接受全球申請。</div>
+<div class="item-title"><a href="https://arc.dev/remote-jobs/data-science">Bentego 全遠端資料科學家</a></div>
+<div class="item-body">Arc 平台新刊，時薪制全遠端，要求 Python、SQL 與機器學習經驗，<a href="https://arc.dev/remote-jobs/data-science">在 Arc 上查看</a>。</div>
 </div>
+
 <div class="item">
 <span class="item-num">2</span>
-<div class="item-title"><a href="https://www.opentrain.ai/jobs/">AI 評估研究員，時薪到 $400</a></div>
-<div class="item-body">同平台另有 Principal Research Scientist in AI Evaluation，時薪 $100–400，需深度模型評測與對齊經驗。</div>
+<div class="item-title"><a href="https://arc.dev/remote-jobs/backend">Binance AI Agent 後端工程師，台灣遠端</a></div>
+<div class="item-body">Binance 在 Arc 掛出台灣可遠端的 AI Agent 後端職缺，技術棧涵蓋 LLM 整合與分散式系統，<a href="https://arc.dev/remote-jobs/backend">在 Arc 上查看</a>。</div>
 </div>
+
 <div class="item">
 <span class="item-num">3</span>
-<div class="item-title"><a href="https://www.kore1.com/agentic-ai-hiring-2026/">Agent 工程師仍是賣方市場</a></div>
-<div class="item-body"><a href="https://www.kore1.com/agentic-ai-hiring-2026/">KORE1 調查</a>指出具 agent 編排經驗者溢價 15–20%，Staff 以上年總包 $400K–$600K+，四到八週內就能收到 offer。</div>
+<div class="item-title"><a href="https://posty.tw">台灣 AI 接案費率行情快照</a></div>
+<div class="item-body">Posty 平台十月費率：自動化開發案每案 5–15 萬，AI 內容寫作每篇 800–3,500 元，<a href="https://posty.tw">在 Posty 上瀏覽</a>。</div>
 </div>
 </div>
 
-<div class="section">
-<div class="section-heading">每日 AI 大事</div>
-<div class="news-item">Google Gemini 4 Argon 正式對開發者開放，API 定價 $2/$10 per million tokens — <a href="https://emergent.sh/news/gemini-4-argon-launches-google-s-new-frontier-434de">Emergent</a></div>
-<div class="news-item">Meta 發布首個前沿模型 Muse Wonder，主攻個人與專業 agent 任務 — <a href="https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder">TechCrunch</a></div>
-<div class="news-item">OpenAI、Anthropic 在英國國會支持具約束力的 AI 安全法規，含強制事故通報 — <a href="https://techstartups.com/2026/10/14/top-tech-news-today-october-14-2026-apple-asml-google-openai-microsoft-nvidia-more/">TechStartups</a></div>
-<div class="news-item">Nvidia 承諾五年 $2.5 億運算資源投入英國 AI 安全研究，涵蓋 agent、基礎模型與機器人安全 — <a href="https://techstartups.com/2026/10/14/top-tech-news-today-october-14-2026-apple-asml-google-openai-microsoft-nvidia-more/">TechStartups</a></div>
-</div>
+<!-- Section 2: 每日 AI 大事 -->
+<div class="section-block">
+<div class="section-block-title">每日 AI 大事</div>
 
-<div class="section">
-<div class="section-heading">AI 職涯階梯</div>
 <div class="item">
 <span class="item-num">1</span>
-<div class="item-title"><a href="https://temporal.io/reports/state-of-development-2026">Agent 天天用，初階門卻更窄</a></div>
-<div class="item-body"><a href="https://temporal.io/reports/state-of-development-2026">Temporal 2026 開發者報告</a>，554 人調查，agent 日常使用率從 47.3% 跳升至 80.8%，56.7% 預期初階求職更困難，高績效團隊 47.9% 明確招聘 AI agent 經驗。</div>
+<div class="item-title">OpenAI 加速 1.4 兆美元級融資，搶在 Anthropic IPO 前完成</div>
+<div class="item-body">OpenAI 計劃在數週內完成新一輪融資，估值將突破 3,000 億美元，與 Anthropic 預計的 IPO 時程形成競爭態勢，<a href="https://www.reuters.com/technology/">據 Reuters 報導</a>。</div>
+</div>
+
+<div class="item">
+<span class="item-num">2</span>
+<div class="item-title">美國國土安全部下令聯邦機關移除 DeepSeek</div>
+<div class="item-body">DHS 以國安風險為由，要求文職聯邦機構 30 天內卸載 DeepSeek 應用與模型，<a href="https://www.wsj.com/tech/">據 WSJ 報導</a>。</div>
+</div>
+
+<div class="item">
+<span class="item-num">3</span>
+<div class="item-title">微軟發布企業級 Agent 風險控管機制</div>
+<div class="item-body">Microsoft 365 Copilot 新增 agent 行為審計與權限邊界功能，讓 IT 管理員可設定 agent 能存取的資料範圍與操作上限，<a href="https://www.geekwire.com/">據 GeekWire 報導</a>。</div>
+</div>
+
+<div class="item">
+<span class="item-num">4</span>
+<div class="item-title">DeepSeek 開源 DeepInfer 推論引擎，Apache 2.0 授權</div>
+<div class="item-body">針對自家 V3/R1 系列模型的推論框架，支援多節點 pipeline parallelism，<a href="https://github.com/deepseek-ai">在 GitHub 上查看</a>。</div>
 </div>
 </div>
 
-<div class="section">
-<div class="section-heading">資料分析師 / 資料科學家職涯</div>
+<!-- Section 3: AI 職涯階梯 -->
+<div class="section-block">
+<div class="section-block-title">AI 職涯階梯</div>
+
 <div class="item">
 <span class="item-num">1</span>
-<div class="item-title"><a href="https://ws.ndc.gov.tw/001/administrator/18/relfile/6037/9935/802bf3b8-6761-412c-9649-5a007a672d29.pdf">品質缺口比數量缺口更大</a></div>
-<div class="item-body"><a href="https://ws.ndc.gov.tw/001/administrator/18/relfile/6037/9935/802bf3b8-6761-412c-9649-5a007a672d29.pdf">資策會/國發會人才推估</a>，台灣 AI 專業人才年需 3,750–4,100 人，47% 企業尚無資料工程師，資深角色填補常逾半年，瓶頸在跨領域應用能力而非人數。</div>
+<div class="item-title"><a href="https://www.anthropic.com/research/the-anthropic-model">Anthropic 自揭 AI 對內部人力結構的衝擊</a></div>
+<div class="item-body">初階技術人員佔新進員工比例從 27% 降到 9%；AI agent 工時已達員工的六倍，commit 量半年內增長五倍；「meta-work」（agent 管理 agent）佔互動的 22%，<a href="https://www.anthropic.com/research/the-anthropic-model">在 Anthropic 官網閱讀</a>。</div>
+</div>
+
+<div class="item">
+<span class="item-num">2</span>
+<div class="item-title"><a href="https://toknjobs.com/blog/">Tokn 十月歐洲 AI 就業快照</a></div>
+<div class="item-body">774 筆 AI 職缺中 29% 涉及 agent 相關工作，69% 標示資深以上，Python 出現在 68.8% 的職缺描述中，<a href="https://toknjobs.com/blog/">在 Tokn 上閱讀</a>。</div>
+</div>
+</div>
+
+<!-- Section 4: 資料分析師 / 資料科學家職涯 -->
+<div class="section-block">
+<div class="section-block-title">資料分析師 / 資料科學家職涯</div>
+
+<div class="item">
+<span class="item-num">1</span>
+<div class="item-title"><a href="https://www.pwc.com.au/important-problems/future-of-work/ai-jobs-barometer.html">PwC AI Jobs Barometer 2026：入門職的技能門檻正在陡升</a></div>
+<div class="item-body">分析十億筆全球職缺後發現：AI 高暴露的入門職要求資深技能的可能性是其他入門職的 7 倍；這類入門職自 2019 年成長 35%，非 AI 入門職同期下降 10%；具備 AI 技能的薪資溢價達 62%，<a href="https://www.pwc.com.au/important-problems/future-of-work/ai-jobs-barometer.html">在 PwC 上閱讀完整報告</a>。</div>
 </div>
 </div>
 
