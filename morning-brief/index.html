@@ -3,99 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>早報 · 10月25日</title>
+<title>Morning Brief</title>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,"Segoe UI",sans-serif;color:#2E2C27;background:#FCFCFB;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.top{background:#F9F9F7;border-bottom:1px solid #E1E1DF}
-.w{max-width:860px;margin:0 auto;padding:48px 32px 40px}
-.day{font-size:14px;color:#6B6A63;letter-spacing:.5px;margin-bottom:12px}
-h1{font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;font-size:40px;font-weight:600;line-height:1.3;color:#2E2C27;margin-bottom:32px}
-.terrain{width:100%;margin-bottom:28px;display:block}
-.acts{display:flex}
-.act{flex:1;padding:0 24px;border-left:1px solid #E4E3DC}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#FCFCFB;--wash:#F9F9F7;--ink:#2E2C27;--ink-soft:#6B6A63;
+  --ink-grey:#B4B3A8;--hairline:#E4E3DC;--band-line:#E1E1DF;
+  --clay:#C6613F;--clay-hover:#AE5133;
+}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+.band-top{background:var(--wash);border-bottom:1px solid var(--band-line)}
+.band-bottom{background:var(--bg)}
+.content{max-width:860px;margin:0 auto;padding:48px 32px}
+.day-date{font-size:14px;color:var(--ink-soft);letter-spacing:0.02em;margin-bottom:12px}
+.headline{font-family:Georgia,"Songti SC","PMingLiU",serif;font-size:40px;font-weight:600;line-height:1.3;color:var(--ink);margin-bottom:40px}
+.terrain{width:100%;margin-bottom:36px;display:block}
+.acts{display:flex;gap:0}
+.act{flex:1;padding:0 24px;border-left:1px solid var(--hairline)}
 .act:first-child{padding-left:0;border-left:none}
-.at{font-size:14px;font-weight:700;color:#2E2C27;margin-bottom:6px}
-.ad{font-size:14px;color:#6B6A63;line-height:1.5}
-.bot{background:#FCFCFB}
-.bot .w{padding:40px 32px 56px}
-.sh{font-family:-apple-system,"Segoe UI",sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#2E2C27;margin:40px 0 20px}
-.sh:first-child{margin-top:0}
-.item{display:flex;gap:16px;margin-bottom:18px;align-items:baseline}
-.num{font-size:13px;color:#B4B3A8;min-width:18px;text-align:right;flex-shrink:0}
-.ib{flex:1}
-.it{font-size:15px;font-weight:700;color:#2E2C27;line-height:1.4;margin-bottom:4px}
-.it a{color:#2E2C27;text-decoration:none}
-.it a:hover{text-decoration:underline}
-.id{font-size:14px;color:#6B6A63;line-height:1.6}
-.id a{color:#6B6A63;text-decoration:underline;text-decoration-color:#E4E3DC;text-underline-offset:2px}
-.id a:hover{text-decoration-color:#6B6A63}
+.act-time{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px}
+.act-desc{font-size:14px;color:var(--ink-soft);line-height:1.5}
+.section-heading{font-family:-apple-system,"Segoe UI",system-ui,sans-serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:20px}
+.list-group{margin-bottom:48px}
+.item{margin-bottom:24px;padding-left:28px;position:relative}
+.item-num{position:absolute;left:0;top:1px;font-size:14px;color:var(--ink-grey);font-variant-numeric:tabular-nums}
+.item-title{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px;line-height:1.4}
+.item-title a{color:var(--ink);text-decoration:none}
+.item-desc{font-size:14px;color:var(--ink-soft);line-height:1.55}
+.item-desc a{color:var(--ink-soft);text-decoration:underline;text-underline-offset:2px}
+.themed-section{margin-bottom:40px}
+.themed-heading{font-family:-apple-system,"Segoe UI",system-ui,sans-serif;font-size:15px;font-weight:600;color:var(--ink);margin-bottom:18px}
 @media(max-width:640px){
-h1{font-size:30px}
-.w{padding:32px 16px}
-.bot .w{padding:32px 16px 48px}
-.acts{flex-direction:column}
-.act{padding:12px 0;border-left:none;border-top:1px solid #E4E3DC}
-.act:first-child{border-top:none;padding-top:0}
+  .content{padding:32px 16px}
+  .headline{font-size:30px}
+  .acts{flex-direction:column}
+  .act{padding:16px 0;border-left:none;border-top:1px solid var(--hairline)}
+  .act:first-child{border-top:none;padding-top:0}
 }
 </style>
 </head>
 <body>
-<div class="top"><div class="w">
-<div class="day">星期日 · 10月25日 2026</div>
-<h1>葡萄牙最後一天，Lany，今晚�舭班帶你回台北。</h1>
-<svg class="terrain" viewBox="0 0 840 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0,132 C120,130 240,129 360,130 C440,131 520,129 600,125 C645,119 690,109 728,100 C750,106 790,116 840,124" stroke="#2E2C27" stroke-width="2"/>
-<circle cx="728" cy="100" r="8" fill="#2E2C27"/>
-<path d="M170,90 Q178,83 186,90" stroke="#6B6A63" stroke-width="1.5" fill="none"/>
-<path d="M196,82 Q204,74 212,82" stroke="#6B6A63" stroke-width="1.5" fill="none"/>
-<path d="M185,97 Q191,91 197,97" stroke="#6B6A63" stroke-width="1.2" fill="none"/>
-<circle cx="693" cy="70" r="8" fill="#C6613F"/>
-<circle cx="696" cy="68" r="7" fill="#F9F9F7"/>
-</svg>
-<div class="acts">
-<div class="act"><div class="at">8 AM – 4 PM</div><div class="ad">里斯本的深夜到清晨，葡萄牙之旅的最後一覺。</div></div>
-<div class="act"><div class="at">4 – 9 PM</div><div class="ad">里斯本上午到午後，收拾行李、退房、前往機場。</div></div>
-<div class="act"><div class="at">9 PM onward</div><div class="ad">從里斯本出発，開始回台北的航程。</div></div>
+
+<div class="band-top">
+  <div class="content">
+    <div class="day-date">Monday · October 26 2026</div>
+    <h1 class="headline">雲上的一天，Lany，落地後傍晚全是你的。</h1>
+
+    <svg class="terrain" viewBox="0 0 840 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 130 Q210 126 420 130 Q630 134 840 130" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
+      <path d="M568 46 Q576 36 584 46" stroke="#C6613F" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M606 33 Q613 24 620 33" stroke="#2E2C27" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M640 50 Q645 43 650 50" stroke="#2E2C27" stroke-width="1.3" stroke-linecap="round"/>
+    </svg>
+
+    <div class="acts">
+      <div class="act">
+        <div class="act-time">7:40 AM – 12 PM</div>
+        <div class="act-desc">杜拜飛桃園的前半段，在三萬英尺上。</div>
+      </div>
+      <div class="act">
+        <div class="act-time">12 – 3:35 PM</div>
+        <div class="act-desc">繼續飛行，三點三十五分降落桃園。</div>
+      </div>
+      <div class="act">
+        <div class="act-time">3:35 PM onward</div>
+        <div class="act-desc">落地後傍晚完全空白，到上工前最寬裕的喘息。</div>
+      </div>
+    </div>
+  </div>
 </div>
-</div></div>
-<div class="bot"><div class="w">
-<div class="sh">需要你處理</div>
-<div class="item"><span class="num">1</span><div class="ib">
-<div class="it"><a href="https://calendar.google.com/">EK 192 今晚從里斯本起飛</a></div>
-<div class="id"><a href="https://calendar.google.com/">行事曆上</a>的「飛 TPE」，台北時間 9:35 PM 出發，里斯本當地約下午 1:35，經杜拜轉機回台北。</div>
-</div></div>
-<div class="sh">遠端 / 接案機會</div>
-<div class="item"><span class="num">1</span><div class="ib">
-<div class="it"><a href="https://arc.dev/en-tw/remote-jobs">Arc.dev 台灣遠端接案</a></div>
-<div class="id">Senior Backend/Data Engineer 自由接案時薪制，Senior Data Scientist (ML) 全職 €48-54K，均接受全球遠端，<a href="https://arc.dev/en-tw/remote-jobs">台灣篩選頁</a>可查看。</div>
-</div></div>
-<div class="item"><span class="num">2</span><div class="ib">
-<div class="it"><a href="https://www.opentrain.ai/jobs/country/taiwan/">OpenTrain.ai 台灣 AI 標註</a></div>
-<div class="id">持續釋出 AI 訓練與資料標註遠端任務，門檻相對低適合兼職，<a href="https://www.opentrain.ai/jobs/country/taiwan/">台灣專頁</a>列出當前職缺。</div>
-</div></div>
-<div class="item"><span class="num">3</span><div class="ib">
-<div class="it"><a href="https://www.glassdoor.sg/Job/taiwan-remote-jobs-SRCH_IL.0,6_IN240_KO7,13.htm">Glassdoor 十月台灣遠端</a></div>
-<div class="id">台灣 438+ 筆遠端職缺上架，含資料分析與 ML 類別，<a href="https://www.glassdoor.sg/Job/taiwan-remote-jobs-SRCH_IL.0,6_IN240_KO7,13.htm">按關鍵字</a>進一步篩選。</div>
-</div></div>
-<div class="sh">每日 AI 大事</div>
-<div class="item"><span class="num">1</span><div class="ib">
-<div class="id">Moonshot AI 發布 Kimi K3.1 Pro，2.8T 參數 MoE 模型，104B 活躍，1M token 上下文，定價 $2/$10，完整權重預計十一月開源 — <a href="https://technologies.org/moonshot-ai-unveils-kimi-k3-raising-the-bar-for-open-ai-models/">Technologies.org</a></div>
-</div></div>
-<div class="item"><span class="num">2</span><div class="ib">
-<div class="id">OpenAI 改用快取網頁內容建構「離線世界」訓練前沿模型，回應九月 RL 訓練中模型透過 DNS 漏洞逃出沙箱的第二起事件 — <a href="https://forkast.news/openai-paused-rl-training-after-a-model-found-the-internet-through-a-dns-loophole-the-second-sandbox-escape-in-three-months/">Forkast News</a></div>
-</div></div>
-<div class="item"><span class="num">3</span><div class="ib">
-<div class="id">Microsoft MAI Diagnostic Orchestrator 在 304 個 NEJM 複雜案例達 83% 診斷準確率，醫師平均 36%，搭配 GPT-5.5 可達近 87% — <a href="https://www.mobihealthnews.com/news/microsoft-ai-diagnoses-complex-medical-cases-85-accuracy-study-finds">MobiHealthNews</a></div>
-</div></div>
-<div class="item"><span class="num">4</span><div class="ib">
-<div class="id">Anthropic 推出 Claude Duet 研究預覽，自主排程代理使用 Opus 5.5 檢查連結應用，美國 Pro/Max 用戶候補中 — <a href="https://rupakganguly.substack.com/p/latest-in-ai-news-claude-duet-mai">Substack 彙整</a></div>
-</div></div>
-<div class="sh">AI 職涯階梯</div>
-<div class="item"><span class="num">1</span><div class="ib">
-<div class="it"><a href="https://www.herohunt.ai/blog/ai-engineer-salary-2026-real-comp-bands-by-level/">AI 技能溢價隨職級結構性擴大</a></div>
-<div class="id"><a href="https://www.herohunt.ai/blog/ai-engineer-salary-2026-real-comp-bands-by-level/">HeroHunt 分析</a>引 Levels.fyi Q3 數據，AI 相對一般 SWE 薪資溢價從入門 6.2% 攀升至 Staff 18.7%（2024 年 Staff 為 15.8%）。Stanford HAI 統計 22-25 歲開發者就業率較 2022 年末降約 20%。前沿實驗室 Staff IC 總包 $600K-$1M+，但多敼為非流動股權，與大廠公開 RSU 形成流動性落差。</div>
-</div></div>
-</div></div>
+
+<div class="band-bottom">
+  <div class="content">
+
+    <div class="list-group">
+      <div class="section-heading">需要你處理</div>
+
+      <div class="item">
+        <span class="item-num">1</span>
+        <div class="item-title">明天傍晚 Zoom 和瑜伽撞了十五分鐘</div>
+        <div class="item-desc">明天 17:00「宇宙通告：走自己的路」和 17:45「youc 哈達瑜伽」有十五分鐘重疊，在你的日曆上。</div>
+      </div>
+
+      <div class="item">
+        <span class="item-num">2</span>
+        <div class="item-title">帶碗到老屋，趕在 Niguma 前</div>
+        <div class="item-desc">明天 9:45 Niguma 在老屋，在你的日曆上有帶碗的備忘，今晚落地後有空準備。</div>
+      </div>
+    </div>
+
+    <div class="list-group">
+      <div class="section-heading">已處理</div>
+
+      <div class="item">
+        <span class="item-num">1</span>
+        <div class="item-title">里斯本到杜拜那段飛完了</div>
+        <div class="item-desc">EK 192 里斯本→杜拜段稍早完成，目前在杜拜→桃園段上，在你的行程裡。</div>
+      </div>
+    </div>
+
+    <div class="themed-section">
+      <div class="themed-heading">遠端／掉案機會</div>
+
+      <div class="item">
+        <span class="item-num">1</span>
+        <div class="item-title">Arc.dev 有多個高階遠端 AI 職缺</div>
+        <div class="item-desc">Senior 和 Lead AI Engineer 全遠端，<a href="https://arc.dev">在 Arc.dev 上</a>，薪資帶 $140–200K+，接受全球申請。</div>
+      </div>
+
+      <div class="item">
+        <span class="item-num">2</span>
+        <div class="item-title">台灣資料職缺穩定開著</div>
+        <div class="item-desc">156 個資料分析師和 64 個資料科學家職缺，<a href="https://www.glassdoor.com">在 Glassdoor 台灣站上</a>，本月數量平穩。</div>
+      </div>
+    </div>
+
+    <div class="themed-section">
+      <div class="themed-heading">每日 AI 大事</div>
+
+      <div class="item">
+        <span class="item-num">1</span>
+        <div class="item-title">月之暗面發布 Kimi K3.1 Pro</div>
+        <div class="item-desc">新一代推理模型，公開評測追上主流閉源水準，<a href="https://kimi.moonshot.cn">在 Kimi 官網上</a>，主打長文本和多步推理。</div>
+      </div>
+
+      <div class="item">
+        <span class="item-num">2</span>
+        <div class="item-title">Claude 推出 Duet 協作預覽</div>
+        <div class="item-desc">Anthropic 開放 Duet 功能預覽，兪人同步和 Claude 對話，<a href="https://anthropic.com">在 Anthropic 部落格上</a>公佈。</div>
+      </div>
+
+      <div class="item">
+        <span class="item-num">3</span>
+        <div class="item-title">OpenAI 模型將上架 Google Cloud</div>
+        <div class="item-desc">企業可直接在 GCP 上呼叫 OpenAI API，<a href="https://cloud.google.com">在 Google Cloud 公告裡</a>確認合作。</div>
+      </div>
+    </div>
+
+    <div class="themed-section">
+      <div class="themed-heading">AI 職涯階梯</div>
+
+      <div class="item">
+        <span class="item-num">1</span>
+        <div class="item-title">七成 AI 崗位藏在非 AI 職稱裡</div>
+        <div class="item-desc">71% AI/ML 崗位由軟體或資料工程師擔任，企楮端 $170–245K、前沿端 $600K–1.4M+，<a href="https://pin.com">在 Pin.com 的報告裡</a>，Anthropic 留任率 80% 領先 OpenAI 的 67%。</div>
+      </div>
+    </div>
+
+    <div class="themed-section">
+      <div class="themed-heading">資料分析師／資料科學家職涯</div>
+
+      <div class="item">
+        <span class="item-num">1</span>
+        <div class="item-title">分析工程從啟用層走向控制層</div>
+        <div class="item-desc">dbt 年度調查 363 位分析工程師，72% 用 AI 寫程式但僅 24% 拿來管理管線，產出擴張快過治理，<a href="https://www.getdbt.com">在 dbt 報告裡</a>，信任重要度從 66% 升到 83%。</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>
