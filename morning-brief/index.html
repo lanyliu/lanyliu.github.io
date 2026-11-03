@@ -6,123 +6,129 @@
 <title>Morning Brief</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#FCFCFB;color:#2E2C27;font-family:-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+body{background:#FCFCFB;color:#2E2C27;font-family:-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .top{background:#F9F9F7;border-bottom:1px solid #E1E1DF}
 .bot{background:#FCFCFB}
-.w{max-width:860px;margin:0 auto;padding:48px 24px}
-.dd{font-size:13px;color:#6B6A63;letter-spacing:.02em;margin-bottom:8px}
-h1{font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;font-size:40px;font-weight:400;line-height:1.25;color:#2E2C27;margin-bottom:32px}
-.terrain{width:100%;height:auto;display:block;margin-bottom:24px}
+.w{max-width:860px;margin:0 auto;padding:0 16px}
+.top .w{padding-top:48px;padding-bottom:40px}
+.bot .w{padding-top:40px;padding-bottom:60px}
+.dd{font-size:14px;color:#6B6A63;margin-bottom:8px;letter-spacing:.5px}
+h1{font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;font-size:40px;font-weight:400;color:#2E2C27;line-height:1.3;margin-bottom:32px}
+.ter{width:100%;display:block;margin-bottom:28px}
 .acts{display:flex}
-.act{flex:1;padding:0 20px;border-left:1px solid #E4E3DC}
-.act:first-child{border-left:none;padding-left:0}
-.at{font-size:14px;font-weight:600;color:#2E2C27;margin-bottom:4px}
+.act{flex:1;padding:0 20px;position:relative}
+.act:not(:last-child)::after{content:'';position:absolute;right:0;top:0;bottom:0;width:1px;background:#E4E3DC}
+.act:first-child{padding-left:0}
+.act:last-child{padding-right:0}
+.at{font-size:14px;font-weight:700;color:#2E2C27;margin-bottom:6px}
 .ad{font-size:14px;color:#6B6A63;line-height:1.5}
-h2{font-size:14px;font-weight:600;color:#2E2C27;letter-spacing:.01em;margin:36px 0 16px}
-h2:first-child{margin-top:0}
-.il{list-style:none;counter-reset:n}
-.il li{position:relative;padding-left:28px;margin-bottom:16px;counter-increment:n}
-.il li::before{content:counter(n);position:absolute;left:0;top:1px;font-size:13px;color:#B4B3A8;font-variant-numeric:tabular-nums}
-.it{font-weight:600;font-size:15px;color:#2E2C27;text-decoration:none}
-a.it:hover{text-decoration:underline}
-.ib{font-size:14px;color:#6B6A63;line-height:1.55;margin-top:2px}
-.ib a{color:#6B6A63;text-decoration:underline}
-.ib a:hover{color:#2E2C27}
-.cn{font-size:13px;color:#B4B3A8;margin-top:24px}
-.sl{list-style:none}
-.sl li{margin-bottom:10px;font-size:14px;color:#6B6A63;line-height:1.55}
-.sl a{color:#6B6A63;text-decoration:underline}
-.sl a:hover{color:#2E2C27}
+h2{font-size:15px;font-weight:600;color:#2E2C27;margin-bottom:20px;letter-spacing:.3px}
+.il{list-style:none;margin-bottom:36px}
+.it{margin-bottom:16px;padding-left:28px;position:relative}
+.nu{position:absolute;left:0;top:2px;font-size:13px;color:#B4B3A8;font-variant-numeric:tabular-nums}
+.tt{font-size:15px;font-weight:600;color:#2E2C27;margin-bottom:3px;line-height:1.4}
+.tt a{color:#2E2C27;text-decoration:none}
+.tt a:hover{text-decoration:underline}
+.ds{font-size:14px;color:#6B6A63;line-height:1.55}
+.ds a{color:#6B6A63;text-decoration:underline}
+.cl{font-size:14px;color:#6B6A63;line-height:1.55;margin-bottom:36px}
+hr{border:none;border-top:1px solid #E4E3DC;margin:36px 0}
 @media(max-width:640px){
 h1{font-size:30px}
-.w{padding:32px 16px}
 .acts{flex-direction:column}
-.act{border-left:none;border-top:1px solid #E4E3DC;padding:12px 0}
-.act:first-child{border-top:none;padding-top:0}
+.act{padding:12px 0}
+.act:not(:last-child)::after{width:100%;height:1px;right:auto;bottom:0;top:auto;left:0}
+.top .w{padding-top:32px;padding-bottom:28px}
 }
 </style>
 </head>
 <body>
 <div class="top"><div class="w">
-<p class="dd">Monday · 11月2日 2026</p>
-<h1>早上和下午都留給你了，Lany，SPA 在中間，瑜伽在尾巴。</h1>
-<svg class="terrain" viewBox="0 0 840 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0,130 C60,132 130,132 190,128 C230,118 260,85 291,62 C320,85 345,105 370,112 C395,118 408,108 420,100 C432,108 450,120 480,128 C530,132 590,133 640,131 C680,126 710,105 735,80 C743,72 752,80 768,98 C790,115 815,125 840,128" stroke="#2E2C27" stroke-width="2"/>
-<circle cx="85" cy="82" r="11" fill="none" stroke="#C6613F" stroke-width="1.5"/>
-<line x1="85" y1="66" x2="85" y2="61" stroke="#C6613F" stroke-width="1.5"/>
-<line x1="85" y1="98" x2="85" y2="103" stroke="#C6613F" stroke-width="1.5"/>
-<line x1="69" y1="82" x2="64" y2="82" stroke="#C6613F" stroke-width="1.5"/>
-<line x1="101" y1="82" x2="106" y2="82" stroke="#C6613F" stroke-width="1.5"/>
-<line x1="73" y1="70" x2="69.5" y2="66.5" stroke="#C6613F" stroke-width="1.5"/>
-<line x1="97" y1="94" x2="100.5" y2="97.5" stroke="#C6613F" stroke-width="1.5"/>
-<line x1="97" y1="70" x2="100.5" y2="66.5" stroke="#C6613F" stroke-width="1.5"/>
-<line x1="73" y1="94" x2="69.5" y2="97.5" stroke="#C6613F" stroke-width="1.5"/>
-<path d="M560,82 C563,77 567,79 570,82" stroke="#6B6A63" stroke-width="1" fill="none"/>
-<path d="M574,76 C577,71 581,73 584,76" stroke="#6B6A63" stroke-width="1" fill="none"/>
-<path d="M568,72 C571,67 575,69 578,72" stroke="#6B6A63" stroke-width="1" fill="none"/>
-<circle cx="291" cy="62" r="10" fill="#2E2C27"/>
-<circle cx="420" cy="100" r="7" fill="#2E2C27"/>
-<circle cx="743" cy="72" r="9" fill="#2E2C27"/>
+<div class="dd">星期二 · 11月3日 2026</div>
+<h1>早上三場連著走，下午五個小時是你的，Lany</h1>
+<svg class="ter" viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,128 C12,126 20,90 32,65 C42,45 85,55 110,58 C135,50 158,48 178,50 C198,52 235,53 259,55 C285,58 320,85 360,115 C395,135 435,140 470,140 C505,140 540,136 570,130 C600,110 625,98 646,92 C665,87 695,100 720,108 C748,105 785,102 808,100 C828,102 836,112 840,118" fill="none" stroke="#2E2C27" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="32" cy="65" r="8" fill="#2E2C27"/>
+<circle cx="178" cy="50" r="8" fill="#2E2C27"/>
+<circle cx="259" cy="55" r="8" fill="#2E2C27"/>
+<circle cx="646" cy="92" r="8" fill="#2E2C27"/>
+<circle cx="808" cy="100" r="8" fill="#2E2C27"/>
+<circle cx="470" cy="108" r="5" fill="none" stroke="#C6613F" stroke-width="1.3"/>
+<line x1="470" y1="100" x2="470" y2="97" stroke="#C6613F" stroke-width="1.1" stroke-linecap="round"/>
+<line x1="477" y1="103" x2="479" y2="100" stroke="#C6613F" stroke-width="1.1" stroke-linecap="round"/>
+<line x1="477" y1="113" x2="479" y2="116" stroke="#C6613F" stroke-width="1.1" stroke-linecap="round"/>
+<line x1="463" y1="103" x2="461" y2="100" stroke="#C6613F" stroke-width="1.1" stroke-linecap="round"/>
+<line x1="463" y1="113" x2="461" y2="116" stroke="#C6613F" stroke-width="1.1" stroke-linecap="round"/>
 </svg>
 <div class="acts">
-<div class="act"><p class="at">8 – 11:30 AM</p><p class="ad">整個早上沒有行程，SPA 之前有三個半小時。</p></div>
-<div class="act"><p class="at">11:30 AM – 3 PM</p><p class="ad">光復黛寶拉 SPA 到 1:30，接著去拿褲子。</p></div>
-<div class="act"><p class="at">3 PM onward</p><p class="ad">下午四小時空檔，7 點小班哈達瑜伽。</p></div>
+<div class="act">
+<div class="at">7:30 AM – 12 PM</div>
+<div class="ad">瑜伽八點半起，九點四十五 Niguma，十一點棉棉，早上一場接一場</div>
+</div>
+<div class="act">
+<div class="at">12 – 5 PM</div>
+<div class="ad">五個小時的完整空檔，今天最大的自由時段</div>
+</div>
+<div class="act">
+<div class="at">5 PM onward</div>
+<div class="ad">五點 Zoom 宇宙通告，七點半出門面交喇叭</div>
+</div>
 </div>
 </div></div>
-
 <div class="bot"><div class="w">
-
 <h2>需要你處理</h2>
-<ol class="il">
-<li>
-<a class="it" href="https://www.google.com/calendar/event?eid=NmRpNjhjMWo2a3JqMmJiMmNkaTM2YjlrY2xqNmNiYjE2a3EzNmI5bzZzbzY4ZDlrNzFoM2NjMWs2byBsYW55bGl1MTIyQG0&amp;ctz=Asia/Taipei">明天傍晚兩個行程交疊 15 分鐘</a>
-<p class="ib">5 點的 Zoom「宇宙通告」和 5:45 的 youc 哈達瑜伽在 5:45–6:00 重疊，今天可以先決定留哪一個或提前離開 Zoom，<a href="https://www.google.com/calendar/event?eid=NmRpNjhjMWo2a3JqMmJiMmNkaTM2YjlrY2xqNmNiYjE2a3EzNmI5bzZzbzY4ZDlrNzFoM2NjMWs2byBsYW55bGl1MTIyQG0&amp;ctz=Asia/Taipei">在你的日曆上</a>。</p>
+<ul class="il">
+<li class="it"><span class="nu">1</span>
+<div class="tt"><a href="https://www.google.com/calendar/event?eid=60r3gcpo6opmcbb36oqjib9kcgsmcb9p60r3gb9m6timaor46oq6ap9lc4&amp;ctz=Asia/Taipei">明天的私人課打了問號</a></div>
+<div class="ds"><a href="https://www.google.com/calendar/event?eid=60r3gcpo6opmcbb36oqjib9kcgsmcb9p60r3gb9m6timaor46oq6ap9lc4&amp;ctz=Asia/Taipei">行事曆上</a>明天 13:30 的瑜伽私人課前有個「？」，下午有五小時空檔</div>
 </li>
-</ol>
-
-<p class="cn">目前只有日曆連線，接上信箱或聊天工具就能看到更完整的全貌。</p>
-
-<h2>遠端 / 接案機會</h2>
-<ol class="il">
-<li>
-<a class="it" href="https://www.tasker.com.tw/cases?selected_tags=427%2C496">Tasker 徵 Claude Code 長期開發夥伴</a>
-<p class="ib">每月 5–6 個 MVP 快速開發，帳號費用案主出，預算面議，遠端，<a href="https://www.tasker.com.tw/cases?selected_tags=427%2C496">在 Tasker 上</a>。</p>
-</li>
-<li>
-<a class="it" href="https://www.ziprecruiter.com/Jobs/Remote-Ai-Analyst">美國遠端 AI 分析師，年薪 $52K–$280K</a>
-<p class="ib">十月持續刊登 AI 分析師與資料科學相關遠端職缺，<a href="https://www.ziprecruiter.com/Jobs/Remote-Ai-Analyst">在 ZipRecruiter 上</a>。</p>
-</li>
-<li>
-<a class="it" href="https://arc.dev/en-tw/remote-jobs">Arc 台灣遠端 ML 與資料工程職缺</a>
-<p class="ib">涵蓋機器學習、資料工程與 AI 應用，以遠端為主，<a href="https://arc.dev/en-tw/remote-jobs">在 Arc 上</a>。</p>
-</li>
-</ol>
-
-<h2>每日 AI 大事</h2>
-<ul class="sl">
-<li>OpenAI 推出 GPT-6.1 Terra，token 成本降 50%、agent 速度三倍，主打電腦操作與視覺推理，<a href="https://bleepingcomputer.com/news/artificial-intelligence/openai-launches-gpt-61-terra-with-3x-faster-ai-agents-50-percent-lower-pricing">在 BleepingComputer 上</a>。</li>
-<li>美國司法部對 Nvidia 以 $129 億收購 Hugging Face 展開反壟斷調查，關注是否會對客戶形成壓力，<a href="https://aiweekly.co/alerts/nvidias-1293b-hugging-face-deal-draws-doj-antitrust-probe">在 AI Weekly 上</a>。</li>
-<li>韓國 AI 晶片商 FuriosaAI 完成 $6.2 億 D 輪，估值 $29 億，韓國國家成長基金注入 $2.8 億，<a href="https://runtimewire.com/article/furiosaai-series-d-620-million-valuation-inference-chips">在 RuntimeWire 上</a>。</li>
-<li>Anthropic 披露因安全防護程序暫停訓練，涉及測試環境中的外部連線審查，<a href="https://aialvin.substack.com/p/ai-news-roundup-10-developments-to-141">在 AI Alvin 上</a>。</li>
 </ul>
-
+<p class="cl">目前只有行事曆連線。接上信箱或聊天工具，等回覆的訊息會出現在這裡</p>
+<hr>
+<h2>遠端 / 接案機會</h2>
+<ul class="il">
+<li class="it"><span class="nu">1</span>
+<div class="tt"><a href="https://www.tasker.com.tw/cases?selected_tags=1%2C427%2C497%2C504">出任務平台有 AI 開發接案</a></div>
+<div class="ds"><a href="https://www.tasker.com.tw/cases?selected_tags=1%2C427%2C497%2C504">出任務</a>上架企業 AI 機器人開發案金額十萬元，另有 n8n 自動化與 AI 內容代發，都接受遠端</div>
+</li>
+<li class="it"><span class="nu">2</span>
+<div class="tt"><a href="https://www.glassdoor.com/Job/taiwan-remote-jobs-SRCH_IL.0,6_IN240_KO7,13.htm">台灣十一月遠端職缺超過四百筆</a></div>
+<div class="ds"><a href="https://www.glassdoor.com/Job/taiwan-remote-jobs-SRCH_IL.0,6_IN240_KO7,13.htm">Glassdoor</a> 統計，AI 與資料相關角色佔比持續上升，多數來自外商或跨國團隊</div>
+</li>
+</ul>
+<h2>每日 AI 大事</h2>
+<ul class="il">
+<li class="it"><span class="nu">1</span>
+<div class="tt"><a href="https://explainx.ai/catch-up-on-ai/2026-11-02">Anthropic IPO 修訂，Q3 收入近 170 億美元</a></div>
+<div class="ds"><a href="https://explainx.ai/catch-up-on-ai/2026-11-02">S-1/A 修訂稿</a>同時披露內部 Claude 使用量（按客戶價格計）四月起超過員工月薪，一至九月成長逾 250 倍</div>
+</li>
+<li class="it"><span class="nu">2</span>
+<div class="tt"><a href="https://techstartups.com/2026/11/02/top-tech-news-today-november-2-2026-the-biggest-stories-in-ai-startups-and-big-tech/">Apple Intelligence 攜 Qwen 進中國</a></div>
+<div class="ds"><a href="https://techstartups.com/2026/11/02/top-tech-news-today-november-2-2026-the-biggest-stories-in-ai-startups-and-big-tech/">報導</a>指阿里巴巴 Qwen 將驅動 Siri 與寫作工具，明天開始開發者測試，十二月隨 iOS 27.3 上線</div>
+</li>
+<li class="it"><span class="nu">3</span>
+<div class="tt"><a href="https://explainx.ai/catch-up-on-ai/2026-11-02">SemiAnalysis 發布跨領域 agent 基準 GDPx</a></div>
+<div class="ds"><a href="https://explainx.ai/catch-up-on-ai/2026-11-02">基準報告</a>涵蓋十一領域 206 項任務，Claude Opus 5.5 以 12% 得分率領先，200 次網安對齊測試中 196 次違規</div>
+</li>
+<li class="it"><span class="nu">4</span>
+<div class="tt"><a href="https://techstartups.com/2026/11/02/top-tech-news-today-november-2-2026-the-biggest-stories-in-ai-startups-and-big-tech/">Google 衛星在低地軌道完成 TPU 推論</a></div>
+<div class="ds">Project Suncatcher 搭載四顆 Trillium TPU，<a href="https://techstartups.com/2026/11/02/top-tech-news-today-november-2-2026-the-biggest-stories-in-ai-startups-and-big-tech/">試驗報告</a>以 Gemma 4 跑推論，單次限約二十分鐘</div>
+</li>
+</ul>
 <h2>AI 職涯階梯</h2>
-<ol class="il">
-<li>
-<a class="it" href="https://www.businesstoday.in/jobs/story/can-ai-fast-track-your-next-promotion-563247-2026-10-23">印度萬人調查：AI 技能已成升遷基線</a>
-<p class="ib">TeamLease EdTech 調查 14,316 名專業人士，42% 在 AI 技能提升後 18 個月內獲升遷或加薪，67% 企業將 AI 能力列入晉升標準，50% 納入績效考核，<a href="https://www.businesstoday.in/jobs/story/can-ai-fast-track-your-next-promotion-563247-2026-10-23">在 Business Today 上</a>。</p>
+<ul class="il">
+<li class="it"><span class="nu">1</span>
+<div class="tt"><a href="https://synapsescope.com/reports/q3-2026/">八分之一美國職缺要求 AI，初階繼續收縮</a></div>
+<div class="ds"><a href="https://synapsescope.com/reports/q3-2026/">SynapseScope 季報</a>統計 forward-deployed engineer 年增 347%，初階技術職佔比從 6.9% 降至 5.7%，Nasdaq-100 企業 AI 職缺佔比達 19.3%</div>
 </li>
-</ol>
-
+</ul>
 <h2>資料分析師 / 資料科學家職涯</h2>
-<ol class="il">
-<li>
-<a class="it" href="https://news.pedaily.cn/202610/570386.shtml">DA 職缺指數墊底，企業全面轉招資深</a>
-<p class="ib">Indeed 十月 DA 職缺指數 63.1，較 2020 年降近四成，47 行業中墊底；Infragistics Reveal 調查 70% 企業僅招資深、12% 願收入門級，初階管道持續收窄，<a href="https://news.pedaily.cn/202610/570386.shtml">在投資界/數據猿上</a>。</p>
+<ul class="il">
+<li class="it"><span class="nu">1</span>
+<div class="tt"><a href="https://synapsescope.com/reports/q3-2026/">AI 技能薪資溢價 14.9%，同一雇主內為零</a></div>
+<div class="ds"><a href="https://synapsescope.com/reports/q3-2026/">同份季報</a>的薪資分析指出溢價來自「誰在招」的組成差異；金融分析師六分之一職缺已標注 AI 需求</div>
 </li>
-</ol>
-
+</ul>
 </div></div>
 </body>
 </html>
