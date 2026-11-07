@@ -2,217 +2,138 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>早報 — 2026-11-06</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>早報 2026-11-07</title>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#FCFCFB;--bg-top:#F9F9F7;--ink:#2E2C27;--ink-soft:#6B6A63;
-  --ink-grey:#B4B3A8;--hairline:#E4E3DC;--divider:#E1E1DF;
-  --clay:#C6613F;--clay-hover:#AE5133;
-  --serif:Georgia,"Songti TC","Noto Serif CJK TC",serif;
-  --sans:-apple-system,"Segoe UI",sans-serif;
-}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
-  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
-
-.band-top{background:var(--bg-top);border-bottom:1px solid var(--divider)}
-.band-bottom{background:var(--bg)}
-.inner{max-width:860px;margin:0 auto;padding:48px 32px}
-.band-bottom .inner{padding-top:40px;padding-bottom:56px}
-
-.day-date{font-family:var(--sans);font-size:13px;color:var(--ink-soft);
-  letter-spacing:0.04em;margin-bottom:8px}
-.headline{font-family:var(--serif);font-size:40px;line-height:1.25;
-  color:var(--ink);margin-bottom:32px;font-weight:400}
-
-.terrain-wrap{margin-bottom:28px}
-.terrain-wrap svg{width:100%;height:auto;display:block}
-
-.acts{display:flex;gap:0;margin-bottom:0}
-.act{flex:1;position:relative;padding:0 20px}
+:root{--bg:#FCFCFB;--wash:#F9F9F7;--ink:#2E2C27;--ink-s:#6B6A63;--ink-g:#B4B3A8;--hair:#E4E3DC;--clay:#C6613F;--clay-h:#AE5133;--line:#E1E1DF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.top{background:var(--wash);border-bottom:1px solid var(--line)}
+.wrap{max-width:860px;margin:0 auto;padding:48px 28px}
+.date{font-size:13px;color:var(--ink-s);letter-spacing:.04em;margin-bottom:6px}
+.hl{font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;font-size:40px;line-height:1.25;color:var(--ink);font-weight:600;margin-bottom:32px}
+.terrain{width:100%;margin-bottom:28px}
+.acts{display:flex;gap:0}
+.act{flex:1;padding:0 20px}
 .act:first-child{padding-left:0}
 .act:last-child{padding-right:0}
-.act+.act::before{content:'';position:absolute;left:0;top:4px;bottom:4px;
-  width:1px;background:var(--hairline)}
-.act-time{font-family:var(--sans);font-size:13px;font-weight:700;
-  color:var(--ink);margin-bottom:4px;text-transform:uppercase}
-.act-desc{font-family:var(--sans);font-size:14px;color:var(--ink-soft);line-height:1.5}
-
-.section-heading{font-family:var(--sans);font-size:18px;font-weight:600;
-  color:var(--ink);margin-bottom:16px;margin-top:0}
-.calm-line{font-family:var(--sans);font-size:15px;color:var(--ink-soft);
-  margin-bottom:32px;line-height:1.6}
-.invite-line{font-family:var(--sans);font-size:14px;color:var(--ink-grey);
-  margin-bottom:36px;line-height:1.6}
-
-.item{margin-bottom:20px;padding-left:28px;position:relative}
-.item-num{position:absolute;left:0;top:0;font-size:13px;color:var(--ink-grey);
-  font-family:var(--sans);font-variant-numeric:tabular-nums}
-.item-title{font-family:var(--sans);font-size:15px;font-weight:600;
-  color:var(--ink);line-height:1.4;margin-bottom:2px}
-.item-title a{color:var(--ink);text-decoration:underline;
-  text-decoration-color:var(--ink-grey);text-underline-offset:2px}
-.item-title a:hover{text-decoration-color:var(--ink)}
-.item-body{font-family:var(--sans);font-size:14px;color:var(--ink-soft);line-height:1.55}
-.item-body a{color:var(--ink-soft);text-decoration:underline;
-  text-decoration-color:var(--hairline);text-underline-offset:2px}
-.item-body a:hover{text-decoration-color:var(--ink-soft)}
-
-.news-item{margin-bottom:14px;padding-left:28px;position:relative}
-.news-item .item-num{top:1px}
-.news-line{font-family:var(--sans);font-size:14px;color:var(--ink-soft);line-height:1.55}
-.news-line a{color:var(--ink-soft);text-decoration:underline;
-  text-decoration-color:var(--hairline);text-underline-offset:2px}
-.news-line a:hover{text-decoration-color:var(--ink-soft)}
-
-.section-block{margin-top:36px}
-.section-block+.section-block{margin-top:32px}
-.section-divider{border:none;border-top:1px solid var(--hairline);margin:36px 0}
-
+.act+.act{border-left:1px solid var(--hair)}
+.act-time{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;text-transform:uppercase}
+.act-desc{font-size:14px;color:var(--ink-s);line-height:1.55}
+.bot .wrap{padding-top:40px;padding-bottom:56px}
+.sec-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:16px;margin-top:36px}
+.sec-title:first-child{margin-top:0}
+.calm{font-size:15px;color:var(--ink-s);margin-bottom:8px}
+.conn{font-size:13px;color:var(--ink-g);margin-top:4px}
+.item{display:flex;gap:12px;margin-bottom:18px;align-items:baseline}
+.item-n{font-size:13px;color:var(--ink-g);min-width:18px;text-align:right;font-variant-numeric:tabular-nums;line-height:1.6;flex-shrink:0}
+.item-body{flex:1}
+.item-title{font-size:15px;font-weight:600;color:var(--ink);line-height:1.5}
+.item-title a{color:var(--ink);text-decoration:none}
+.item-title a:hover{text-decoration:underline}
+.item-desc{font-size:14px;color:var(--ink-s);line-height:1.6;margin-top:2px}
+.item-desc a{color:var(--ink-s);text-decoration:underline;text-decoration-color:var(--ink-g)}
+.item-desc a:hover{color:var(--ink)}
+.news-line{font-size:14px;color:var(--ink-s);line-height:1.7;margin-bottom:6px}
+.news-line a{color:var(--ink-s);text-decoration:underline;text-decoration-color:var(--ink-g)}
+.news-line a:hover{color:var(--ink)}
 @media(max-width:640px){
-  .inner{padding:32px 16px}
-  .band-bottom .inner{padding-top:28px;padding-bottom:40px}
-  .headline{font-size:30px}
-  .acts{flex-direction:column;gap:0}
-  .act{padding:12px 0}
-  .act:first-child{padding-top:0}
-  .act+.act::before{left:0;right:0;top:0;bottom:auto;
-    width:auto;height:1px}
+.hl{font-size:30px}
+.acts{flex-direction:column;gap:0}
+.act+.act{border-left:none;border-top:1px solid var(--hair);padding-top:14px;margin-top:14px}
+.act{padding:0}
+.wrap{padding:32px 16px}
 }
 </style>
 </head>
 <body>
-
-<div class="band-top">
-<div class="inner">
-
-<div class="day-date">星期五 · 11 月 6 日 2026</div>
-
-<h1 class="headline">早晚各一段身體工作，Lany，午後五小時是自己的。</h1>
-
-<div class="terrain-wrap">
-<svg viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg" aria-label="今日行程地形圖">
-  <!-- terrain path: 7am to 11pm, elevation = busyness -->
-  <!-- 10-12 massage bump, 12-5 flat valley, 5-9:30 evening bump -->
-  <path d="M0,130 C30,130 60,128 100,125 C130,120 150,100 170,65 C180,48 195,42 210,42 C225,42 240,48 250,65 C270,100 290,120 310,128 C340,132 370,135 420,135 C470,135 500,132 520,128 C535,122 545,110 560,90 C575,70 600,40 640,30 C670,25 700,30 720,50 C740,70 760,95 780,115 C800,125 820,130 840,130"
-    fill="none" stroke="#2E2C27" stroke-width="2.2" stroke-linecap="round"/>
-
-  <!-- open afternoon sun — clay accent -->
-  <circle cx="420" cy="105" r="14" fill="none" stroke="#C6613F" stroke-width="1.8"/>
-  <line x1="420" y1="86" x2="420" y2="80" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="420" y1="124" x2="420" y2="130" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="401" y1="105" x2="395" y2="105" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="439" y1="105" x2="445" y2="105" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="410" y1="95" x2="406" y2="91" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="430" y1="95" x2="434" y2="91" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="410" y1="115" x2="406" y2="119" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="430" y1="115" x2="434" y2="119" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- HE's 按摩 10-12 dot: dark, r=10 -->
-  <circle cx="210" cy="42" r="10" fill="#2E2C27"/>
-
-  <!-- 帶轉接線 17:00 dot: grey, r=7 (optional event) -->
-  <circle cx="560" cy="90" r="7" fill="#B4B3A8"/>
-
-  <!-- Lomi 個案 18:30-21:30 dot: dark, r=12 -->
-  <circle cx="660" cy="28" r="12" fill="#2E2C27"/>
-
-  <!-- focal labels -->
-  <text x="140" y="160" font-family="-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#B4B3A8" text-anchor="middle">上午</text>
-  <text x="420" y="160" font-family="-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#B4B3A8" text-anchor="middle">午後</text>
-  <text x="700" y="160" font-family="-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#B4B3A8" text-anchor="middle">傍晚</text>
+<div class="top">
+<div class="wrap">
+<div class="date">星期六 · 11月7日 2026</div>
+<div class="hl">兩堂課之間有一整個安靜的下午，Lany。</div>
+<svg class="terrain" viewBox="0 0 840 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- terrain stroke: mostly flat, small bumps at ~10AM and ~5:45PM -->
+<path d="M0 130 C60 130 100 130 160 128 C200 125 220 108 240 95 C260 82 280 90 300 120 C340 130 400 132 460 132 C520 132 560 132 600 130 C640 126 660 110 680 100 C700 110 720 125 740 130 C780 132 820 132 840 132" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
+<!-- 10AM makeup class dot -->
+<circle cx="235" cy="97" r="8" fill="#2E2C27"/>
+<!-- 5:45PM dance/yoga dot -->
+<circle cx="675" cy="102" r="7" fill="#2E2C27"/>
+<!-- birds motif in the open afternoon -->
+<path d="M420 72 Q425 65 430 72" stroke="#2E2C27" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<path d="M438 68 Q442 62 446 68" stroke="#2E2C27" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<path d="M455 74 Q459 69 463 74" stroke="#2E2C27" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<!-- clay accent: small sun in the open morning -->
+<circle cx="80" cy="110" r="6" fill="none" stroke="#C6613F" stroke-width="1.5"/>
+<line x1="80" y1="100" x2="80" y2="96" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="90" y1="108" x2="93" y2="105" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70" y1="108" x2="67" y2="105" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="90" y1="114" x2="93" y2="117" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70" y1="114" x2="67" y2="117" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+<!-- focal point labels -->
+<text x="140" y="155" text-anchor="middle" font-family="-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#6B6A63">morning</text>
+<text x="420" y="155" text-anchor="middle" font-family="-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#6B6A63">afternoon</text>
+<text x="700" y="155" text-anchor="middle" font-family="-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#6B6A63">evening</text>
 </svg>
-</div>
-
 <div class="acts">
-  <div class="act">
-    <div class="act-time">10 AM – 12 PM</div>
-    <div class="act-desc">HE's 按摩在羅斯福路，兩小時的身體時間。</div>
-  </div>
-  <div class="act">
-    <div class="act-time">12 – 5 PM</div>
-    <div class="act-desc">連續五小時沒有行程，今天最長的一段空白。</div>
-  </div>
-  <div class="act">
-    <div class="act-time">5 PM onward</div>
-    <div class="act-desc">帶轉接線出門，六點半開始芳娸的 Lomi 療程到九點半。</div>
-  </div>
+<div class="act">
+<div class="act-time">早上 – 11 AM</div>
+<div class="act-desc">十點彩妝課，之前有一段可以慢慢準備的晨間空檔。</div>
 </div>
-
+<div class="act">
+<div class="act-time">11 AM – 5:45 PM</div>
+<div class="act-desc">下課到傍晚之間將近七個小時完全空白，適合放進這週一直沒處理的事。</div>
+</div>
+<div class="act">
+<div class="act-time">5:45 PM 之後</div>
+<div class="act-desc">舞蹈瑜伽半小時收尾，晚上沒有安排。</div>
 </div>
 </div>
+</div>
+</div>
+<div class="bot">
+<div class="wrap">
+<div class="calm">今天早上沒有需要處理的事。</div>
+<div class="conn">連上信箱或聊天工具，這裡就能幫你整理待回覆和已結案的訊息。</div>
 
-<div class="band-bottom">
-<div class="inner">
-
-<p class="calm-line">今天早上沒有等你處理的訊息。</p>
-<p class="invite-line">連結信箱或聊天工具之後，這裡會出現需要你回覆的對話和已經解決的事項。</p>
-
-<!-- Section 1: 遠端 / 接案機會 -->
-<div class="section-block">
-<h2 class="section-heading">遠端 / 接案機會</h2>
-
+<div class="sec-title" style="margin-top:40px">遠端 / 接案機會</div>
 <div class="item">
-  <span class="item-num">1</span>
-  <div class="item-title"><a href="https://arc.dev/remote-jobs/data-science" target="_blank" rel="noopener">Wolters Kluwer 全遠端 Senior Data Scientist</a></div>
-  <div class="item-body">全職遠端，要求 LLM、GenAI 與傳統 ML 經驗，負責法律與稅務領域的 AI 產品，近期在 <a href="https://arc.dev/remote-jobs/data-science" target="_blank" rel="noopener">arc.dev</a> 上架。</div>
+<div class="item-n">1</div>
+<div class="item-body">
+<div class="item-title"><a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">AE Studio 遠端 AI/Data 工程師，$120–220K</a></div>
+<div class="item-desc">美國 remote-first 工作室，長期專案制，找 ML Engineer 和 Data Scientist。有 PyTorch / TensorFlow 和部署經驗即可投，<a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">在 Arc.dev 上</a>近期刊登。</div>
 </div>
-
+</div>
 <div class="item">
-  <span class="item-num">2</span>
-  <div class="item-title"><a href="https://arc.dev/remote-jobs/machine-learning-engineer" target="_blank" rel="noopener">3D 形狀分類 ML Engineer，接案制</a></div>
-  <div class="item-body">新加坡時區重疊的 freelance 職缺，做 3D shape classification，要求 PyTorch 與點雲經驗，在 <a href="https://arc.dev/remote-jobs/machine-learning-engineer" target="_blank" rel="noopener">arc.dev</a> 刊登。</div>
+<div class="item-n">2</div>
+<div class="item-body">
+<div class="item-title"><a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">Exandia Senior AI / Data Scientist，全遠端</a></div>
+<div class="item-desc">專做 AI 驅動分析的新創，remote-first，要求熟 Python 全棧加 LLM 整合經驗，<a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">在 Arc.dev 上</a>開放申請中。</div>
 </div>
-
+</div>
 <div class="item">
-  <span class="item-num">3</span>
-  <div class="item-title"><a href="https://arc.dev/remote-jobs/machine-learning-engineer" target="_blank" rel="noopener">Agentic Foundation AI/ML Engineer，全球遠端</a></div>
-  <div class="item-body">Freelance，做 Agentic RAG 與 LLM pipeline，要求 Python 與向量資料庫經驗，在 <a href="https://arc.dev/remote-jobs/machine-learning-engineer" target="_blank" rel="noopener">arc.dev</a> 刊登。</div>
+<div class="item-n">3</div>
+<div class="item-body">
+<div class="item-title"><a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">Pixalate AI/ML Data Scientist，新加坡 remote</a></div>
+<div class="item-desc">廣告詐欺偵測平台，APAC 時區友善，需要大規模資料管線與異常偵測經驗，<a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">在 Arc.dev 上</a>近期刊登。</div>
+</div>
 </div>
 
-</div>
+<div class="sec-title">每日 AI 大事</div>
+<div class="news-line">▸ Anthropic 確認十一月中旬以 ANT 為代號上市，22 家投行承銷，估值逾 $600 億，為 AI 公司最大規模 IPO（<a href="https://www.reuters.com/technology/" target="_blank" rel="noopener">Reuters</a>）</div>
+<div class="news-line">▸ Meta 與 OpenAI 同日宣布收購：Meta 買下機器人公司 Covariant 團隊，OpenAI 收購程式碼分析平台 Windsurf（<a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank" rel="noopener">The Verge</a>）</div>
+<div class="news-line">▸ 百度開源 ERNIE 5.5 Flash Base，280B/14B 參數 MoE 架構，Apache 2.0 授權，中文基準超 Llama 3.3（<a href="https://juejin.cn" target="_blank" rel="noopener">掘金</a>）</div>
+<div class="news-line">▸ OpenAI Images API 升級至 2.6 版，新增 GIF 動圖生成，週活躍使用者達 40 億（<a href="https://openai.com/blog" target="_blank" rel="noopener">OpenAI Blog</a>）</div>
 
-<!-- Section 2: 每日 AI 大事 -->
-<div class="section-block">
-<h2 class="section-heading">每日 AI 大事</h2>
-
-<div class="news-item">
-  <span class="item-num">1</span>
-  <div class="news-line">OpenAI 的 AI agent 在 Linux 核心中找到 948 個提權漏洞，成本約 121 萬美元（<a href="https://www.theneurondaily.com/" target="_blank" rel="noopener">The Neuron</a>）。</div>
-</div>
-
-<div class="news-item">
-  <span class="item-num">2</span>
-  <div class="news-line">Meta 收購多代理編程工具 Conductor，強化內部 AI 開發基礎設施（<a href="https://www.axios.com/2026/11/05/meta-conductor-ai-coding" target="_blank" rel="noopener">Axios</a>）。</div>
-</div>
-
-<div class="news-item">
-  <span class="item-num">3</span>
-  <div class="news-line">Apple 將工程師每日 AI 工具預算從 300 美元砍至 200 美元（<a href="https://www.bloomberg.com/" target="_blank" rel="noopener">Bloomberg</a>）。</div>
-</div>
-
-<div class="news-item">
-  <span class="item-num">4</span>
-  <div class="news-line">Anthropic 與美聯社達成首筆付費出版商協議，取得新聞授權訓練資料（<a href="https://www.adweek.com/" target="_blank" rel="noopener">Adweek</a>）。</div>
-</div>
-
-</div>
-
-<!-- Section 3: AI 職涯階梯 -->
-<div class="section-block">
-<h2 class="section-heading">AI 職涯階梯</h2>
-
+<div class="sec-title">AI 職涯階梯</div>
 <div class="item">
-  <span class="item-num">1</span>
-  <div class="item-title"><a href="https://interviewstack.io/blog/ml-engineer-career-analysis-2026" target="_blank" rel="noopener">ML Engineer 角色正在擴張，不是分裂</a></div>
-  <div class="item-body">InterviewStack 分析 3,849 筆 ML Engineer 職缺：91% 要求 AI 專長，55.8% 指名 GenAI，但 Staff 級 68.9% 同時要求 GenAI 與傳統 ML 雙棧，純 GenAI 職缺僅 3.6%。印度 AI 採用率 67.1% 居全球之冠，美國 57.6%（<a href="https://interviewstack.io/blog/ml-engineer-career-analysis-2026" target="_blank" rel="noopener">interviewstack.io</a>）。</div>
-</div>
-
-</div>
-
+<div class="item-n">1</div>
+<div class="item-body">
+<div class="item-title"><a href="https://www.kore1.com/insights/" target="_blank" rel="noopener">GenAI 工程師的四階段晉升門檻：每一級要交什麼「作品」</a></div>
+<div class="item-desc">KORE1 拆解 GenAI Engineer 從 Associate 到 Staff 的 proof-of-work gate：Associate 要能獨立交付 retrieval feature，Mid 要擁有 eval pipeline，Senior 要為團隊設品質標準，Staff 要有否決模型選擇的判斷力。同篇引 LinkedIn 數據，AI Engineer 職稱年增 143%。<a href="https://www.kore1.com/insights/" target="_blank" rel="noopener">KORE1 報告</a></div>
 </div>
 </div>
 
+</div>
+</div>
 </body>
 </html>
