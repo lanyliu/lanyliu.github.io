@@ -2,136 +2,205 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>早報 2026-11-07</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>早報 — 2026-11-08</title>
 <style>
-:root{--bg:#FCFCFB;--wash:#F9F9F7;--ink:#2E2C27;--ink-s:#6B6A63;--ink-g:#B4B3A8;--hair:#E4E3DC;--clay:#C6613F;--clay-h:#AE5133;--line:#E1E1DF}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-.top{background:var(--wash);border-bottom:1px solid var(--line)}
-.wrap{max-width:860px;margin:0 auto;padding:48px 28px}
-.date{font-size:13px;color:var(--ink-s);letter-spacing:.04em;margin-bottom:6px}
-.hl{font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;font-size:40px;line-height:1.25;color:var(--ink);font-weight:600;margin-bottom:32px}
-.terrain{width:100%;margin-bottom:28px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#FCFCFB;--wash:#F9F9F7;--ink:#2E2C27;--ink-soft:#6B6A63;
+  --ink-grey:#B4B3A8;--hairline:#E4E3DC;--edge:#E1E1DF;
+  --clay:#C6613F;--clay-hover:#AE5133;
+}
+body{
+  font-family:-apple-system,"Segoe UI",sans-serif;
+  background:var(--bg);color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── top band ── */
+.top-band{background:var(--wash);border-bottom:1px solid var(--edge)}
+.top-inner{max-width:860px;margin:0 auto;padding:48px 24px 40px}
+.day-date{font-size:14px;color:var(--ink-soft);letter-spacing:.02em;margin-bottom:12px}
+h1{
+  font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;
+  font-size:40px;font-weight:600;line-height:1.3;color:var(--ink);margin-bottom:32px;
+}
+.terrain{width:100%;height:auto;display:block;margin-bottom:28px}
 .acts{display:flex;gap:0}
-.act{flex:1;padding:0 20px}
-.act:first-child{padding-left:0}
+.act{flex:1;padding:0 16px;border-left:1px solid var(--hairline)}
+.act:first-child{border-left:none;padding-left:0}
 .act:last-child{padding-right:0}
-.act+.act{border-left:1px solid var(--hair)}
-.act-time{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;text-transform:uppercase}
-.act-desc{font-size:14px;color:var(--ink-s);line-height:1.55}
-.bot .wrap{padding-top:40px;padding-bottom:56px}
-.sec-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:16px;margin-top:36px}
-.sec-title:first-child{margin-top:0}
-.calm{font-size:15px;color:var(--ink-s);margin-bottom:8px}
-.conn{font-size:13px;color:var(--ink-g);margin-top:4px}
-.item{display:flex;gap:12px;margin-bottom:18px;align-items:baseline}
-.item-n{font-size:13px;color:var(--ink-g);min-width:18px;text-align:right;font-variant-numeric:tabular-nums;line-height:1.6;flex-shrink:0}
-.item-body{flex:1}
-.item-title{font-size:15px;font-weight:600;color:var(--ink);line-height:1.5}
+.act-time{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px}
+.act-desc{font-size:14px;color:var(--ink-soft);line-height:1.55}
+
+/* ── bottom band ── */
+.bottom-band{background:var(--bg)}
+.bottom-inner{max-width:860px;margin:0 auto;padding:40px 24px 60px}
+
+/* lists */
+.list-heading{
+  font-family:-apple-system,"Segoe UI",sans-serif;
+  font-size:13px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--ink-soft);margin-bottom:20px;
+}
+.items{margin-bottom:32px}
+.item{margin-bottom:20px;padding-left:32px;position:relative}
+.item-num{
+  position:absolute;left:0;top:0;
+  font-size:14px;color:var(--ink-grey);font-variant-numeric:tabular-nums;
+}
+.item-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.45}
 .item-title a{color:var(--ink);text-decoration:none}
 .item-title a:hover{text-decoration:underline}
-.item-desc{font-size:14px;color:var(--ink-s);line-height:1.6;margin-top:2px}
-.item-desc a{color:var(--ink-s);text-decoration:underline;text-decoration-color:var(--ink-g)}
-.item-desc a:hover{color:var(--ink)}
-.news-line{font-size:14px;color:var(--ink-s);line-height:1.7;margin-bottom:6px}
-.news-line a{color:var(--ink-s);text-decoration:underline;text-decoration-color:var(--ink-g)}
-.news-line a:hover{color:var(--ink)}
+.item-body{font-size:14px;color:var(--ink-soft);line-height:1.65}
+.item-body a{
+  color:var(--ink-soft);text-decoration:underline;
+  text-decoration-color:var(--hairline);text-underline-offset:2px;
+}
+.item-body a:hover{text-decoration-color:var(--ink-soft)}
+.connect-line{font-size:14px;color:var(--ink-grey);line-height:1.6;margin-bottom:40px}
+
+/* themed sections */
+.theme-section{margin-bottom:36px}
+.theme-heading{
+  font-family:-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;font-weight:700;color:var(--ink);margin-bottom:16px;
+}
+
+/* compact bullet items (每日AI大事) */
+.compact-item{
+  font-size:14px;color:var(--ink-soft);line-height:1.7;
+  margin-bottom:10px;padding-left:14px;position:relative;
+}
+.compact-item::before{
+  content:'';position:absolute;left:0;top:10px;
+  width:4px;height:4px;border-radius:50%;background:var(--ink-grey);
+}
+.compact-item a{
+  color:var(--ink-soft);text-decoration:underline;
+  text-decoration-color:var(--hairline);text-underline-offset:2px;
+}
+.compact-item a:hover{text-decoration-color:var(--ink-soft)}
+
 @media(max-width:640px){
-.hl{font-size:30px}
-.acts{flex-direction:column;gap:0}
-.act+.act{border-left:none;border-top:1px solid var(--hair);padding-top:14px;margin-top:14px}
-.act{padding:0}
-.wrap{padding:32px 16px}
+  h1{font-size:30px}
+  .top-inner{padding:32px 16px 28px}
+  .bottom-inner{padding:28px 16px 48px}
+  .acts{flex-direction:column;gap:0}
+  .act{border-left:none;border-top:1px solid var(--hairline);padding:12px 0}
+  .act:first-child{border-top:none;padding-top:0}
 }
 </style>
 </head>
 <body>
-<div class="top">
-<div class="wrap">
-<div class="date">星期六 · 11月7日 2026</div>
-<div class="hl">兩堂課之間有一整個安靜的下午，Lany。</div>
-<svg class="terrain" viewBox="0 0 840 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-<!-- terrain stroke: mostly flat, small bumps at ~10AM and ~5:45PM -->
-<path d="M0 130 C60 130 100 130 160 128 C200 125 220 108 240 95 C260 82 280 90 300 120 C340 130 400 132 460 132 C520 132 560 132 600 130 C640 126 660 110 680 100 C700 110 720 125 740 130 C780 132 820 132 840 132" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
-<!-- 10AM makeup class dot -->
-<circle cx="235" cy="97" r="8" fill="#2E2C27"/>
-<!-- 5:45PM dance/yoga dot -->
-<circle cx="675" cy="102" r="7" fill="#2E2C27"/>
-<!-- birds motif in the open afternoon -->
-<path d="M420 72 Q425 65 430 72" stroke="#2E2C27" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-<path d="M438 68 Q442 62 446 68" stroke="#2E2C27" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-<path d="M455 74 Q459 69 463 74" stroke="#2E2C27" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-<!-- clay accent: small sun in the open morning -->
-<circle cx="80" cy="110" r="6" fill="none" stroke="#C6613F" stroke-width="1.5"/>
-<line x1="80" y1="100" x2="80" y2="96" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="90" y1="108" x2="93" y2="105" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="70" y1="108" x2="67" y2="105" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="90" y1="114" x2="93" y2="117" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="70" y1="114" x2="67" y2="117" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
-<!-- focal point labels -->
-<text x="140" y="155" text-anchor="middle" font-family="-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#6B6A63">morning</text>
-<text x="420" y="155" text-anchor="middle" font-family="-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#6B6A63">afternoon</text>
-<text x="700" y="155" text-anchor="middle" font-family="-apple-system,'Segoe UI',sans-serif" font-size="11" fill="#6B6A63">evening</text>
-</svg>
-<div class="acts">
-<div class="act">
-<div class="act-time">早上 – 11 AM</div>
-<div class="act-desc">十點彩妝課，之前有一段可以慢慢準備的晨間空檔。</div>
-</div>
-<div class="act">
-<div class="act-time">11 AM – 5:45 PM</div>
-<div class="act-desc">下課到傍晚之間將近七個小時完全空白，適合放進這週一直沒處理的事。</div>
-</div>
-<div class="act">
-<div class="act-time">5:45 PM 之後</div>
-<div class="act-desc">舞蹈瑜伽半小時收尾，晚上沒有安排。</div>
-</div>
-</div>
-</div>
-</div>
-<div class="bot">
-<div class="wrap">
-<div class="calm">今天早上沒有需要處理的事。</div>
-<div class="conn">連上信箱或聊天工具，這裡就能幫你整理待回覆和已結案的訊息。</div>
 
-<div class="sec-title" style="margin-top:40px">遠端 / 接案機會</div>
-<div class="item">
-<div class="item-n">1</div>
-<div class="item-body">
-<div class="item-title"><a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">AE Studio 遠端 AI/Data 工程師，$120–220K</a></div>
-<div class="item-desc">美國 remote-first 工作室，長期專案制，找 ML Engineer 和 Data Scientist。有 PyTorch / TensorFlow 和部署經驗即可投，<a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">在 Arc.dev 上</a>近期刊登。</div>
-</div>
-</div>
-<div class="item">
-<div class="item-n">2</div>
-<div class="item-body">
-<div class="item-title"><a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">Exandia Senior AI / Data Scientist，全遠端</a></div>
-<div class="item-desc">專做 AI 驅動分析的新創，remote-first，要求熟 Python 全棧加 LLM 整合經驗，<a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">在 Arc.dev 上</a>開放申請中。</div>
-</div>
-</div>
-<div class="item">
-<div class="item-n">3</div>
-<div class="item-body">
-<div class="item-title"><a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">Pixalate AI/ML Data Scientist，新加坡 remote</a></div>
-<div class="item-desc">廣告詐欺偵測平台，APAC 時區友善，需要大規模資料管線與異常偵測經驗，<a href="https://arc.dev/remote-jobs/data" target="_blank" rel="noopener">在 Arc.dev 上</a>近期刊登。</div>
+<div class="top-band">
+<div class="top-inner">
+  <div class="day-date">星期日 · 2026 年 11 月 8 日</div>
+  <h1>排到四點半的週日，Lany，傍晚歸你。</h1>
+
+  <svg class="terrain" viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg">
+    <!-- terrain stroke -->
+    <path d="M0,138 C30,138 70,138 100,118 C118,100 145,80 168,78 C191,76 208,96 224,120 C236,136 252,140 266,140 C272,140 276,95 282,45 C286,28 298,22 308,22 C318,22 328,42 336,58 C348,64 400,66 450,68 C478,72 512,104 532,135 C548,142 600,142 840,142"
+          fill="none" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- brunch: filled dot -->
+    <circle cx="168" cy="78" r="8" fill="#2E2C27"/>
+
+    <!-- noon overlap: two hollow intersecting circles -->
+    <circle cx="296" cy="24" r="10" fill="#F9F9F7" stroke="#2E2C27" stroke-width="2"/>
+    <circle cx="314" cy="24" r="10" fill="#F9F9F7" stroke="#2E2C27" stroke-width="2"/>
+
+    <!-- clay squiggle under overlap -->
+    <path d="M282,50 C288,43 294,57 300,50 C306,43 312,57 318,50 C324,43 330,57 336,50"
+          fill="none" stroke="#C6613F" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- birds in evening -->
+    <path d="M638,108 C643,103 648,108 653,103" fill="none" stroke="#2E2C27" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M660,100 C665,95 670,100 675,95" fill="none" stroke="#2E2C27" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M678,114 C682,110 686,114 690,110" fill="none" stroke="#2E2C27" stroke-width="1" stroke-linecap="round"/>
+  </svg>
+
+  <div class="acts">
+    <div class="act">
+      <div class="act-time">9 – 11 AM</div>
+      <div class="act-desc">早午餐，兩小時不趕。</div>
+    </div>
+    <div class="act">
+      <div class="act-time">12 – 4:30 PM</div>
+      <div class="act-desc">頭等艙接著瑜伽私人課，中間有一小時重疊。</div>
+    </div>
+    <div class="act">
+      <div class="act-time">4:30 PM onward</div>
+      <div class="act-desc">傍晚全空。明天十一點有 Ami 早午餐。</div>
+    </div>
+  </div>
 </div>
 </div>
 
-<div class="sec-title">每日 AI 大事</div>
-<div class="news-line">▸ Anthropic 確認十一月中旬以 ANT 為代號上市，22 家投行承銷，估值逾 $600 億，為 AI 公司最大規模 IPO（<a href="https://www.reuters.com/technology/" target="_blank" rel="noopener">Reuters</a>）</div>
-<div class="news-line">▸ Meta 與 OpenAI 同日宣布收購：Meta 買下機器人公司 Covariant 團隊，OpenAI 收購程式碼分析平台 Windsurf（<a href="https://www.theverge.com/ai-artificial-intelligence" target="_blank" rel="noopener">The Verge</a>）</div>
-<div class="news-line">▸ 百度開源 ERNIE 5.5 Flash Base，280B/14B 參數 MoE 架構，Apache 2.0 授權，中文基準超 Llama 3.3（<a href="https://juejin.cn" target="_blank" rel="noopener">掘金</a>）</div>
-<div class="news-line">▸ OpenAI Images API 升級至 2.6 版，新增 GIF 動圖生成，週活躍使用者達 40 億（<a href="https://openai.com/blog" target="_blank" rel="noopener">OpenAI Blog</a>）</div>
+<div class="bottom-band">
+<div class="bottom-inner">
 
-<div class="sec-title">AI 職涯階梯</div>
-<div class="item">
-<div class="item-n">1</div>
-<div class="item-body">
-<div class="item-title"><a href="https://www.kore1.com/insights/" target="_blank" rel="noopener">GenAI 工程師的四階段晉升門檻：每一級要交什麼「作品」</a></div>
-<div class="item-desc">KORE1 拆解 GenAI Engineer 從 Associate 到 Staff 的 proof-of-work gate：Associate 要能獨立交付 retrieval feature，Mid 要擁有 eval pipeline，Senior 要為團隊設品質標準，Staff 要有否決模型選擇的判斷力。同篇引 LinkedIn 數據，AI Engineer 職稱年增 143%。<a href="https://www.kore1.com/insights/" target="_blank" rel="noopener">KORE1 報告</a></div>
-</div>
-</div>
+  <!-- 需要留意 -->
+  <div class="list-heading">需要留意</div>
+  <div class="items">
+    <div class="item">
+      <span class="item-num">1</span>
+      <div class="item-title">中午兩個行程疊在一起了</div>
+      <div class="item-body">頭等艙 12:00–13:00 和民權西瑜伽私人課 12:00–16:30 同時從中午開始，在行事曆上重疊到下午一點。</div>
+    </div>
+  </div>
+
+  <div class="connect-line">連結信箱或即時通訊，早報能告訴你什麼事在等你回覆。</div>
+
+  <!-- ── 遠端 / 接案機會 ── -->
+  <div class="theme-section">
+    <div class="theme-heading">遠端 / 接案機會</div>
+    <div class="item">
+      <span class="item-num">1</span>
+      <div class="item-title"><a href="https://www.tasker.com.tw/cases?selected_tags=427%2C496">AI Agent 接案持續有人發</a></div>
+      <div class="item-body">AI Agent 與系統開發案件仍在<a href="https://www.tasker.com.tw/cases?selected_tags=427%2C496">Tasker</a> 上刊登，單案預算五千到二十萬元。</div>
+    </div>
+    <div class="item">
+      <span class="item-num">2</span>
+      <div class="item-title"><a href="https://arc.dev/en-tw/remote-jobs/data-science">台灣遠端 AI 職缺以工程為主</a></div>
+      <div class="item-body">十一月 <a href="https://arc.dev/en-tw/remote-jobs/data-science">Arc.dev 台灣頁面</a>列出 ML/AI 工程、Data Scientist 等全球遠端職缺，多為資深級。</div>
+    </div>
+    <div class="item">
+      <span class="item-num">3</span>
+      <div class="item-title"><a href="https://zerogtalent.com/blog/the-ai-agent-startup-boom-is-creating-an-entirely-new-engineering-job-category-and-salaries-are-surging">Agentic AI 工程師薪資溢價 15–20%</a></div>
+      <div class="item-body">Korn Ferry 調查 52% 企業計畫年底前部署自主代理，agentic AI 工程師均薪約 $190K，資深可達 $300K 以上。<a href="https://zerogtalent.com/blog/the-ai-agent-startup-boom-is-creating-an-entirely-new-engineering-job-category-and-salaries-are-surging">ZeroG Talent 整理</a></div>
+    </div>
+  </div>
+
+  <!-- ── 每日 AI 大事 ── -->
+  <div class="theme-section">
+    <div class="theme-heading">每日 AI 大事</div>
+    <div class="compact-item">Microsoft 開源 Agent Package Manager（APM），用 manifest 管理 AI agent 的技能與 MCP 伺服器，支援 Copilot、Claude Code、Cursor 等九種工具。<a href="https://dev.to/hiroki-ii-ai/ai-daily-digest-november-8-2026-openai-taps-hacktron-for-bug-hunts-muse-wonder-for-everyone-gin">dev.to 彙整</a></div>
+    <div class="compact-item">Google ADK 2.14.0 釋出穩定版，A2A 協定、執行環境與評估模組正式畢業。<a href="https://dev.to/hiroki-ii-ai/ai-daily-digest-november-8-2026-openai-taps-hacktron-for-bug-hunts-muse-wonder-for-everyone-gin">dev.to 彙整</a></div>
+    <div class="compact-item">OpenAI Images 2.6 生成速度提升 50%，新增 GIF 生成，API 分為 Flare（速度）與 Sunburst（品質）雙模型。<a href="https://dev.to/hiroki-ii-ai/ai-daily-digest-november-8-2026-openai-taps-hacktron-for-bug-hunts-muse-wonder-for-everyone-gin">dev.to 彙整</a></div>
+    <div class="compact-item">Liquid AI 釋出 LFM3-1.7B 語言模型，同步上線免費版本。<a href="https://dev.to/hiroki-ii-ai/ai-daily-digest-november-8-2026-openai-taps-hacktron-for-bug-hunts-muse-wonder-for-everyone-gin">dev.to 彙整</a></div>
+  </div>
+
+  <!-- ── AI 職涯階梯 ── -->
+  <div class="theme-section">
+    <div class="theme-heading">AI 職涯階梯</div>
+    <div class="item">
+      <span class="item-num">1</span>
+      <div class="item-title"><a href="https://hatchworks.com/blog/gen-ai/software-engineer-shortage/">工程招聘在整體縮減中逆勢擴張</a></div>
+      <div class="item-body">SignalFire 分析 8,000 萬筆公司數據，大廠新鮮人整體招聘降 65%，但工程師佔比從 46% 升至 55%；AI/ML 角色成長 39%，Forward-Deployed Engineer 成長 30%。<a href="https://hatchworks.com/blog/gen-ai/software-engineer-shortage/">HatchWorks</a></div>
+    </div>
+  </div>
+
+  <!-- ── 資料分析師 / 資料科學家職涯 ── -->
+  <div class="theme-section">
+    <div class="theme-heading">資料分析師 / 資料科學家職涯</div>
+    <div class="item">
+      <span class="item-num">1</span>
+      <div class="item-title"><a href="https://blog.104.com.tw/104data-fresh-graduate-ai-position/">AI 入門從理工向全科系擴展</a></div>
+      <div class="item-body">104 Q1 數據：6.7 萬筆 AI 職缺對新鮮人開放，62% 不限科系，應徵量年增 46%。工程學院 2.4 萬筆居首，但商管學院最積極投遞。<a href="https://blog.104.com.tw/104data-fresh-graduate-ai-position/">104 人力銀行</a></div>
+    </div>
+  </div>
 
 </div>
 </div>
