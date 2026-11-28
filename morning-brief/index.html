@@ -1,353 +1,148 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>早報 · 11月27日</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Brief</title>
 <style>
-:root {
-  --bg: #FCFCFB;
-  --bg-top: #F9F9F7;
-  --ink: #2E2C27;
-  --ink-soft: #6B6A63;
-  --ink-grey: #B4B3A8;
-  --hairline: #E4E3DC;
-  --clay: #C6613F;
-  --clay-hover: #AE5133;
-  --divider: #E1E1DF;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #1A1917;
-    --bg-top: #15140F;
-    --ink: #E8E6DF;
-    --ink-soft: #A09E95;
-    --ink-grey: #6B6A63;
-    --hairline: #33322D;
-    --clay: #D4785A;
-    --clay-hover: #E08B6B;
-    --divider: #2A2924;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #1A1917;
-  --bg-top: #15140F;
-  --ink: #E8E6DF;
-  --ink-soft: #A09E95;
-  --ink-grey: #6B6A63;
-  --hairline: #33322D;
-  --clay: #D4785A;
-  --clay-hover: #E08B6B;
-  --divider: #2A2924;
-}
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: -apple-system, 'Segoe UI', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.6;
-}
-.band-top {
-  background: var(--bg-top);
-  border-bottom: 1px solid var(--divider);
-}
-.band-bottom {
-  background: var(--bg);
-}
-.container {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-.band-top .container {
-  padding-top: 48px;
-  padding-bottom: 44px;
-}
-.band-bottom .container {
-  padding-top: 40px;
-  padding-bottom: 60px;
-}
-.day-date {
-  font-size: 13px;
-  color: var(--ink-soft);
-  letter-spacing: 0.04em;
-  margin-bottom: 10px;
-}
-.headline {
-  font-family: Georgia, 'Songti TC', 'Noto Serif CJK TC', serif;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 1.35;
-  color: var(--ink);
-  margin-bottom: 36px;
-}
-.terrain-wrap {
-  margin-bottom: 32px;
-}
-.terrain-wrap svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.acts {
-  display: flex;
-  gap: 0;
-}
-.act {
-  flex: 1;
-  position: relative;
-  padding: 0 20px;
-}
-.act:first-child { padding-left: 0; }
-.act:last-child { padding-right: 0; }
-.act + .act::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 2px;
-  bottom: 2px;
-  width: 1px;
-  background: var(--hairline);
-}
-.act-time {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 6px;
-  letter-spacing: 0.01em;
-}
-.act-desc {
-  font-size: 14px;
-  color: var(--ink-soft);
-  line-height: 1.55;
-}
-.calm-line {
-  font-size: 15px;
-  color: var(--ink-soft);
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-.connect-hint {
-  font-size: 13px;
-  color: var(--ink-grey);
-  line-height: 1.55;
-}
-.section {
-  margin-top: 44px;
-}
-.section-heading {
-  font-family: -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--ink);
-  text-transform: none;
-  letter-spacing: 0.02em;
-  margin-bottom: 20px;
-}
-.item {
-  margin-bottom: 18px;
-  padding-left: 28px;
-  position: relative;
-}
-.item-num {
-  position: absolute;
-  left: 0;
-  top: 1px;
-  font-size: 13px;
-  color: var(--ink-grey);
-  font-variant-numeric: tabular-nums;
-}
-.item-title {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--ink);
-  line-height: 1.5;
-  margin-bottom: 2px;
-}
-.item-title a {
-  color: var(--ink);
-  text-decoration: none;
-}
-.item-title a:hover {
-  text-decoration: underline;
-}
-.item-body {
-  font-size: 14px;
-  color: var(--ink-soft);
-  line-height: 1.6;
-}
-.item-body a {
-  color: var(--ink-soft);
-  text-decoration: underline;
-  text-decoration-color: var(--hairline);
-  text-underline-offset: 2px;
-}
-.item-body a:hover {
-  text-decoration-color: var(--ink-soft);
-}
-.news-line {
-  font-size: 14px;
-  color: var(--ink-soft);
-  line-height: 1.65;
-  margin-bottom: 10px;
-}
-.news-line a {
-  color: var(--ink-soft);
-  text-decoration: underline;
-  text-decoration-color: var(--hairline);
-  text-underline-offset: 2px;
-}
-.news-line a:hover {
-  text-decoration-color: var(--ink-soft);
-}
-
-@media (max-width: 640px) {
-  .headline { font-size: 30px; }
-  .container { padding-left: 16px; padding-right: 16px; }
-  .acts { flex-direction: column; gap: 0; }
-  .act { padding: 14px 0; }
-  .act:first-child { padding-top: 0; }
-  .act:last-child { padding-bottom: 0; }
-  .act + .act::before {
-    left: 0; right: 0;
-    top: 0; bottom: auto;
-    width: auto; height: 1px;
-  }
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#FCFCFB;color:#2E2C27;font-family:-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.bt{background:#F9F9F7;border-bottom:1px solid #E1E1DF}
+.bb{background:#FCFCFB}
+.c{max-width:860px;margin:0 auto;padding:48px 24px}
+.dd{font-size:14px;color:#6B6A63;letter-spacing:.03em;margin-bottom:10px}
+h1{font-family:Georgia,"Songti TC","Noto Serif CJK TC",serif;font-size:40px;font-weight:400;line-height:1.25;color:#2E2C27;margin-bottom:32px}
+.tr{width:100%;margin-bottom:28px}
+.tr svg{width:100%;height:auto;display:block}
+.acts{display:flex}
+.act{flex:1;position:relative;padding:0 16px}
+.act:not(:last-child)::after{content:'';position:absolute;right:0;top:0;bottom:0;width:1px;background:#E4E3DC}
+.act:first-child{padding-left:0}
+.act:last-child{padding-right:0}
+.at{font-size:14px;font-weight:700;color:#2E2C27;margin-bottom:6px}
+.ad{font-size:14px;color:#6B6A63;line-height:1.5}
+.sh{font-size:15px;font-weight:600;color:#2E2C27;margin-bottom:20px;letter-spacing:.01em}
+.sb{margin-top:40px}
+.sb:first-child{margin-top:0}
+.it{margin-bottom:20px;padding-left:28px;position:relative}
+.in{position:absolute;left:0;top:2px;font-size:13px;color:#B4B3A8;font-variant-numeric:tabular-nums}
+.tt{font-size:15px;font-weight:600;line-height:1.4;margin-bottom:4px}
+.tt a{color:#2E2C27;text-decoration:none}
+.tt a:hover{text-decoration:underline}
+.ib{font-size:14px;color:#6B6A63;line-height:1.6}
+.ib a{color:#6B6A63;text-decoration:underline;text-decoration-color:#B4B3A8;text-underline-offset:2px}
+.ib a:hover{color:#2E2C27}
+.cl{font-size:14px;color:#6B6A63;margin-top:24px;margin-bottom:8px;line-height:1.6}
+@media(max-width:640px){
+h1{font-size:30px}
+.c{padding:32px 16px}
+.acts{flex-direction:column}
+.act{padding:12px 0;border-bottom:1px solid #E4E3DC}
+.act:not(:last-child)::after{display:none}
+.act:last-child{border-bottom:none}
+.act:first-child{padding-top:0}
 }
 </style>
 </head>
 <body>
+<div class="bt"><div class="c">
+<div class="dd">Saturday · November 28, 2026</div>
+<h1>九點收工，Lany，剩下的週六全是空白。</h1>
+<div class="tr">
+<svg viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,138 C30,137 55,133 80,127 C95,122 110,119 130,124 C150,129 180,135 250,138 C380,140 520,139 660,138 C750,137 800,137 840,137" fill="none" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
+<circle cx="105" cy="120" r="7" fill="#2E2C27"/>
+<circle cx="500" cy="62" r="12" fill="none" stroke="#C6613F" stroke-width="1.5"/>
+<line x1="500" y1="44" x2="500" y2="39" stroke="#C6613F" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="500" y1="80" x2="500" y2="85" stroke="#C6613F" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="482" y1="62" x2="477" y2="62" stroke="#C6613F" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="518" y1="62" x2="523" y2="62" stroke="#C6613F" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="488" y1="50" x2="484" y2="46" stroke="#C6613F" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="512" y1="74" x2="516" y2="78" stroke="#C6613F" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="512" y1="50" x2="516" y2="46" stroke="#C6613F" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="488" y1="74" x2="484" y2="78" stroke="#C6613F" stroke-width="1.3" stroke-linecap="round"/>
+</svg>
+</div>
+<div class="acts">
+<div class="act"><div class="at">8 – 9 AM</div><div class="ad">行事曆上唯一一件事：下載影片。</div></div>
+<div class="act"><div class="at">9 AM – 3 PM</div><div class="ad">六小時沒有任何會議或邀約。</div></div>
+<div class="act"><div class="at">3 PM onward</div><div class="ad">傍晚空著，沒有安排。</div></div>
+</div>
+</div></div>
 
-<div class="band-top">
-  <div class="container">
-    <div class="day-date">星期五 · 11月27日</div>
-    <h1 class="headline">上午跟凱西共學，午後帶 Amber 的課，Lany，三點以後時間是你的。</h1>
+<div class="bb"><div class="c">
 
-    <div class="terrain-wrap">
-      <svg viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <!-- terrain path: flat morning → rise at 10 → plateau til 1 → dip → rise 2-3:15 → drop → gentle bumps 5-8 -->
-        <path d="M0,120 C40,120 60,118 100,115 C140,112 160,110 200,108
-                 C230,106 260,65 300,55 C330,48 360,50 390,52
-                 C410,54 430,58 460,80 C480,92 500,70 530,58
-                 C550,50 570,55 590,72 C610,85 630,88 660,78
-                 C680,70 700,72 720,80 C740,86 770,90 800,95
-                 C820,98 835,100 840,102"
-              fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round"/>
-
-        <!-- event dots -->
-        <!-- 10:00-12:00 AI 共學 (2h, heavy) cx≈300 -->
-        <circle cx="300" cy="55" r="10" fill="var(--ink)"/>
-        <!-- 12:00-13:00 omake (1h) cx≈390 -->
-        <circle cx="390" cy="52" r="7" fill="var(--ink)"/>
-        <!-- 14:00-15:15 Amber 課 (1.25h) cx≈530 -->
-        <circle cx="530" cy="58" r="8" fill="var(--ink)"/>
-        <!-- 17:00-19:00 剪頭毛 (2h) cx≈660 -->
-        <circle cx="665" cy="78" r="9" fill="var(--ink)"/>
-        <!-- 19:00-20:00 保養液 (1h) cx≈720 -->
-        <circle cx="720" cy="80" r="6" fill="var(--ink-grey)"/>
-
-        <!-- clay birds — two small birds in the open afternoon gap around cx 460-490, cy ~40 -->
-        <g fill="none" stroke="var(--clay)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M455,42 C458,36 462,34 466,37 M466,37 C470,34 474,36 477,42"/>
-          <path d="M472,35 C475,29 479,27 483,30 M483,30 C487,27 491,29 494,35"/>
-        </g>
-      </svg>
-    </div>
-
-    <div class="acts">
-      <div class="act">
-        <div class="act-time">10 AM – 1 PM</div>
-        <div class="act-desc">和凱西的 AI 共學佔掉上午兩小時，接著 omake 十二點開賣，中間沒有喘息。十點前是今天最長的一段空白。</div>
-      </div>
-      <div class="act">
-        <div class="act-time">1 – 5 PM</div>
-        <div class="act-desc">午餐後帶 Amber 的 ZZZ 主題課到三點一刻。三點到五點沒有排程，做自己的事。</div>
-      </div>
-      <div class="act">
-        <div class="act-time">5 PM 之後</div>
-        <div class="act-desc">五點剪頭毛，七點保養液，兩件生活雜務排在一起。之後週五晚上就空出來了。</div>
-      </div>
-    </div>
-  </div>
+<div class="sb">
+<div class="sh">需要你處理</div>
+<div class="it">
+<span class="in">1</span>
+<div class="tt"><a href="https://www.google.com/calendar/event?eid=Y2dyM2VwOW42a3NqY2I5ajY4czY4YjlrY3BnajJiOXA2OHI2NmJiMmM4cW00b3BoNjBzM2FwaGxjayBsYW55bGl1MTIyQG0&ctz=Asia/Taipei">明天下午三件事疊在一起</a></div>
+<div class="ib">瑜伽私人課 12:30–5 PM 還標著問號，同一段有拿鑰匙 2:15 和衡享 2:30，<a href="https://www.google.com/calendar/event?eid=Y2dyM2VwOW42a3NqY2I5ajY4czY4YjlrY3BnajJiOXA2OHI2NmJiMmM4cW00b3BoNjBzM2FwaGxjayBsYW55bGl1MTIyQG0&ctz=Asia/Taipei">在你的行事曆上</a>。如果私人課確定，時間重疊需要釐清。</div>
+</div>
 </div>
 
-<div class="band-bottom">
-  <div class="container">
-    <p class="calm-line">信箱和訊息還沒接上，今天的待辦清單從行事曆推不出來。</p>
-    <p class="connect-hint">接上 Gmail 或 Slack，這裡就能列出誰在等你回覆、什麼事已經有人處理了。</p>
+<p class="cl">信箱和聊天工具目前沒有連線，接上後早報能看見更多。</p>
 
-    <!-- Section 1: 遠端 / 接案機會 -->
-    <div class="section">
-      <div class="section-heading">遠端 / 接案機會</div>
-
-      <div class="item">
-        <span class="item-num">1</span>
-        <div class="item-title">PyTorch Forums 在找 ML 工程合約</div>
-        <div class="item-body">micro1 為 PyTorch Forums 專案招募遠端 ML 工程契約人員，需求包含模型微調與推論優化，合約制，<a href="https://www.micro1.ai/" target="_blank" rel="noopener">micro1 平台</a>上申請。</div>
-      </div>
-
-      <div class="item">
-        <span class="item-num">2</span>
-        <div class="item-title">freelancermap AI/ML 遠端合約持續開放</div>
-        <div class="item-body">歐洲與全球遠端 AI/ML 專案穩定掛單中，資料工程與 MLOps 合約日費率 €600–900 區間，<a href="https://www.freelancermap.com/" target="_blank" rel="noopener">freelancermap</a> 可篩選 APAC 時區友善的案子。</div>
-      </div>
-
-      <div class="item">
-        <span class="item-num">3</span>
-        <div class="item-title">Arc.dev 台灣方向的 AI 遠端職缺</div>
-        <div class="item-body">Arc.dev 持續列有面向亞太的 AI 與資料科學遠端正職與合約機會，<a href="https://arc.dev/" target="_blank" rel="noopener">Arc.dev</a> 上可篩出接受台灣據點的職缺。</div>
-      </div>
-    </div>
-
-    <!-- Section 2: 每日 AI 大事 -->
-    <div class="section">
-      <div class="section-heading">每日 AI 大事</div>
-
-      <div class="news-line">NVIDIA 暫停東南亞七國 AI 晶片出貨，配合美國商務部最新出口管制審查，影響泰國、越南、馬來西亞等地資料中心擴建計畫。<a href="https://www.reuters.com/technology/" target="_blank" rel="noopener">Reuters</a></div>
-
-      <div class="news-line">Google 宣布 Workspace 全面支援 MCP（Model Context Protocol），Gmail、Docs、Sheets 等服務可直接作為 AI agent 的工具端點。<a href="https://workspace.google.com/blog/" target="_blank" rel="noopener">Google Workspace Blog</a></div>
-
-      <div class="news-line">數學家宣稱完成黎曼猜想證明並上傳預印本，數學與 AI 社群正在審閱中，若成立將影響密碼學與素數理論基礎。<a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv</a></div>
-
-      <div class="news-line">美國參議員 Schumer 提出跨黨派 AI 晶片法案，擬撥款 $50B 擴大國內先進封裝產能，降低對亞洲供應鏈依賴。<a href="https://www.reuters.com/technology/" target="_blank" rel="noopener">Reuters</a></div>
-    </div>
-
-    <!-- Section 3: AI 職涯階梯 -->
-    <div class="section">
-      <div class="section-heading">AI 職涯階梯</div>
-
-      <div class="item">
-        <span class="item-num">1</span>
-        <div class="item-title">Anthropic 工程主管談 AI 時代的晉升標準轉向</div>
-        <div class="item-body">Anthropic 一位工程主管受訪表示，當 AI 能在幾秒內寫完程式碼，晉升衡量正從「寫了多少 code」轉向「產生了多大影響力」。面試也開始測試候選人使用 AI 工具的能力，不用 AI 反而是扣分項。<a href="https://newsforagent.com/" target="_blank" rel="noopener">News for Agent</a> 十一月報導。</div>
-      </div>
-    </div>
-
-    <!-- Section 4: 地端 AI -->
-    <div class="section">
-      <div class="section-heading">地端 AI</div>
-
-      <div class="item">
-        <span class="item-num">1</span>
-        <div class="item-title">AMD 收購 MEXT AI，預測式記憶體分層用 flash 取代 DRAM</div>
-        <div class="item-body">AMD 收購 MEXT AI 取得其預測式記憶體分層技術，可將 AI 推論伺服器中 75% 的 DRAM 替換為 flash，效能保留 85–88%，大幅降低每節點記憶體成本。該技術已整合進 EPYC Venice 伺服器平台，以閉源 Linux 核心模組形式提供。<a href="https://www.phoronix.com/" target="_blank" rel="noopener">Phoronix</a> 十一月報導。</div>
-      </div>
-    </div>
-
-    <!-- Section 5: 資料分析師 / 資料科學家職涯 -->
-    <div class="section">
-      <div class="section-heading">資料分析師 / 資料科學家職涯</div>
-
-      <div class="item">
-        <span class="item-num">1</span>
-        <div class="item-title">台灣 AI 使用率 96% 居亞洲之冠，預測分析能力最被看重</div>
-        <div class="item-body">Robert Walters 亞洲十國調查顯示台灣職場 AI 使用率 96%，為亞洲最高。預測分析與決策支援是最常見的應用場景（62%），76% 雇主認為批判思考是 AI 時代最關鍵的技能，治理與合規相關職務成長最快。<a href="https://blog.104.com.tw/" target="_blank" rel="noopener">104 部落格</a>引述報告。</div>
-      </div>
-    </div>
-
-  </div>
+<div class="sb">
+<div class="sh">遠端 / 接案機會</div>
+<div class="it">
+<span class="in">1</span>
+<div class="tt"><a href="https://arc.dev/en-tw/remote-jobs">Arc.dev 多筆 AI 遠端接案對台灣開放</a></div>
+<div class="ib">Senior Audio ML Engineer（freelance, PyTorch/ONNX）、交易系統 Python 工程師（需香港時區重疊）和 Data Scientist（全職遠端），<a href="https://arc.dev/en-tw/remote-jobs">在 Arc.dev 台灣頁面上</a>。</div>
+</div>
+<div class="it">
+<span class="in">2</span>
+<div class="tt"><a href="https://digidai.github.io/2026/11/27/ziprecruiter-ai-hiring-plans-pay-raises-2027/">AI 職缺佔比從 4% 升至 7.4%</a></div>
+<div class="ib">ZipRecruiter 十一月雇主調查：30% 預期 AI 增加編制（去年 19%），61% 已在擴編；批判性思考是雇主認為最缺的技能，佔 44%，<a href="https://digidai.github.io/2026/11/27/ziprecruiter-ai-hiring-plans-pay-raises-2027/">據 DigiDAI 分析</a>。</div>
+</div>
 </div>
 
+<div class="sb">
+<div class="sh">每日 AI 大事</div>
+<div class="it">
+<span class="in">1</span>
+<div class="tt"><a href="https://dev.to/hiroki-ii-ai/ai-daily-digest-november-28-2026-claude-watermarks-draw-cancellations-os-omni-scores-computer-36bk">Claude 導入 SynthID-Text 文字浮水印</a></div>
+<div class="ib">Anthropic 為八月後的模型搭載不可見浮水印，符合歐盟 AI 法案透明度規範，偵測權限限監管機構與事實查核組織；部分開發者擔心交付程式碼被標記而退訂，<a href="https://dev.to/hiroki-ii-ai/ai-daily-digest-november-28-2026-claude-watermarks-draw-cancellations-os-omni-scores-computer-36bk">據 DEV Community 彙整</a>。</div>
+</div>
+<div class="it">
+<span class="in">2</span>
+<div class="tt"><a href="https://dev.to/hiroki-ii-ai/ai-daily-digest-november-28-2026-claude-watermarks-draw-cancellations-os-omni-scores-computer-36bk">OS-Omni 跨六平台 AI Agent 實測發表</a></div>
+<div class="ib">涵蓋 Windows、macOS、iOS、Android 等六系統加跨裝置工作流，Claude Opus 5.5 以 68.5% 領先但行動平台落後人類逾 25 百分點，已被 NeurIPS 2026 接收，<a href="https://dev.to/hiroki-ii-ai/ai-daily-digest-november-28-2026-claude-watermarks-draw-cancellations-os-omni-scores-computer-36bk">據 DEV Community 彙整</a>。</div>
+</div>
+<div class="it">
+<span class="in">3</span>
+<div class="tt"><a href="https://riorundown.substack.com/p/ai-news-nov-27-2026-ai-infrastructure">Google 要求 AI Agent 走 MCP 通道</a></div>
+<div class="ib">2027 年二月起 Gmail、Drive、Docs 的 AI Agent 存取須透過 Workspace MCP Server，搭配 Agent Registry 身份驗證與 Model Armor 過濾，<a href="https://riorundown.substack.com/p/ai-news-nov-27-2026-ai-infrastructure">據 RIO Rundown</a>。</div>
+</div>
+</div>
+
+<div class="sb">
+<div class="sh">AI 職涯階梯</div>
+<div class="it">
+<span class="in">1</span>
+<div class="tt"><a href="https://www.kornferry.com/about-us/press/korn-ferry-report-ai-isnt-eliminating-the-entry-level-job-its-redefining-it">81% 組織計劃增加初階招聘</a></div>
+<div class="ib">Korn Ferry「Class of 2030」研究，5,000 人跨 13 國調查：76% 認為入門職位不會消失，初階工作內容正從執行轉向 AI 輔助的研究、合成分析與判斷，<a href="https://www.kornferry.com/about-us/press/korn-ferry-report-ai-isnt-eliminating-the-entry-level-job-its-redefining-it">據 Korn Ferry 新聞稿</a>。</div>
+</div>
+</div>
+
+<div class="sb">
+<div class="sh">地端 AI</div>
+<div class="it">
+<span class="in">1</span>
+<div class="tt"><a href="https://iottechnews.com/news/siemens-edge-ai-industrial-automation/">Siemens 工業邊緣 AI 閉迴路連接 PLC</a></div>
+<div class="ib">SPS 2026 展出 Industrial Edge 透過 PROFINET 連接 SIMATIC S7 控制器做即時 AI 推論，Audi 工廠已用於焊接飛濺偵測；模型在本地 GPU 推論，無需常態雲端連線，<a href="https://iottechnews.com/news/siemens-edge-ai-industrial-automation/">據 IoT Tech News</a>。</div>
+</div>
+</div>
+
+<div class="sb">
+<div class="sh">資料分析師 / 資料科學家職涯</div>
+<div class="it">
+<span class="in">1</span>
+<div class="tt"><a href="https://news.cnyes.com/news/id/6670110">資料分析師職缺季增三成，AI 技能需求外溢</a></div>
+<div class="ib">1111 與資策會 2027 白皮書：資料分析師 +30.30%，AI Agent 相關從 Q1 的 32 筆到 Q3 的 144 筆；SQL（1,061 筆）和 Python（786 筆）為最高需求技能，AI 招聘正擴散至化學製造（+74%）與倉儲物流（+45%），<a href="https://news.cnyes.com/news/id/6670110">據鉅亨網報導</a>。</div>
+</div>
+</div>
+
+</div></div>
 </body>
 </html>
